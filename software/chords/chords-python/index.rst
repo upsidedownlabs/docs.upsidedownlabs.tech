@@ -128,7 +128,7 @@ If you prefer running scripts directly (for development, debugging, or customiza
 
    - You can download the Chords-Python repository from GitHub by visiting the following link: `Chords-Python <https://github.com/upsidedownlabs/Chords-Python/>`_.
 
-   - Or, You can clone the repository using Git by running the following command:
+   - Or, you can clone the repository using Git by running the following command:
 
    .. code-block:: console
 
@@ -136,20 +136,18 @@ If you prefer running scripts directly (for development, debugging, or customiza
 
 2. **Create and Activate a Virtual Environment** (if not already):
 
-   .. code-block:: console
-
-      python -m venv .venv
-
    - **On Windows**:
 
       .. code-block:: console
-
+          
+         python -m venv .venv
          .venv\Scripts\activate
 
    - **On macOS/Linux**:
 
       .. code-block:: console
 
+         python3 -m venv .venv
          source .venv/bin/activate
 
 3. **Install Requirements**:
@@ -164,6 +162,7 @@ If you prefer running scripts directly (for development, debugging, or customiza
 
    .. code-block:: console
 
+      # from repository root
       cd chordspy                            # Navigate to the chordspy folder
       python app.py                          # To launch the web interface
       python connection.py --protocol usb    # To start LSL stream via USB
@@ -174,6 +173,7 @@ If you prefer running scripts directly (for development, debugging, or customiza
 
    .. code-block:: console
 
+      # from repository root
       cd chordspy           # Navigate to the chordspy folder
       python gui.py         # GUI Application
       python ffteeg.py      # EEG with FFT Analysis
