@@ -64,7 +64,8 @@ Opening Chords-Python
 
 There are two ways to use Chords-Python:
 
-**A. Using the `chordspy` Python Package (Recommended)**  
+**A. Using the `chordspy` Python Package (Recommended)**
+
 **B. Running Scripts Manually from the Repository**
 
 A. Using the chordspy Package
@@ -77,17 +78,21 @@ This is the smoothest way to get started. Follow the steps below:
 
 2. **Create and Activate a Virtual Environment**:
 
-   .. code-block:: console
-
-      python -m venv .venv
-
    - **On Windows**:
+
+      .. code-block:: console
+
+         python -m venv .venv
 
       .. code-block:: console
 
          .venv\Scripts\activate
 
    - **On macOS/Linux**:
+
+      .. code-block:: console
+
+         python3 -m venv .venv
 
       .. code-block:: console
 
@@ -139,8 +144,11 @@ If you prefer running scripts directly (for development, debugging, or customiza
    - **On Windows**:
 
       .. code-block:: console
-          
+
          python -m venv .venv
+
+      .. code-block:: console
+
          .venv\Scripts\activate
 
    - **On macOS/Linux**:
@@ -148,6 +156,9 @@ If you prefer running scripts directly (for development, debugging, or customiza
       .. code-block:: console
 
          python3 -m venv .venv
+
+      .. code-block:: console
+
          source .venv/bin/activate
 
 3. **Install Requirements**:
@@ -547,6 +558,8 @@ A GUI window will appear that shows the data in real-time.
 
 8. `EOG Keystroke Emulator`
 ===========================
+
+.. youtube:: ZJmUUtHJj08
 
 Overview
 --------
