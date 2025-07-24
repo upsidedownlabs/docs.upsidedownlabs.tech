@@ -173,21 +173,17 @@ If you prefer running scripts directly (for development, debugging, or customiza
 
    .. code-block:: console
 
-      # from repository root
-      cd chordspy                            # Navigate to the chordspy folder
-      python app.py                          # To launch the web interface
-      python connection.py --protocol usb    # To start LSL stream via USB
-      python connection.py --protocol ble    # To start LSL stream via BLE
-      python connection.py --protocol wifi   # To start LSL stream via WiFi
+      python -m chordspy.app                          # To launch the web interface
+      python -m chordspy.connection --protocol usb    # To start LSL stream via USB
+      python -m chordspy.connection --protocol ble    # To start LSL stream via BLE
+      python -m chordspy.connection --protocol wifi   # To start LSL stream via WiFi
 
    To run any application, open a new terminal:
 
    .. code-block:: console
 
-      # from repository root
-      cd chordspy           # Navigate to the chordspy folder
-      python gui.py         # GUI Application
-      python ffteeg.py      # EEG with FFT Analysis
+      python chordspy.gui.py         # GUI Application
+      python chordspy.ffteeg.py      # EEG with FFT Analysis
 
 Connection
 **********
