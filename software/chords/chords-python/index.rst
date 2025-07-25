@@ -62,60 +62,55 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 Opening Chords-Python
 *********************
 
-Follow these steps to set up and install Chords-Python:
+There are two ways to use Chords-Python:
 
-1. Ensure you have latest version of Python installed.
-2. **Download the GitHub repository**:
+**A. Using the `chordspy` Python Package (Recommended)**
 
-   - You can download the Chords-Python repository from GitHub by visiting the following link: `Chords-Python <https://github.com/upsidedownlabs/Chords-Python/>`_.
-   - Or, You can clone the repository using Git by running the following command:
+**B. Running Scripts Manually from the Repository**
 
-   .. code-block:: console
-      
-      git clone https://github.com/upsidedownlabs/Chords-Python.git
+A. Using the chordspy Package
+=============================
 
-3. **Create a Virtual Environment**:
-   
-   A virtual environment allows you to manage dependencies for your project in isolation.
+This is the smoothest way to get started. Follow the steps below:
 
-   - Open a terminal or command prompt.
-   - Navigate to the directory where you have cloned the repository.
-   - Run the following command to create a virtual environment:
+1. **Install Python**  
+   Make sure latest version of Python is installed.
 
-   .. code-block:: console
-      
-      python -m venv venv
+2. **Create and Activate a Virtual Environment**:
 
-   - To activate the virtual environment:
-      - **On Windows**:
+   - **On Windows**:
+
       .. code-block:: console
 
-         .\venv\Scripts\activate
+         python -m venv .venv
 
-      - **On macOS/Linux**:
-      .. code-block:: python
-         
-         source venv/bin/activate
+      .. code-block:: console
 
-4. **Install the Required Python Libraries**:
+         .venv\Scripts\activate
 
-   Once the virtual environment is activated, you need to install the required libraries for the project.
+   - **On macOS/Linux**:
 
-   - In the terminal or command prompt, run the following command to install the dependencies needed to run the python script listed in the `requirements.txt` file:
+      .. code-block:: console
+
+         python3 -m venv .venv
+
+      .. code-block:: console
+
+         source .venv/bin/activate
+
+3. **Install the Package**:
 
    .. code-block:: console
-      
-      pip install -r requirements.txt
 
-   - This will install all the necessary Python libraries and dependencies for Chords-Python.
+      pip install chordspy
 
-5. To launch the Flask server, run the following command :
+4. **Launch the Web Interface**:
 
-   .. code-block:: python
-      
-      python app.py
+   .. code-block:: console
 
-Click on the generated link to open the web interface.
+      chordspy
+
+A web interface will open where you can connect your device and access applications.
 
 .. figure:: ./media/light-interface.*
    :align: center
@@ -128,6 +123,67 @@ Click on the generated link to open the web interface.
    :alt: Interface in Dark Mode
 
    Interface in Dark Mode
+
+B. Running Scripts Manually (Alternative)
+=========================================
+
+If you prefer running scripts directly (for development, debugging, or customization):
+
+1. **Download the Repository**:
+
+   - You can download the Chords-Python repository from GitHub by visiting the following link: `Chords-Python <https://github.com/upsidedownlabs/Chords-Python/>`_.
+
+   - Or, you can clone the repository using Git by running the following command:
+
+   .. code-block:: console
+
+      git clone https://github.com/upsidedownlabs/Chords-Python.git
+
+2. **Create and Activate a Virtual Environment** (if not already):
+
+   - **On Windows**:
+
+      .. code-block:: console
+
+         python -m venv .venv
+
+      .. code-block:: console
+
+         .venv\Scripts\activate
+
+   - **On macOS/Linux**:
+
+      .. code-block:: console
+
+         python3 -m venv .venv
+
+      .. code-block:: console
+
+         source .venv/bin/activate
+
+3. **Install Requirements**:
+
+   .. code-block:: console
+
+      pip install -r requirements.txt
+
+4. **Run the Application**:
+
+   Navigate to the `chordspy` folder and run:
+
+   .. code-block:: console
+
+      python -m chordspy.app                          # To launch the web interface
+      python -m chordspy.connection --protocol usb    # To start LSL stream via USB
+      python -m chordspy.connection --protocol ble    # To start LSL stream via BLE
+      python -m chordspy.connection --protocol wifi   # To start LSL stream via WiFi
+
+   To run any application, open a new terminal:
+
+   .. code-block:: console
+
+      python chordspy.gui.py         # GUI Application
+      python chordspy.ffteeg.py      # EEG with FFT Analysis
 
 Connection
 **********
@@ -249,7 +305,7 @@ A GUI window will appear, displaying the real-time ECG signal along with the cal
 2. `EMG with Envelope`
 ======================
 
-.. youtube:: tZud2tc-TGITiDwSQEY2eY&t=23s
+.. youtube:: TiDwSQEY2eY
 
 Overview
 --------
@@ -322,6 +378,8 @@ A GUI window will appear, displaying the real-time EOG signal along with the Bli
 
 4. `EEG with FFT`
 =================
+
+.. youtube:: yVD9KmyZgxA
 
 Overview
 --------
@@ -496,6 +554,8 @@ A GUI window will appear that shows the data in real-time.
 
 8. `EOG Keystroke Emulator`
 ===========================
+
+.. youtube:: ZJmUUtHJj08
 
 Overview
 --------
