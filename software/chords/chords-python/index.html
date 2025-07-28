@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Jul 15, 2025"/>
+    <meta name="docbuild:last-update" content="Jul 28, 2025"/>
   </head>
   
   
@@ -699,66 +699,51 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 </section>
 <section id="opening-chords-python">
 <span id="using-chords-python"></span><h2>Opening Chords-Python<a class="headerlink" href="#opening-chords-python" title="Link to this heading">#</a></h2>
-<p>Follow these steps to set up and install Chords-Python:</p>
+<p>There are two ways to use Chords-Python:</p>
+<p><strong>A. Using the `chordspy` Python Package (Recommended)</strong></p>
+<p><strong>B. Running Scripts Manually from the Repository</strong></p>
+<section id="a-using-the-chordspy-package">
+<h3>A. Using the chordspy Package<a class="headerlink" href="#a-using-the-chordspy-package" title="Link to this heading">#</a></h3>
+<p>This is the smoothest way to get started. Follow the steps below:</p>
 <ol class="arabic">
-<li><p>Ensure you have latest version of Python installed.</p></li>
-<li><p><strong>Download the GitHub repository</strong>:</p>
-<ul class="simple">
-<li><p>You can download the Chords-Python repository from GitHub by visiting the following link: <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Python/">Chords-Python</a>.</p></li>
-<li><p>Or, You can clone the repository using Git by running the following command:</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/upsidedownlabs/Chords-Python.git</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>Create a Virtual Environment</strong>:</p>
-<p>A virtual environment allows you to manage dependencies for your project in isolation.</p>
-<ul class="simple">
-<li><p>Open a terminal or command prompt.</p></li>
-<li><p>Navigate to the directory where you have cloned the repository.</p></li>
-<li><p>Run the following command to create a virtual environment:</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv venv</span>
-</pre></div>
-</div>
+<li><p><strong>Install Python</strong>
+Make sure latest version of Python is installed.</p></li>
+<li><p><strong>Create and Activate a Virtual Environment</strong>:</p>
 <ul>
-<li><dl>
-<dt>To activate the virtual environment:</dt><dd><ul class="simple">
-<li><p><strong>On Windows</strong>:</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.\venv\Scripts\activate</span>
+<li><p><strong>On Windows</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p><strong>On macOS/Linux</strong>:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
 </pre></div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
+</li>
+<li><p><strong>On macOS/Linux</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+</pre></div>
+</div>
+</div></blockquote>
 </li>
 </ul>
 </li>
-<li><p><strong>Install the Required Python Libraries</strong>:</p>
-<p>Once the virtual environment is activated, you need to install the required libraries for the project.</p>
-<ul class="simple">
-<li><p>In the terminal or command prompt, run the following command to install the dependencies needed to run the python script listed in the <cite>requirements.txt</cite> file:</p></li>
-</ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
+<li><p><strong>Install the Package</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install chordspy</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>This will install all the necessary Python libraries and dependencies for Chords-Python.</p></li>
-</ul>
 </li>
-<li><p>To launch the Flask server, run the following command :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span>
+<li><p><strong>Launch the Web Interface</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">chordspy</span>
 </pre></div>
 </div>
 </li>
 </ol>
-<p>Click on the generated link to open the web interface.</p>
+<p>A web interface will open where you can connect your device and access applications.</p>
 <figure class="align-center" id="id20">
 <img alt="Interface in Light Mode" src="../../../_images/light-interface.png" />
 <figcaption>
@@ -771,6 +756,65 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <p><span class="caption-text">Interface in Dark Mode</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="b-running-scripts-manually-alternative">
+<h3>B. Running Scripts Manually (Alternative)<a class="headerlink" href="#b-running-scripts-manually-alternative" title="Link to this heading">#</a></h3>
+<p>If you prefer running scripts directly (for development, debugging, or customization):</p>
+<ol class="arabic">
+<li><p><strong>Download the Repository</strong>:</p>
+<ul class="simple">
+<li><p>You can download the Chords-Python repository from GitHub by visiting the following link: <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Python/">Chords-Python</a>.</p></li>
+<li><p>Or, you can clone the repository using Git by running the following command:</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/upsidedownlabs/Chords-Python.git</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create and Activate a Virtual Environment</strong> (if not already):</p>
+<ul>
+<li><p><strong>On Windows</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">.venv\Scripts\activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>On macOS/Linux</strong>:</p>
+<blockquote>
+<div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python3 -m venv .venv</span>
+</pre></div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source .venv/bin/activate</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Install Requirements</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -r requirements.txt</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run the Application</strong>:</p>
+<p>Navigate to the <cite>chordspy</cite> folder and run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python -m chordspy.app                          # To launch the web interface</span>
+<span class="go">python -m chordspy.connection --protocol usb    # To start LSL stream via USB</span>
+<span class="go">python -m chordspy.connection --protocol ble    # To start LSL stream via BLE</span>
+<span class="go">python -m chordspy.connection --protocol wifi   # To start LSL stream via WiFi</span>
+</pre></div>
+</div>
+<p>To run any application, open a new terminal:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">python chordspy.gui.py         # GUI Application</span>
+<span class="go">python chordspy.ffteeg.py      # EEG with FFT Analysis</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
 </section>
 <section id="connection">
 <h2>Connection<a class="headerlink" href="#connection" title="Link to this heading">#</a></h2>
@@ -933,7 +977,7 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <section id="emg-with-envelope">
 <h3>2. <cite>EMG with Envelope</cite><a class="headerlink" href="#emg-with-envelope" title="Link to this heading">#</a></h3>
 <div class="video_wrapper" style="">
-<iframe allowfullscreen="true" src="https://www.youtube.com/embed/tZud2tc-TGITiDwSQEY2eY&amp;t=23s" style="border: 0; height: 345px; width: 560px">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/TiDwSQEY2eY" style="border: 0; height: 345px; width: 560px">
 </iframe></div><section id="id4">
 <h4>Overview<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>The <strong>EMG with Envelope</strong> is a Python-based application designed to visualize and analyze Electromyography (EMG) signals in real-time. It connects to an EMG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to extract the EMG envelope, and displays both the filtered EMG signal and its envelope in a user-friendly graphical interface. Built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite>, the application provides a responsive and interactive visualization tool for students, researchers, or developers working with EMG data.</p>
@@ -1077,7 +1121,9 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 </section>
 <section id="eeg-with-fft">
 <h3>4. <cite>EEG with FFT</cite><a class="headerlink" href="#eeg-with-fft" title="Link to this heading">#</a></h3>
-<section id="id7">
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/yVD9KmyZgxA" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id7">
 <h4>Overview<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <p>The <strong>EEG with FFT and Brainwave Power</strong> is a Python-based application designed to visualize and analyze Electroencephalography (EEG) signals in real-time. It connects to an EEG data stream using the Lab Streaming Layer (LSL) protocol, processes the signal to remove noise, and performs Fast Fourier Transform (FFT) to compute the power of different brainwave frequency bands (Delta, Theta, Alpha, Beta, and Gamma). The application provides a graphical user interface (GUI) built with <cite>PyQt5</cite> and <cite>pyqtgraph</cite> for real-time visualization of raw EEG signals, FFT results, and brainwave power distribution.</p>
 </section>
@@ -1409,7 +1455,9 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 </section>
 <section id="eog-keystroke-emulator">
 <h3>8. <cite>EOG Keystroke Emulator</cite><a class="headerlink" href="#eog-keystroke-emulator" title="Link to this heading">#</a></h3>
-<section id="id16">
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/ZJmUUtHJj08" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="id16">
 <h4>Overview<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
 <p>The <strong>EOG Keystroke Emulator</strong> is a Python-based application designed to detect eye blinks using Electrooculography (EOG) signals and translate them into keystrokes. The application leverages the Lab Streaming Layer (LSL) protocol to acquire real-time EOG data, processes the signal to detect blinks, and simulates a spacebar press whenever a blink is detected. The application is built using the <cite>tkinter</cite> library for the graphical user interface (GUI) and integrates with <cite>pyautogui</cite> for keystroke emulation.</p>
 </section>
@@ -1653,7 +1701,11 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-python">Opening Chords-Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-python">Opening Chords-Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-using-the-chordspy-package">A. Using the chordspy Package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-running-scripts-manually-alternative">B. Running Scripts Manually (Alternative)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connection">Connection</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
@@ -1773,7 +1825,7 @@ Go to tools, select your board, and the correct COM port. Now, hit the upload bu
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Jul 15, 2025.
+  Last updated on Jul 28, 2025.
   <br/>
 </p></div>
       
