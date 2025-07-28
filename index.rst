@@ -13,6 +13,7 @@ Welcome to Upside Down Labs docs's documentation!
 
 .. figure:: media/banner.*
    :align: center
+   :alt: Site banner
 
 Welcome to Upside Down Labs' Docs Site!
 ****************************************
