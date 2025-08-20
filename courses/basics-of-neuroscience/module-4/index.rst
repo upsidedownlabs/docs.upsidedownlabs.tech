@@ -31,8 +31,6 @@ Membrane resistance refers to resistance to the flow of ions across the neuronal
 - Ion Channels: The presence and density of ion channels directly affect membrane resistance. More channels result in lower resistance because they provide additional pathways for ions to flow.
 - Membrane Composition: The lipid bilayer structure and the types of proteins embedded in the membrane influence its overall resistance. A thicker membrane will have higher resistance.
 
-.. todo:: Add Membrane Resistance (Rm) graphic here.
-
 .. note:: A high membrane resistance helps maintain the membrane's resting potential by minimizing the flow of ions across it. 
 
 .. figure:: ../media/membrane-resistance.*
@@ -50,8 +48,6 @@ Axial resistance refers to resistance to the flow of electrical current along th
 
 .. figure:: ../media/axial-resistance.*
    :alt: Axial Resistance
-
-.. todo:: Add Axial Resistance (Ri) graphic here
 
 .. note:: Axial resistance affects how far a signal can travel along an axon without significant potential loss. Lower axial resistance allows signals to travel farther and faster.
 

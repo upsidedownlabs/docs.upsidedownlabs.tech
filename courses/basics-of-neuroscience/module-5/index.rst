@@ -27,15 +27,11 @@ channels: voltage-gated Na⁺ channels and K⁺ channels. These channels open an
 .. figure:: ../media/voltage-gated-on-Ion-channels.*
    :alt: voltage-gated-on-Ion-channels
 
-.. todo:: Add voltage-gated channel diagram here .  
-
 .. note:: Voltage gated ion channels open when the neuron’s membrane potential reaches a certain value called threshold value. [1]_
 
 5.2 Phases of the Action Potential 
 ***********************************
 
-.. todo:: Add phases of action potential diagram here.
-   
 .. figure:: ../media/phases-of-the-action-potential.*
    :alt: phases-of-the-action-potential
 
@@ -109,7 +105,7 @@ action potentials propagate in one direction (without reversing course) and that
 reset its membrane potential to its resting state.
 
 .. figure:: ../media/refractory-period.*
-   :alt: Refactory Period
+   :alt: Refractory Period
 
 
 Types of Refractory Periods
