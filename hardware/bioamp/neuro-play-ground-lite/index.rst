@@ -1,6 +1,6 @@
 .. _neuro-play-ground-lite:
 
-Neuro Play Ground (NPG) Lite
+Neuro PlayGround (NPG) Lite
 ############################
 
 **An expandable 3-channel wireless BioAmp for HCI & BCI**

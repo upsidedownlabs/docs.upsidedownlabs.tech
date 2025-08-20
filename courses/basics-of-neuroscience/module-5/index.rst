@@ -24,6 +24,8 @@ Voltage-gated channels are specialized membrane proteins that open or close in r
 allow neurons to transmit signals rapidly and effectively throughout the nervous system. The action potential arises from the activity of two primary voltage-gated ion 
 channels: voltage-gated Na⁺ channels and K⁺ channels. These channels open and close at specific moments, generating ion flow, which leads to an action potential. 
 
+.. figure:: ../media/voltage-gated-on-Ion-channels.*
+
 .. todo:: Add voltage-gated channel diagram here .  
 
 .. note:: Voltage gated ion channels open when the neuron’s membrane potential reaches a certain value called threshold value. [1]_
@@ -32,6 +34,8 @@ channels: voltage-gated Na⁺ channels and K⁺ channels. These channels open an
 ***********************************
 
 .. todo:: Add phases of action potential diagram here.
+   
+.. figure:: ../media/phases-of-the-action-potential.*
 
 The action potential consists of several distinct phases, each characterized by specific changes in membrane potential and ion movement : 
 
@@ -102,6 +106,7 @@ to fire another action potential, or requires a stronger-than-normal stimulus to
 action potentials propagate in one direction (without reversing course) and that the cell has enough time to 
 reset its membrane potential to its resting state.
 
+.. figure:: ../media/refractory-period.*
 Types of Refractory Periods
 ----------------------------
 
@@ -142,6 +147,7 @@ Myelination : [1]_
 
 **Nodes of Ranvier:** Action potentials jump between nodes of Ranvier (gaps in the myelin sheath) through a process known as saltatory conduction. This significantly speeds up the transmission of impulses compared to continuous conduction in unmyelinated axons.
  
+.. figure:: ../media/myelination.* 
 
 Diameter of Axon : [1]_
 ~~~~~~~~~~~~~~~~~~~~~~~~
