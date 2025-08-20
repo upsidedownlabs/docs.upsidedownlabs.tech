@@ -30,6 +30,11 @@ Chords Software Suite
          :text-align: center
          :link: chords-lsl-connector
          :link-type: ref
+      
+      .. grid-item-card:: Chords Java
+         :text-align: center
+         :link: chords-java
+         :link-type: ref
 
 Tools
 ============================
@@ -84,6 +89,7 @@ BioAmp Firmware
    chords/chords-web/index
    chords/chords-python/index
    chords/chords-lsl-connector/index
+   chords/chords-java/index
 
 
 .. toctree::
