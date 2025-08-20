@@ -25,6 +25,7 @@ allow neurons to transmit signals rapidly and effectively throughout the nervous
 channels: voltage-gated Na⁺ channels and K⁺ channels. These channels open and close at specific moments, generating ion flow, which leads to an action potential. 
 
 .. figure:: ../media/voltage-gated-on-Ion-channels.*
+   :alt: voltage-gated-on-Ion-channels
 
 .. todo:: Add voltage-gated channel diagram here .  
 
@@ -36,6 +37,7 @@ channels: voltage-gated Na⁺ channels and K⁺ channels. These channels open an
 .. todo:: Add phases of action potential diagram here.
    
 .. figure:: ../media/phases-of-the-action-potential.*
+   :alt: phases-of-the-action-potential
 
 The action potential consists of several distinct phases, each characterized by specific changes in membrane potential and ion movement : 
 
@@ -107,6 +109,9 @@ action potentials propagate in one direction (without reversing course) and that
 reset its membrane potential to its resting state.
 
 .. figure:: ../media/refractory-period.*
+   :alt: Refactory Period
+
+
 Types of Refractory Periods
 ----------------------------
 
@@ -148,6 +153,7 @@ Myelination : [1]_
 **Nodes of Ranvier:** Action potentials jump between nodes of Ranvier (gaps in the myelin sheath) through a process known as saltatory conduction. This significantly speeds up the transmission of impulses compared to continuous conduction in unmyelinated axons.
  
 .. figure:: ../media/myelination.* 
+   :alt: Myelination
 
 Diameter of Axon : [1]_
 ~~~~~~~~~~~~~~~~~~~~~~~~

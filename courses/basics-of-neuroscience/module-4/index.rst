@@ -36,6 +36,7 @@ Membrane resistance refers to resistance to the flow of ions across the neuronal
 .. note:: A high membrane resistance helps maintain the membrane's resting potential by minimizing the flow of ions across it. 
 
 .. figure:: ../media/membrane-resistance.*
+   :alt: Membrane Resistance
 
 2. Axial Resistance (Ri)
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,7 +48,8 @@ Axial resistance refers to resistance to the flow of electrical current along th
 - Cytoplasmic Conductivity: The concentration of ions and other conductive materials in the cytoplasm affects axial resistance. A higher concentration of conductive ions leads to low axial resistance.
 - Diameter of the Neuron: Larger diameter axons have lower axial resistance because a greater cross-sectional area allows for easier ion flow. This is why larger axons can conduct signals more rapidly.
 
-.. figure:: ../media/axial-resistence.*
+.. figure:: ../media/axial-resistance.*
+   :alt: Axial Resistance
 
 .. todo:: Add Axial Resistance (Ri) graphic here
 

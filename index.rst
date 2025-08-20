@@ -109,7 +109,7 @@ that you can use with our hardware.
             :link: muscle-bioamp-patchy
             :link-type: ref
             :img-top: media/muscle-bioamp-patchy.*
-            :img-alt: Muslce BioAmp Patchy
+            :img-alt: Muscle BioAmp Patchy
             :text-align: center
 
             Muscle BioAmp Patchy 
