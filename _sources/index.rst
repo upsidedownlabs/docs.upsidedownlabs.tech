@@ -13,6 +13,7 @@ Welcome to Upside Down Labs docs's documentation!
 
 .. figure:: media/banner.*
    :align: center
+   :alt: Site banner
 
 Welcome to Upside Down Labs' Docs Site!
 ****************************************
@@ -42,9 +43,10 @@ that you can use with our hardware.
             :link: neuro-play-ground-lite
             :link-type: ref
             :img-top: media/neuro-playground-lite.*
-            :img-alt:
+            :img-alt: Neuro PlayGround Lite
+            :text-align: center
 
-            Neuro Playground Lite
+            Neuro PlayGround Lite
     
     .. grid-item::
         
@@ -52,7 +54,8 @@ that you can use with our hardware.
             :link: bioamp-exg-pill
             :link-type: ref
             :img-top: media/bioamp-exg-pill.*
-            :img-alt:
+            :img-alt: BioAmp EXG Pill
+            :text-align: center
 
             BioAmp EXG Pill
 
@@ -62,7 +65,8 @@ that you can use with our hardware.
             :link: muscle-bioamp-biscute
             :link-type: ref
             :img-top: media/muscle-bioamp-biscute.*
-            :img-alt:
+            :img-alt: Muscle BioAmp Biscute
+            :text-align: center
 
             Muscle BioAmp Biscute
 
@@ -72,7 +76,8 @@ that you can use with our hardware.
             :link: muscle-bioamp-candy
             :link-type: ref
             :img-top: media/muscle-bioamp-candy.*
-            :img-alt:
+            :img-alt: Muscle BioAmp Candy
+            :text-align: center
 
             Muscle BioAmp Candy   
 
@@ -82,7 +87,8 @@ that you can use with our hardware.
             :link: bioamp-v1.5
             :link-type: ref
             :img-top: media/bioamp-v1.5.*
-            :img-alt:
+            :img-alt: BioAmp v1.5
+            :text-align: center
 
             BioAmp V1.5 
 
@@ -92,7 +98,8 @@ that you can use with our hardware.
             :link: muscle-bioamp-blip
             :link-type: ref
             :img-top: media/muscle-bioamp-blip.*
-            :img-alt:
+            :img-alt: Muscle BioAmp Blip
+            :text-align: center
 
             Muscle BioAmp Blip 
 
@@ -102,7 +109,8 @@ that you can use with our hardware.
             :link: muscle-bioamp-patchy
             :link-type: ref
             :img-top: media/muscle-bioamp-patchy.*
-            :img-alt:
+            :img-alt: Muscle BioAmp Patchy
+            :text-align: center
 
             Muscle BioAmp Patchy 
 
@@ -112,7 +120,8 @@ that you can use with our hardware.
             :link: muscle-bioamp-shield
             :link-type: ref
             :img-top: media/muscle-bioamp-shield.*
-            :img-alt:
+            :img-alt: Muscle BioAmp Shield
+            :text-align: center
 
             Muscle BioAmp Shield  
 

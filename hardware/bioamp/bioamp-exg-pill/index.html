@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Aug 20, 2025"/>
+    <meta name="docbuild:last-update" content="Aug 25, 2025"/>
   </head>
   
   
@@ -562,7 +562,7 @@
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Hardware</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../neuro-play-ground-lite/index.html">Neuro Play Ground (NPG) Lite</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../neuro-play-ground-lite/index.html">Neuro PlayGround (NPG) Lite</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../neuro-play-ground-lite/npg-lite-explorer/index.html">Neuro PlayGround Lite Explorer Pack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../neuro-play-ground-lite/npg-lite-ninja/index.html">Neuro PlayGround Lite Ninja Pack</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../neuro-play-ground-lite/npg-lite-beast/index.html">Neuro PlayGround Lite Beast Pack</a></li>
@@ -1096,6 +1096,23 @@ It is typically non-invasive, with the electrodes placed along the scalp.</p>
 <p>Similarly you can use the band to record EEG signals from the visual cortex part of brain by placing the dry electrodes on O1 and O2 instead of Fp1 and Fp2. Everything else will remain the same.</p>
 </div>
 </section>
+<section id="channel-eeg-data">
+<h4>2-Channel EEG data<a class="headerlink" href="#channel-eeg-data" title="Link to this heading">#</a></h4>
+<p>To record 2-channel Electroencephalography (EEG) data using two BioAmp EXG Pills in conjunction with an Arduino Uno R4 Minima, meticulous hardware setup is essential.</p>
+<p><strong>Required Components</strong></p>
+<ol class="arabic simple">
+<li><p>Two BioAmp EXG Pill</p></li>
+<li><p>Arduino Uno R4 minima</p></li>
+<li><p>Breadboard</p></li>
+<li><p>Jumper wires</p></li>
+<li><p>Gel electrodes</p></li>
+</ol>
+<p><strong>Hardware setup</strong></p>
+<p>To set up the hardware for 2-channel EEG recording using two BioAmp EXG Pill modules and an Arduino Uno R4 Minima, begun by connecting the Arduino’s 5V and GND pins to the power rails of a breadboard, then supply VCC and GND from the breadboard to both BioAmp EXG Pills. Connect the OUT pin of the first EXG pill to Arduino’s analog pin A0 (channel 1) and the second EXG Pill’s OUT to anolog pin A1 (channel 2). For electrodes placement, connect the IN+ of each module (red wires) to different EEG recording sites on the forehead (eg. Fp1 and Fp2), and connect IN- (black wires) and both REF pins (yellow wires) from the EXG Pills to a common reference electrode placed on a neutral location like the mastoid or earlobe to ensure clean and synchonized signal acquisition.</p>
+<figure class="align-center">
+<img alt="2 Channel EEG Connection" src="../../../_images/channel-2-eeg-connection.png" />
+</figure>
+</section>
 <section id="id10">
 <h4>Uploading the code<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
 <p>Connect Arduino Uno to your laptop using the USB cable (Type A to Type B). Copy paste the Arduino Sketch given below in Arduino IDE v1.8.19 that you downloaded earlier:</p>
@@ -1354,6 +1371,7 @@ Brain Computer Interface (BCI) projects and share them with us at <a class="refe
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-measuring-electroencephalography-eeg">Step 8: Measuring Electroencephalography (EEG)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Electrodes placement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#channel-eeg-data">2-Channel EEG data</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Uploading the code</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-eeg-signals">Visualizing the EEG signals</a></li>
 </ul>
@@ -1453,7 +1471,7 @@ Brain Computer Interface (BCI) projects and share them with us at <a class="refe
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Aug 20, 2025.
+  Last updated on Aug 25, 2025.
   <br/>
 </p></div>
       

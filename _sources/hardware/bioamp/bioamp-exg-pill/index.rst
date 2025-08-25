@@ -453,6 +453,27 @@ We have 2 options to measure the EEG signals, either using the gel electrodes or
 
 .. note:: Similarly you can use the band to record EEG signals from the visual cortex part of brain by placing the dry electrodes on O1 and O2 instead of Fp1 and Fp2. Everything else will remain the same.
 
+2-Channel EEG data 
+----------------------
+
+To record 2-channel Electroencephalography (EEG) data using two BioAmp EXG Pills in conjunction with an Arduino Uno R4 Minima, meticulous hardware setup is essential.
+
+**Required Components**
+
+1. Two BioAmp EXG Pill
+2. Arduino Uno R4 minima
+3. Breadboard
+4. Jumper wires
+5. Gel electrodes
+
+**Hardware setup**
+
+To set up the hardware for 2-channel EEG recording using two BioAmp EXG Pill modules and an Arduino Uno R4 Minima, begun by connecting the Arduino's 5V and GND pins to the power rails of a breadboard, then supply VCC and GND from the breadboard to both BioAmp EXG Pills. Connect the OUT pin of the first EXG pill to Arduino's analog pin A0 (channel 1) and the second EXG Pill's OUT to anolog pin A1 (channel 2). For electrodes placement, connect the IN+ of each module (red wires) to different EEG recording sites on the forehead (eg. Fp1 and Fp2), and connect IN- (black wires) and both REF pins (yellow wires) from the EXG Pills to a common reference electrode placed on a neutral location like the mastoid or earlobe to ensure clean and synchonized signal acquisition.
+
+.. figure:: media/channel-2-eeg-connection.*
+    :align: center
+    :alt: 2 Channel EEG Connection
+
 Uploading the code
 -----------------------
 
@@ -520,6 +541,7 @@ be used for a wide variety of interesting biosensing projects, including:
 - Real-time game controllers (EOG)
 - Blink detection (EOG)
 - Capturing photos with a blink of an eye (EOG) and many more examples. 
+
 
 Project ideas & tutorials
 ********************************
