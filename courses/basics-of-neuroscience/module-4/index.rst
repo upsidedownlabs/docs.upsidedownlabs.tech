@@ -31,9 +31,10 @@ Membrane resistance refers to resistance to the flow of ions across the neuronal
 - Ion Channels: The presence and density of ion channels directly affect membrane resistance. More channels result in lower resistance because they provide additional pathways for ions to flow.
 - Membrane Composition: The lipid bilayer structure and the types of proteins embedded in the membrane influence its overall resistance. A thicker membrane will have higher resistance.
 
-.. todo:: Add Membrane Resistance (Rm) graphic here.
-
 .. note:: A high membrane resistance helps maintain the membrane's resting potential by minimizing the flow of ions across it. 
+
+.. figure:: ../media/membrane-resistance.*
+   :alt: Membrane Resistance
 
 2. Axial Resistance (Ri)
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +46,8 @@ Axial resistance refers to resistance to the flow of electrical current along th
 - Cytoplasmic Conductivity: The concentration of ions and other conductive materials in the cytoplasm affects axial resistance. A higher concentration of conductive ions leads to low axial resistance.
 - Diameter of the Neuron: Larger diameter axons have lower axial resistance because a greater cross-sectional area allows for easier ion flow. This is why larger axons can conduct signals more rapidly.
 
-.. todo:: Add Axial Resistance (Ri) graphic here
+.. figure:: ../media/axial-resistance.*
+   :alt: Axial Resistance
 
 .. note:: Axial resistance affects how far a signal can travel along an axon without significant potential loss. Lower axial resistance allows signals to travel farther and faster.
 
@@ -56,6 +58,7 @@ Axial resistance refers to resistance to the flow of electrical current along th
    It is the ease with which electric current can flow through a membrane. In the context of neurons, it refers to the ease with which ions can move across the neuronal membrane, meaning a higher conductance indicates a lower resistance, allowing for easier passage of electrical signals through the neuron. 
 
 .. todo:: ADD CONDUCTANCE FORMULA
+
 
 4.1.2 Capacitance:
 ==================

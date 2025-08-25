@@ -20,7 +20,7 @@ You can find the complete documentations for different hardwares by clicking the
       :margin: 4 4 0 0 
       :gutter: 2
 
-      .. grid-item-card:: Neuro Play Ground (NPG) Lite
+      .. grid-item-card:: Neuro PlayGround (NPG) Lite
          :text-align: center
          :link: neuro-play-ground-lite
          :link-type: ref
