@@ -645,8 +645,10 @@ The **EOG Morse Decoder** is a Python-based application that enables users to in
    :align: center
    :alt: Morse Decoder
 
-Features 
---------
+   Morse Decoder
+
+Features
+========
 
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 | Features                                                              | Description                                                                                                               |
@@ -654,8 +656,8 @@ Features
 | 1. Real-Time EOG Signal Processing                                    | - Connects to an LSL stream to acquire real-time EOG data.                                                                |
 |                                                                       | - Applies notch and bandpass filters to remove noise and isolate eye movement signals.                                    |
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-| 2. Eye Movement Detection                                             | - Detects left and right eye movements by analyzing deviations from a dynamically calculated baseline.                     |
-|                                                                       | - Uses adjustable thresholds and sample counts for robust movement detection.                                              |
+| 2. Eye Movement Detection                                             | - Detects left and right eye movements by analyzing deviations from a dynamically calculated baseline.                    |
+|                                                                       | - Uses adjustable thresholds and sample counts for robust movement detection.                                             |
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 | 3. Morse Code Input                                                   | - Right eye movement generates a dot (.)                                                                                  |
 |                                                                       | - Left eye movement generates a dash (-)                                                                                  |
@@ -664,9 +666,11 @@ Features
 | 4. GUI Feedback                                                       | - Displays the decoded word in a large, clear font using a Tkinter GUI.                                                   |
 |                                                                       | - Updates the display in real time as you input Morse code.                                                               |
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
-| 5. Adjustable Parameters                                              | - Allows users to fine-tune detection sensitivity for their physiology and setup.                                         |
-|                                                                       | - Parameters include baseline sample count, deviation threshold, movement sample count, and cooldown period.               |
+| 5. Adjustable Parameters                                              | - Allows users to fine-tune detection sensitivity for their neural signals and setup.                                     |
+|                                                                       | - Parameters include baseline sample count, deviation threshold, movement sample count, and cooldown period.              |
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+
+A GUI window will appear that allows you to input Morse code using eye movements and displays the decoded text in real-time.
 
 How It Works
 ------------
