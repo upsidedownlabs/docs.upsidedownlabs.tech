@@ -633,6 +633,84 @@ A small pop-up will appear, providing options to load the file, select the chann
 
    CSV Plotter
 
+10. `EOG Morse Decoder`
+=======================
+
+Overview
+--------
+
+The **EOG Morse Decoder** is a Python-based application that enables users to input Morse code using eye movements detected via Electrooculography (EOG) signals. By moving your eyes left or right, you can generate dots and dashes, and by performing a double blink, you can convert the Morse sequence into alphanumeric characters. This application is ideal for hands-free communication and accessibility research.
+
+.. figure:: ./media/morse-decoder.*
+   :align: center
+   :alt: Morse Decoder
+
+Features 
+--------
+
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| Features                                                              | Description                                                                                                               |
++=======================================================================+===========================================================================================================================+
+| 1. Real-Time EOG Signal Processing                                    | - Connects to an LSL stream to acquire real-time EOG data.                                                                |
+|                                                                       | - Applies notch and bandpass filters to remove noise and isolate eye movement signals.                                    |
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| 2. Eye Movement Detection                                             | - Detects left and right eye movements by analyzing deviations from a dynamically calculated baseline.                     |
+|                                                                       | - Uses adjustable thresholds and sample counts for robust movement detection.                                              |
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| 3. Morse Code Input                                                   | - Right eye movement generates a dot (.)                                                                                  |
+|                                                                       | - Left eye movement generates a dash (-)                                                                                  |
+|                                                                       | - Double blink triggers decoding of the current Morse sequence into a character.                                          |
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| 4. GUI Feedback                                                       | - Displays the decoded word in a large, clear font using a Tkinter GUI.                                                   |
+|                                                                       | - Updates the display in real time as you input Morse code.                                                               |
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| 5. Adjustable Parameters                                              | - Allows users to fine-tune detection sensitivity for their physiology and setup.                                         |
+|                                                                       | - Parameters include baseline sample count, deviation threshold, movement sample count, and cooldown period.               |
++-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+
+How It Works
+------------
+
+- **Signal Acquisition**: The application connects to an LSL stream and continuously reads EOG data.
+- **Filtering**: Notch and bandpass filters are applied to remove powerline interference and isolate relevant frequencies.
+- **Baseline Calculation**: During startup, the system calculates a baseline and standard deviation from your neutral eye position.
+- **Movement Detection**: Each new sample is compared to the baseline. Significant deviations are classified as left or right movements.
+- **Morse Code Input**: 
+  - Right movement → Dot (.)
+  - Left movement → Dash (-)
+  - Double blink → Decodes the current Morse sequence into a character and appends it to the output.
+- **GUI Display**: The decoded word is shown in a Tkinter window for easy reading.
+
+Adjusting Detection for Your Neuro Signals
+---------------------------------------
+
+If you find left or right movements are not detected accurately, you can adjust the following parameters in `chordspy/morse_decoder.py`:
+
+- **DEVIATION_SIGMA**: Controls sensitivity. Lower values make detection more sensitive; higher values reduce false positives.
+- **MIN_MOVEMENT_SAMPLES**: Number of consecutive samples required to confirm a movement. Increase for more robust detection.
+- **BASELINE_SAMPLES**: Number of samples used to calculate the baseline. Ensure you are relaxed and looking straight ahead during this period.
+- **COOLDOWN_SAMPLES**: Number of samples to wait before detecting another movement.
+
+Example (in the code):
+
+   self.BASELINE_SAMPLES = 125      # Number of samples for baseline calculation
+   self.DEVIATION_SIGMA = 6        # Sensitivity threshold (increase for stricter detection)
+   self.MIN_MOVEMENT_SAMPLES = 40  # Samples required for movement detection
+   self.COOLDOWN_SAMPLES = 30      # Cooldown period between movements
+
+**Tip:**  
+If left movements are sometimes detected as right, try increasing `DEVIATION_SIGMA` or `MIN_MOVEMENT_SAMPLES`. You can also add debug print statements to monitor the deviation and threshold values during operation.
+
+
+Troubleshooting
+---------------
+
+- If movements are not detected reliably, adjust the parameters as described above.
+- Ensure electrodes are placed correctly and the signal is clean.
+- Remain relaxed and look straight ahead during baseline calculation.
+- Use the debug print statements to monitor signal deviations and thresholds.
+
+
 Create Custom application
 **************************
 
