@@ -102,7 +102,9 @@ Installation
     sudo apt --fix-broken install  
   
   3. Launch **Chords LSL Visualizer**
-    
+
+  .. code:: 
+   
     chords-lsl-visualizer
 
 .. dropdown:: **macOS (.dmg)**  
