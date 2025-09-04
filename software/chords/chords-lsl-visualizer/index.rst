@@ -115,8 +115,8 @@ Installation
 
   ``click **Open**``
 
-  3. Drag **Chords LSL Visualizer.app** into your **Applications** folder.  
-  4. Eject the mounted image and open the app from **Applications**.
+  4. Drag **Chords LSL Visualizer.app** into your **Applications** folder.  
+  5. Eject the mounted image and open the app from **Applications**.
 
 
 4. (Optional) Build from source 
