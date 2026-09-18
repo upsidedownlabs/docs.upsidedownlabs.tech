@@ -20,7 +20,7 @@ Requirements
 ************
 
 - A modern Chromium, Firefox, or Safari based browser (no installation or build step required).
-- A time-series CSV file, such as EEG, EMG, ECG, EOG, or IMU data.
+- A time-series CSV file, such as EEG, EMG, ECG, EOG, or any sensor data.
 
 .. tip::
 
