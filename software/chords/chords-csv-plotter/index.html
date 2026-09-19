@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chords CSV Plotter &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/chords/chords-csv-plotter/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/chords/chords-csv-plotter/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NPG Lite Flasher" href="../../tools/npg-lite-flasher/index.html" />
+    <link rel="prev" title="Chords-Java" href="../chords-java/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 19, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-python/index.html">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Chords CSV Plotter</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="chords-csv-plotter">
+<span id="id1"></span><h1>Chords CSV Plotter<a class="headerlink" href="#chords-csv-plotter" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/b9qSuuJwDvE" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Chords CSV Plotter is a free, browser-based tool for visualizing and analysing <strong>time-series CSV data</strong>. It is designed to help you view recordings exported from Chords directly in your browser, without installing any extra software. Everything runs client-side, so your data never leaves your computer, making it a quick way to explore biopotential signals such as EEG, EMG, ECG, EOG, or any other numeric CSV recording, including IMU and vibration data.</p>
+<figure class="align-center" id="id3">
+<img alt="Chords CSV Plotter Overview" src="../../../_images/overview.png" />
+<figcaption>
+<p><span class="caption-text">Chords CSV Plotter Overview</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A modern Chromium, Firefox, or Safari based browser (no installation or build step required).</p></li>
+<li><p>A time-series CSV file, such as EEG, EMG, ECG, EOG, or any sensor data.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don’t already have a CSV recording, learn how to record and export data using <a class="reference internal" href="../chords-web/index.html#chords"><span class="std std-ref">Chords-Web</span></a> in this tutorial: <a class="reference external" href="https://www.youtube.com/watch?v=cbAZcs6EuHI&amp;t=79s">Recording data with Chords</a>.</p>
+</div>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>CSV Upload</strong></p></td>
+<td><p>Upload or drag and drop a time-series CSV recording directly into the browser.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Multi-Channel Plotting</strong></p></td>
+<td><p>Plot multiple numeric channels together and choose which ones to display from the channel list.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Minimap Navigation</strong></p></td>
+<td><p>Move and resize the minimap window to quickly navigate long recordings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sampling Rate</strong></p></td>
+<td><p>Enter a sample rate to display <strong>time</strong> instead of sample index on the horizontal axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Vertical Scale</strong></p></td>
+<td><p>Adjust the vertical scale to make signals easier to read and compare.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>FFT Viewer</strong></p></td>
+<td><p>View the frequency content of the visible signal, useful for EEG, EMG, ECG, and other time-series data.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Resizable Layout</strong></p></td>
+<td><p>Drag panel borders to resize the plot and FFT Viewer for more workspace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Light / Dark Theme</strong></p></td>
+<td><p>Switch between light and dark mode for comfortable viewing.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="running-the-application">
+<h2>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h2>
+<p>Open <a class="reference external" href="https://upsidedownlabs.github.io/Chords-CSV-Plotter/">Chords CSV Plotter</a> in your web browser. The first time you upload a CSV file, the tool shows a short interactive tour explaining the main features.</p>
+<section id="uploading-your-csv-file">
+<h3>Uploading Your CSV File<a class="headerlink" href="#uploading-your-csv-file" title="Link to this heading">#</a></h3>
+<p>Click <strong>Upload CSV</strong> and choose your time-series CSV file, or drag and drop it anywhere on the page. Once the file is uploaded, the tool loads your data and prepares it for visualization.</p>
+<figure class="align-center" id="id4">
+<img alt="Upload CSV" src="../../../_images/upload-csv.png" />
+<figcaption>
+<p><span class="caption-text">Upload CSV</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="viewing-the-channel-list">
+<h3>Viewing the Channel List<a class="headerlink" href="#viewing-the-channel-list" title="Link to this heading">#</a></h3>
+<p>Click the channel list icon in the top-left corner to open the channel panel and see all the channels available in your recording.</p>
+<figure class="align-center" id="id5">
+<img alt="Channel List" src="../../../_images/channel-list.png" />
+<figcaption>
+<p><span class="caption-text">Channel List</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="selecting-channels">
+<h3>Selecting Channels<a class="headerlink" href="#selecting-channels" title="Link to this heading">#</a></h3>
+<p>Choose the channels you want to view from the channel list. As soon as you select a channel, its signal appears on the graph, and you can display one or multiple channels at the same time.</p>
+<figure class="align-center" id="id6">
+<img alt="Select Channels" src="../../../_images/select-channels.png" />
+<figcaption>
+<p><span class="caption-text">Select Channels</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="setting-the-sampling-rate">
+<h3>Setting the Sampling Rate<a class="headerlink" href="#setting-the-sampling-rate" title="Link to this heading">#</a></h3>
+<p>Enter the sampling rate of your recording in the <strong>Sample Rate (Hz)</strong> field. This step is optional but recommended: it changes the horizontal axis from sample numbers to <strong>time</strong>, making it easier to understand when events occurred during the recording.</p>
+<figure class="align-center" id="id7">
+<img alt="Set Sampling Rate" src="../../../_images/sampling-rate.png" />
+<figcaption>
+<p><span class="caption-text">Set Sampling Rate</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="adjusting-the-vertical-scale">
+<h3>Adjusting the Vertical Scale<a class="headerlink" href="#adjusting-the-vertical-scale" title="Link to this heading">#</a></h3>
+<p>Use the <strong>Scale</strong> control to zoom the signal amplitude in or out, making the waveform easier to read and compare across channels.</p>
+<figure class="align-center" id="id8">
+<img alt="Adjust Vertical Scale" src="../../../_images/zoom.png" />
+<figcaption>
+<p><span class="caption-text">Adjust Vertical Scale</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="navigating-with-the-minimap">
+<h3>Navigating with the Minimap<a class="headerlink" href="#navigating-with-the-minimap" title="Link to this heading">#</a></h3>
+<p>Drag the minimap window to move through the recording, or drag its edges to zoom into a specific time range. You can also click anywhere on the minimap to jump directly to that point.</p>
+<figure class="align-center" id="id9">
+<img alt="Minimap Slider" src="../../../_images/minimap-slider.png" />
+<figcaption>
+<p><span class="caption-text">Minimap Slider</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="using-the-fft-viewer">
+<h3>Using the FFT Viewer<a class="headerlink" href="#using-the-fft-viewer" title="Link to this heading">#</a></h3>
+<p>Click <strong>FFT</strong> to open the Frequency Viewer and see the frequencies present in the visible part of your signal. This is useful for analysing signals such as EEG, EMG, ECG, IMU and vibration data, and other time-series recordings.</p>
+<figure class="align-center" id="id10">
+<img alt="FFT Button" src="../../../_images/fft-button.png" />
+<figcaption>
+<p><span class="caption-text">FFT Button</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="resizing-the-workspace">
+<h3>Resizing the Workspace<a class="headerlink" href="#resizing-the-workspace" title="Link to this heading">#</a></h3>
+<p>Drag the panel border between the plot and the FFT Viewer to resize the workspace, giving more room to whichever view you need.</p>
+<figure class="align-center" id="id11">
+<img alt="Adjust FFT Panel Size" src="../../../_images/adjust-fft-panel-size.png" />
+<figcaption>
+<p><span class="caption-text">Adjust FFT Panel Size</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="switching-the-theme">
+<h3>Switching the Theme<a class="headerlink" href="#switching-the-theme" title="Link to this heading">#</a></h3>
+<p>Click the theme toggle button to switch between <strong>Light Mode</strong> and <strong>Dark Mode</strong>, and choose whichever is most comfortable for you.</p>
+<figure class="align-center" id="id12">
+<img alt="Toggle Theme" src="../../../_images/toggle-theme-button.png" />
+<figcaption>
+<p><span class="caption-text">Toggle Theme</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="technologies-used">
+<h2>Technologies Used<a class="headerlink" href="#technologies-used" title="Link to this heading">#</a></h2>
+<p>Chords CSV Plotter is built with plain <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>vanilla JavaScript</strong>, using the HTML5 <strong>Canvas API</strong> to render the plot, minimap, and FFT views. It has no external framework or plotting library dependencies, so it loads instantly and works entirely in the browser.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chords-java/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chords-Java</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../tools/npg-lite-flasher/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NPG Lite Flasher</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-your-csv-file">Uploading Your CSV File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-channel-list">Viewing the Channel List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-channels">Selecting Channels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-sampling-rate">Setting the Sampling Rate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adjusting-the-vertical-scale">Adjusting the Vertical Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating-with-the-minimap">Navigating with the Minimap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-fft-viewer">Using the FFT Viewer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resizing-the-workspace">Resizing the Workspace</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switching-the-theme">Switching the Theme</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">Technologies Used</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/chords/chords-csv-plotter/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/chords/chords-csv-plotter/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Sep 19, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -41,6 +41,11 @@ Chords Software Suite
          :link: chords-java
          :link-type: ref
 
+      .. grid-item-card:: Chords CSV Plotter
+         :text-align: center
+         :link: chords-csv-plotter
+         :link-type: ref
+
 Tools
 ============================
 
@@ -96,6 +101,7 @@ BioAmp Firmware
    chords/chords-lsl-connector/index
    chords/chords-lsl-visualizer/index
    chords/chords-java/index
+   chords/chords-csv-plotter/index
 
 
 .. toctree::
