@@ -6,7 +6,7 @@ BioAmp Filter Designer
 Overview
 ********
 
-BioAmp Filter Designer is a Python-based desktop tool that generates ready-to-use digital filters for biomedical signal processing applications such as ECG, EMG, EOG and EEG, for example when working with :ref:`BioAmp Hardware <upsidedownlabs_hardware_home>`. Pick a filter type, sampling rate, order and cutoff frequencies, choose a programming language, and the tool writes a complete Butterworth IIR filter class for you, along with an optional frequency response plot.
+BioAmp Filter Designer is a Python-based desktop tool that generates ready-to-use digital filters for bio-potential signal processing applications such as ECG, EMG, EOG and EEG, for example when working with :ref:`BioAmp Hardware <upsidedownlabs_hardware_home>`. Pick a filter type, sampling rate, order and cutoff frequencies, choose a programming language, and the tool writes a complete Butterworth IIR filter class for you, along with an optional frequency response plot.
 
 The generated filter is implemented as cascaded second-order sections (biquads) and comes as a class with ``process()`` and ``reset()`` methods, so you can create one object per channel for multi-channel signals.
 
@@ -228,3 +228,8 @@ The code ends with commented-out usage examples for single-channel and multi-cha
     :alt: Generate Filter button outlined in red, with the generated C++ filter code shown in the right panel and status messages below the button
 
     Generate the Filter
+
+Reference
+*********
+
+The filters are Butterworth IIR filters designed with SciPy: `scipy.signal.butter <https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.butter.html>`_.
