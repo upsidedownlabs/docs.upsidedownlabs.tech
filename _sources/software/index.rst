@@ -61,6 +61,11 @@ Tools
          :link: npg-lite-flasher
          :link-type: ref
 
+      .. grid-item-card:: BioAmp Filter Designer
+         :text-align: center
+         :link: bioamp-filter-designer
+         :link-type: ref
+
 BioAmp Firmware
 ============================
 
@@ -110,7 +115,8 @@ BioAmp Firmware
    :caption: Tools
 
    tools/npg-lite-flasher/index
-   
+   tools/bioamp-filter-designer/index
+
 .. toctree::
    :hidden:
    :maxdepth: 1
