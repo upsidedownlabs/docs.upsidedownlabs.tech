@@ -1,0 +1,1174 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NPG Lite Cardio &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/applications/npg-lite-cardio/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/applications/npg-lite-cardio/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NPG Lite Flasher" href="../../tools/npg-lite-flasher/index.html" />
+    <link rel="prev" title="Chords CSV Plotter" href="../../chords/chords-csv-plotter/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 22, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-python/index.html">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-csv-plotter/index.html">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NPG Lite Cardio</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/bioamp-filter-designer/index.html">BioAmp Filter Designer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NPG Lite Cardio</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="npg-lite-cardio">
+<span id="id1"></span><h1>NPG Lite Cardio<a class="headerlink" href="#npg-lite-cardio" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/NRavSISQbBA" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>NPG Lite Cardio is a web-based ECG monitor for <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a>. It shows a live ECG waveform and your heart rate (BPM) in real time, and lets you record, replay and export ECG sessions as CSV, all in the browser with nothing to install.</p>
+<p>It works on Windows, Mac, Linux and Android in any Chromium-based browser, and on iOS with a BLE-enabled browser such as Bluefy. Open the app at <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Cardio/">upsidedownlabs.github.io/NPG-Lite-Cardio</a>.</p>
+<p>For a step-by-step tutorial, see <a class="reference external" href="https://www.instructables.com/Monitor-ECG-Anywhere/">Monitor ECG Anywhere</a> on Instructables.</p>
+<figure class="align-center" id="id4">
+<img alt="NPG-Lite Cardio running on a phone and a laptop, each showing a live ECG waveform and heart rate" src="../../../_images/overview.gif" />
+<figcaption>
+<p><span class="caption-text">NPG Lite Cardio on a phone and a laptop</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Real-time ECG</strong></p></td>
+<td><p>Live ECG display at 500 Hz, rendered with WebGL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Heart Rate</strong></p></td>
+<td><p>BPM readout with beat detection using the Pan-Tompkins algorithm.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Signal Quality Detection</strong></p></td>
+<td><p>Ignores noise and floating leads, so the heart rate only shows when there is a clear signal.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>DC Filter</strong></p></td>
+<td><p>Toggle a DC filter to remove baseline wander.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>R-Peak Markers</strong></p></td>
+<td><p>Marks the R-peaks on the waveform. Toggle the button to show or hide them.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Recording</strong></p></td>
+<td><p>Record ECG sessions and save them to the browser storage.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Recordings Manager</strong></p></td>
+<td><p>Play back, rename, download (CSV) or delete recordings, and use the minimap to move through long ones.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Light and Dark Theme</strong></p></td>
+<td><p>Switch between light and dark mode.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Fullscreen Mode</strong></p></td>
+<td><p>Expand the ECG to the full screen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>3CH and 6CH Support</strong></p></td>
+<td><p>Works with both the 3CH and 6CH NPG-Lite firmware variants.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="what-is-an-ecg">
+<h2>What is an ECG?<a class="headerlink" href="#what-is-an-ecg" title="Link to this heading">#</a></h2>
+<p>ECG stands for electrocardiogram. It records the electrical activity of your heart. Every heartbeat creates an electrical signal, and this signal appears as a repeating waveform on the screen:</p>
+<ul class="simple">
+<li><p><strong>P wave</strong>: the upper chambers of the heart contract.</p></li>
+<li><p><strong>QRS complex</strong>: the large spike that shows the main heartbeat.</p></li>
+<li><p><strong>T wave</strong>: the heart relaxes before the next beat.</p></li>
+</ul>
+<figure class="align-center" id="id5">
+<img alt="ECG waveform with the P wave, the Q, R and S points of the QRS complex, and the T wave labeled" src="../../../_images/ecg-wave.png" />
+<figcaption>
+<p><span class="caption-text">ECG Waveform</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a> (<a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-explorer/index.html#npg-lite-explorer"><span class="std std-ref">Explorer</span></a>, <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-ninja/index.html#npg-lite-ninja"><span class="std std-ref">Ninja</span></a> or <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-beast/index.html#npg-lite-beast"><span class="std std-ref">Beast</span></a> pack)</p></li>
+<li><p>3 BioAmp snap cables</p></li>
+<li><p>Gel electrodes</p></li>
+<li><p>NuPrep skin preparation gel or alcohol swabs</p></li>
+<li><p>USB Type-C cable</p></li>
+<li><p>Phone or laptop with Bluetooth</p></li>
+</ul>
+</section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Any Chromium-based browser: <strong>Chrome, Edge, Brave, Opera, Vivaldi</strong>, etc. Firefox does not support Web Bluetooth. On iOS, use a BLE-enabled browser such as <strong>Bluefy</strong>.</p></li>
+<li><p>NPG-Lite-BLE firmware flashed on the device, using <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> desktop app.</p></li>
+</ul>
+</section>
+<section id="setting-up-the-hardware">
+<h2>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<section id="flashing-the-firmware">
+<h3>Flashing the firmware<a class="headerlink" href="#flashing-the-firmware" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Turn on your NPG Lite using the power switch and make sure the battery is connected correctly.</p></li>
+<li><p>Connect the NPG Lite to your computer with the USB Type-C cable.</p></li>
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> in your browser.</p></li>
+<li><p>Click <strong>Connect</strong> and select the USB device named <strong>USB JTAG</strong>.</p></li>
+<li><p>Select the <strong>NPG Lite BLE</strong> firmware and click <strong>Flash</strong>.</p></li>
+<li><p>Wait a few seconds while the firmware is uploaded, then disconnect the USB cable.</p></li>
+</ol>
+<p>Your NPG Lite is now ready to work wirelessly. Just make sure the battery is connected and sufficiently charged before using the ECG monitor.</p>
+</section>
+<section id="preparing-your-skin">
+<h3>Preparing your skin<a class="headerlink" href="#preparing-your-skin" title="Link to this heading">#</a></h3>
+<p>Good skin preparation improves electrode contact and gives a much cleaner ECG signal.</p>
+<ol class="arabic simple">
+<li><p>Clean the areas where the electrodes will go with an alcohol swab or wet wipe.</p></li>
+<li><p>For an even better signal, you can first apply a small amount of NuPrep skin preparation gel and then clean the skin.</p></li>
+<li><p>Let the skin dry before placing the electrodes.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more details, see <a class="reference internal" href="../../../guides/usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation</span></a> and <a class="reference internal" href="../../../guides/usage-guides/using-gel-electrodes/index.html#using-gel-electrodes"><span class="std std-ref">Using Gel Electrodes</span></a>.</p>
+</div>
+</section>
+<section id="placing-the-electrodes">
+<h3>Placing the electrodes<a class="headerlink" href="#placing-the-electrodes" title="Link to this heading">#</a></h3>
+<p>Connect the snap cables to the gel electrodes and peel off the plastic backing. Then use one of the two placements below.</p>
+<section id="placement-1-chest-ecg">
+<h4>Placement 1: Chest (ECG)<a class="headerlink" href="#placement-1-chest-ecg" title="Link to this heading">#</a></h4>
+<p>This placement generally gives cleaner recordings.</p>
+<ol class="arabic simple">
+<li><p>Place the negative (black) electrode on the left side of your chest, just below the collarbone.</p></li>
+<li><p>Place the positive (red) electrode slightly to its right, leaving a small gap between them.</p></li>
+<li><p>Place the reference (yellow) electrode on the right side of your chest.</p></li>
+</ol>
+<figure class="align-center" id="id6">
+<img alt="Chest electrode placement diagram: the yellow reference, red positive and black negative cables run from the NPG Lite connector to three electrodes on the chest" src="../../../_images/ecg-placement.png" />
+<figcaption>
+<p><span class="caption-text">Chest (ECG) Electrode Placement</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="placement-2-wrists-ekg">
+<h4>Placement 2: Wrists (EKG)<a class="headerlink" href="#placement-2-wrists-ekg" title="Link to this heading">#</a></h4>
+<p>This placement is more convenient for quick demonstrations.</p>
+<ol class="arabic simple">
+<li><p>Place the negative (black) electrode on your left wrist.</p></li>
+<li><p>Place the positive (red) electrode on your right wrist.</p></li>
+<li><p>Place the reference (yellow) electrode on the back of your hand, on the same arm as the negative electrode, as shown in the diagram.</p></li>
+</ol>
+<figure class="align-center" id="id7">
+<img alt="Wrist electrode placement diagram: the red positive cable goes to one wrist, the black negative cable to the other wrist, and the yellow reference cable to the back of the hand" src="../../../_images/ekg-placement.png" />
+<figcaption>
+<p><span class="caption-text">Wrist (EKG) Electrode Placement</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="connecting-the-snap-cables-to-the-npg-lite">
+<h3>Connecting the snap cables to the NPG Lite<a class="headerlink" href="#connecting-the-snap-cables-to-the-npg-lite" title="Link to this heading">#</a></h3>
+<p>Connect the other ends of the snap cables to the NPG Lite as shown in both diagrams:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Cable</strong></p></th>
+<th class="head"><p><strong>Chest placement</strong></p></th>
+<th class="head"><p><strong>Wrist placement</strong></p></th>
+<th class="head"><p><strong>NPG Lite pin</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Negative (black)</p></td>
+<td><p>Left chest</p></td>
+<td><p>Left wrist</p></td>
+<td><p><strong>A0N</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Positive (red)</p></td>
+<td><p>Middle chest</p></td>
+<td><p>Right wrist</p></td>
+<td><p><strong>A0P</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Reference (yellow)</p></td>
+<td><p>Right chest</p></td>
+<td><p>Back of the hand</p></td>
+<td><p><strong>REF</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="connecting-to-npg-lite-cardio">
+<h2>Connecting to NPG Lite Cardio<a class="headerlink" href="#connecting-to-npg-lite-cardio" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Turn on NPG Lite by flipping the switch on it. Make sure it is not connected to a charger.</p></li>
+<li><p>Make sure the device is charged. The 6th NeoPixel shows the battery level: green above 70%, orange between 20 and 70%, red below 20%.</p></li>
+<li><p>Make sure Bluetooth is enabled on your phone or laptop. Do not pair or connect to NPG Lite from your system Bluetooth settings, only connect through the browser.</p></li>
+<li><p>Sit at least 1 m away from any AC appliance (fans, chargers, monitors, etc.) to avoid interference.</p></li>
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Cardio/">NPG Lite Cardio</a> in a Chromium-based browser, then click the <strong>Connect</strong> button (Bluetooth icon) at the bottom center.</p></li>
+</ol>
+<figure class="align-center" id="id8">
+<img alt="The red Connect button at the bottom center of the app, with its Connect tooltip" src="../../../_images/connect.png" />
+<figcaption>
+<p><span class="caption-text">Connect</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Select your NPG Lite from the browser popup and click <strong>Pair</strong>.</p></li>
+</ol>
+<figure class="align-center" id="id9">
+<img alt="Browser Bluetooth popup listing an NPG-Lite device with the Pair button" src="../../../_images/select-npg.png" />
+<figcaption>
+<p><span class="caption-text">Select your NPG Lite and click Pair</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>The ECG starts streaming automatically. Within a few seconds you will see the live waveform and your heart rate.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Brave disables Web Bluetooth by default. Open <code class="docutils literal notranslate"><span class="pre">brave://flags</span></code>, search for “bluetooth”, set <strong>Web Bluetooth API</strong> to <strong>Enabled</strong>, then relaunch the browser.</p>
+</div>
+<figure class="align-center" id="id10">
+<img alt="Brave flags page with the Web Bluetooth API dropdown open and Enabled highlighted" src="../../../_images/bluetooth-api.png" />
+<figcaption>
+<p><span class="caption-text">Enable Web Bluetooth in Brave</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="using-the-application">
+<h2>Using the application<a class="headerlink" href="#using-the-application" title="Link to this heading">#</a></h2>
+<p>Once connected you will see:</p>
+<ul class="simple">
+<li><p>The live ECG waveform, showing the last 4 seconds at 500 Hz.</p></li>
+<li><p>Your heart rate in BPM at the top center. It updates every second, and shows <code class="docutils literal notranslate"><span class="pre">--</span> <span class="pre">BPM</span></code> when there is no clear, regular heartbeat (for example with loose electrodes) or when the rate is outside 40 to 120 BPM.</p></li>
+<li><p>A heart icon that beats with every detected heartbeat.</p></li>
+<li><p>Red markers on the R-peaks of the waveform.</p></li>
+</ul>
+<figure class="align-center" id="id11">
+<img alt="Live ECG waveform with a heart rate of 68 BPM and red markers on the R-peaks" src="../../../_images/ecg-streaming.png" />
+<figcaption>
+<p><span class="caption-text">Live ECG</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="controls">
+<h3>Controls<a class="headerlink" href="#controls" title="Link to this heading">#</a></h3>
+<p>The buttons in the top right corner, from left to right:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Button</strong></p></th>
+<th class="head"><p><strong>What it does</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Info (i)</strong></p></td>
+<td><p>Opens a small panel with the scale of the display: the display window (4 s), the size of a large box (0.20 s) and a small box (0.040 s) of the grid, the sample rate (500 Hz), and the signal filters (50 Hz notch, 30 Hz ECG low-pass and 0.5 Hz DC removal). The DC removal filter is optional: it is applied by default and can be turned off by clicking the <strong>DC filter</strong> button at the bottom.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Fullscreen</strong></p></td>
+<td><p>Toggles fullscreen mode. Press <code class="docutils literal notranslate"><span class="pre">Esc</span></code> to exit. On phones it also switches to landscape.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Theme</strong></p></td>
+<td><p>Switches between light and dark mode. Your choice is remembered.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Disconnect</strong></p></td>
+<td><p>Disconnects the NPG Lite. It stays disabled until a device is connected.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="align-center" id="id12">
+<img alt="The theme button highlighted while the app is in light mode" src="../../../_images/theme-toggle.png" />
+<figcaption>
+<p><span class="caption-text">Theme Button</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="The disconnect button highlighted at the top right while the app is in fullscreen" src="../../../_images/disconnect.png" />
+<figcaption>
+<p><span class="caption-text">Disconnect Button</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The buttons at the bottom, from left to right:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Button</strong></p></th>
+<th class="head"><p><strong>What it does</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Recordings</strong></p></td>
+<td><p>Opens the list of your recordings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Record</strong></p></td>
+<td><p>Starts and stops a recording.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Connect / Pause / Play</strong></p></td>
+<td><p>The large center button. It connects to your NPG Lite. Once connected it becomes <strong>Pause</strong>, which pauses the display while staying connected, and <strong>Play</strong> resumes the live stream.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Peaks</strong></p></td>
+<td><p>Shows or hides the R-peak markers.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>DC filter</strong></p></td>
+<td><p>Turns the DC filter on or off. It is on by default and removes slow baseline drift. The icon changes when the filter is off.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="align-center" id="id14">
+<img alt="The Peaks button highlighted with its Hide peaks tooltip" src="../../../_images/hide-peaks.png" />
+<figcaption>
+<p><span class="caption-text">Peaks Button</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="if-the-ecg-looks-upside-down">
+<h3>If the ECG looks upside down<a class="headerlink" href="#if-the-ecg-looks-upside-down" title="Link to this heading">#</a></h3>
+<p>If your ECG waveform is inverted, swap the positive (red) and negative (black) electrodes. The waveform immediately appears in the correct orientation.</p>
+</section>
+<section id="recording-your-ecg">
+<h3>Recording your ECG<a class="headerlink" href="#recording-your-ecg" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Click <strong>Record</strong> (red dot) to start recording.</p></li>
+<li><p>A timer at the bottom shows how long you have been recording.</p></li>
+<li><p>Recordings must be at least 12 seconds long. The button stays locked for the first 12 seconds, and shorter recordings are discarded.</p></li>
+<li><p>Click the button again to stop. The recording is saved in your browser and named <code class="docutils literal notranslate"><span class="pre">ECG-YYYYMMDD-HHMMSS.csv</span></code>.</p></li>
+</ol>
+<figure class="align-center" id="id15">
+<img alt="Recording in progress with the red timer showing 00:00:05 and the stop button active" src="../../../_images/record.png" />
+<figcaption>
+<p><span class="caption-text">Recording</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="viewing-your-recordings">
+<h3>Viewing your recordings<a class="headerlink" href="#viewing-your-recordings" title="Link to this heading">#</a></h3>
+<p>Click <strong>Recordings</strong> to open the list. For each recording you can:</p>
+<ul class="simple">
+<li><p>Click the name to <strong>rename</strong> it, then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p></li>
+<li><p>Click the <strong>eye</strong> icon to open it in the viewer.</p></li>
+<li><p>Click the <strong>download</strong> icon to save it as a CSV file.</p></li>
+<li><p>Click the <strong>trash</strong> icon to delete it.</p></li>
+</ul>
+<figure class="align-center" id="id16">
+<img alt="The recordings list open with the view, download and delete buttons next to a saved recording" src="../../../_images/recordings.png" />
+<figcaption>
+<p><span class="caption-text">Recordings List</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The viewer replays a saved recording. The header shows its name, length and number of samples, with buttons to download it or close the viewer. To move through the recording:</p>
+<ul class="simple">
+<li><p>Drag the highlighted window on the minimap at the bottom, or click anywhere on the minimap to jump there.</p></li>
+<li><p>Use the left and right arrow keys, the mouse wheel or trackpad, or swipe on a touch screen.</p></li>
+</ul>
+<p>Click the <strong>Play</strong> button at the bottom center, or the close button in the header, to return to the live view.</p>
+<figure class="align-center" id="id17">
+<img alt="Recording viewer with the file name in the header and the minimap at the bottom" src="../../../_images/vizualize-recording.png" />
+<figcaption>
+<p><span class="caption-text">Recording Viewer</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="saving-your-data">
+<h3>Saving your data<a class="headerlink" href="#saving-your-data" title="Link to this heading">#</a></h3>
+<p>Recordings are stored in your browser, and clearing your browser’s site data deletes them. Download anything you want to keep as a CSV file. The file has two columns: <code class="docutils literal notranslate"><span class="pre">Sample</span> <span class="pre">Counter</span></code> and <code class="docutils literal notranslate"><span class="pre">CH0</span></code>, the filtered ECG signal sampled at 500 Hz.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The minimum recording length is 12 seconds. If the device goes out of range, it disconnects on its own.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../chords/chords-csv-plotter/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chords CSV Plotter</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../tools/npg-lite-flasher/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NPG Lite Flasher</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-an-ecg">What is an ECG?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flashing-the-firmware">Flashing the firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-your-skin">Preparing your skin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-the-electrodes">Placing the electrodes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#placement-1-chest-ecg">Placement 1: Chest (ECG)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#placement-2-wrists-ekg">Placement 2: Wrists (EKG)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-the-snap-cables-to-the-npg-lite">Connecting the snap cables to the NPG Lite</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-npg-lite-cardio">Connecting to NPG Lite Cardio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-application">Using the application</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controls">Controls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-the-ecg-looks-upside-down">If the ECG looks upside down</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recording-your-ecg">Recording your ECG</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-your-recordings">Viewing your recordings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-your-data">Saving your data</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/applications/npg-lite-cardio/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/applications/npg-lite-cardio/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Sep 22, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
