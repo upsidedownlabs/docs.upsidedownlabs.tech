@@ -46,13 +46,28 @@ Chords Software Suite
          :link: chords-csv-plotter
          :link-type: ref
 
+Applications
+============================
+
+.. only:: html
+
+   .. grid:: 2 2 2 2
+      :margin: 4 4 0 0
+      :gutter: 2
+
+
+      .. grid-item-card:: NPG Lite Cardio
+         :text-align: center
+         :link: npg-lite-cardio
+         :link-type: ref
+
 Tools
 ============================
 
 .. only:: html
 
    .. grid:: 2 2 2 2
-      :margin: 4 4 0 0 
+      :margin: 4 4 0 0
       :gutter: 2
 
 
@@ -108,6 +123,13 @@ BioAmp Firmware
    chords/chords-java/index
    chords/chords-csv-plotter/index
 
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Applications
+
+   applications/npg-lite-cardio/index
 
 .. toctree::
    :hidden:
