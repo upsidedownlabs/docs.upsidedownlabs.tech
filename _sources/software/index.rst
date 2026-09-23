@@ -66,6 +66,11 @@ Applications
          :link: npg-lite-snes
          :link-type: ref
 
+      .. grid-item-card:: M2W
+         :text-align: center
+         :link: m2w
+         :link-type: ref
+
 Tools
 ============================
 
@@ -136,6 +141,7 @@ BioAmp Firmware
 
    applications/npg-lite-cardio/index
    applications/npg-lite-snes/index
+   applications/m2w/index
 
 .. toctree::
    :hidden:

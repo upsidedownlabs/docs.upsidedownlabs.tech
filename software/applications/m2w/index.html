@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>M2W &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/applications/m2w/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/applications/m2w/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NPG Lite Flasher" href="../../tools/npg-lite-flasher/index.html" />
+    <link rel="prev" title="NPG Lite SNES" href="../npg-lite-snes/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 23, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-python/index.html">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-csv-plotter/index.html">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../npg-lite-cardio/index.html">NPG Lite Cardio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../npg-lite-snes/index.html">NPG Lite SNES</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">M2W</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/bioamp-filter-designer/index.html">BioAmp Filter Designer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">M2W</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="m2w">
+<span id="id1"></span><h1>M2W<a class="headerlink" href="#m2w" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/kM2ivaYuCfE" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>M2W (Mind to Words) is a free, browser-based assistive communication app for people who cannot speak or move, such as ALS patients. It connects to <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a> over Bluetooth and reads a single blink-detection channel from the forehead. A menu of everyday needs (Food, Help, Outing, Television, Washroom and Water) is navigated entirely with eye blinks, and the app speaks the selected need out loud.</p>
+<p>Open the app at <a class="reference external" href="https://upsidedownlabs.github.io/M2W/">upsidedownlabs.github.io/M2W</a>.</p>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Wireless</strong></p></td>
+<td><p>Connects to the NPG Lite over Bluetooth Low Energy (BLE).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Blink-only Control</strong></p></td>
+<td><p>Double blink to open and move through the menu, triple blink to select. No hands, mouse or keyboard needed.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>6 Need Categories</strong></p></td>
+<td><p>Food, Help, Outing, Television, Washroom and Water, each with its own spoken audio.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Spoken Feedback</strong></p></td>
+<td><p>Plays a sound for the selected need, so the person nearby hears it announced.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Light and Dark Theme</strong></p></td>
+<td><p>Switch between light and dark mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Zero Install</strong></p></td>
+<td><p>Runs entirely in the browser as a static web app. Nothing to download or set up.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a> (<a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-explorer/index.html#npg-lite-explorer"><span class="std std-ref">Explorer</span></a>, <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-ninja/index.html#npg-lite-ninja"><span class="std std-ref">Ninja</span></a> or <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-beast/index.html#npg-lite-beast"><span class="std std-ref">Beast</span></a> pack), only 1 channel is needed</p></li>
+<li><p>BioAmp snap cables and gel electrodes (2 for the signal, plus 1 reference)</p></li>
+<li><p>NuPrep skin preparation gel (optional) and alcohol swabs</p></li>
+<li><p>USB Type-C cable</p></li>
+<li><p>Phone or laptop with Bluetooth</p></li>
+</ul>
+</section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A Chromium-based browser with Web Bluetooth support: <strong>Chrome, Edge, Brave</strong>, etc. On iOS, use a BLE-enabled browser such as <strong>Bluefy</strong>.</p></li>
+<li><p>BCI-Blink-BLE firmware flashed on the device, using <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> desktop app.</p></li>
+</ul>
+</section>
+<section id="setting-up-the-hardware">
+<h2>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<section id="flashing-the-firmware">
+<h3>Flashing the firmware<a class="headerlink" href="#flashing-the-firmware" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Turn on your NPG Lite using the power switch and make sure the battery is connected correctly.</p></li>
+<li><p>Connect the NPG Lite to your computer with the USB Type-C cable.</p></li>
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> in a Chromium-based browser, then click <strong>Connect Device</strong>.</p></li>
+</ol>
+<figure class="align-center" id="id3">
+<img alt="NPG Lite Firmware Flasher with the Connect Device button highlighted" class="dark-light" src="../../../_images/flasher-step1.png" />
+<figcaption>
+<p><span class="caption-text">Connect Device</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Select the USB device named <strong>USB JTAG</strong> and click <strong>Connect</strong>.</p></li>
+</ol>
+<figure class="align-center" id="id4">
+<img alt="Browser serial port popup with USB JTAG/serial debug unit highlighted" class="dark-light" src="../../../_images/flasher-step2.png" />
+<figcaption>
+<p><span class="caption-text">Select the USB JTAG Device</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>Once connected, click <strong>Get from GitHub</strong> to browse the available firmware.</p></li>
+</ol>
+<figure class="align-center" id="id5">
+<img alt="NPG Lite Firmware Flasher connected, with the Get from GitHub button highlighted" class="dark-light" src="../../../_images/flasher-step3.png" />
+<figcaption>
+<p><span class="caption-text">Get From GitHub</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Select <strong>BCI-Blink-BLE.ino.bin</strong> from the list. This is the blink-detection firmware M2W needs.</p></li>
+</ol>
+<figure class="align-center" id="id6">
+<img alt="Available Firmwares list with BCI-Blink-BLE.ino.bin highlighted" class="dark-light" src="../../../_images/flasher-step4.png" />
+<figcaption>
+<p><span class="caption-text">Select BCI-Blink-BLE.ino.bin</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>Click <strong>Flash Firmware</strong> and wait for it to finish uploading.</p></li>
+</ol>
+<figure class="align-center" id="id7">
+<img alt="BCI-Blink-BLE.ino.bin selected with the Flash Firmware button highlighted" class="dark-light" src="../../../_images/flasher-step5.png" />
+<figcaption>
+<p><span class="caption-text">Flash Firmware</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="8">
+<li><p>Once you see <strong>Flash completed successfully!</strong> in the console, disconnect the USB cable.</p></li>
+</ol>
+<figure class="align-center" id="id8">
+<img alt="Console showing Flash completed successfully" class="dark-light" src="../../../_images/flasher-step6.png" />
+<figcaption>
+<p><span class="caption-text">Flash Completed</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="preparing-your-skin">
+<h3>Preparing your skin<a class="headerlink" href="#preparing-your-skin" title="Link to this heading">#</a></h3>
+<p>Good skin preparation improves electrode contact and gives a much cleaner signal.</p>
+<ol class="arabic simple">
+<li><p>Clean the areas where the electrodes will go with an alcohol swab or wet wipe.</p></li>
+<li><p>For an even better signal, you can first apply a small amount of NuPrep skin preparation gel and then clean the skin.</p></li>
+<li><p>Let the skin dry before placing the electrodes.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more details, see <a class="reference internal" href="../../../guides/usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation</span></a> and <a class="reference internal" href="../../../guides/usage-guides/using-gel-electrodes/index.html#using-gel-electrodes"><span class="std std-ref">Using Gel Electrodes</span></a>.</p>
+</div>
+</section>
+<section id="placing-the-electrodes">
+<h3>Placing the electrodes<a class="headerlink" href="#placing-the-electrodes" title="Link to this heading">#</a></h3>
+<p>Place the positive electrode (<strong>IN+</strong>, red) on the centre of your forehead, the negative electrode (<strong>IN-</strong>, black) behind one ear, and the reference electrode (<strong>REF</strong>, yellow) behind the other ear.</p>
+<figure class="align-center" id="id9">
+<img alt="Electrode placement diagram with IN+ on the forehead, IN- behind one ear, and REF behind the other ear" class="dark-light" src="../../../_images/eeg-placement.png" />
+<figcaption>
+<p><span class="caption-text">Electrode Placement</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="connecting-the-cables">
+<h3>Connecting the cables<a class="headerlink" href="#connecting-the-cables" title="Link to this heading">#</a></h3>
+<p>Connect the cables to Channel 1 on the NPG Lite: red to <strong>A0P</strong>, black to <strong>A0N</strong>, and yellow to <strong>REF</strong>.</p>
+</section>
+</section>
+<section id="connecting-to-m2w">
+<h2>Connecting to M2W<a class="headerlink" href="#connecting-to-m2w" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Turn on NPG Lite by flipping the switch on it. Make sure it is not connected to a charger.</p></li>
+<li><p>Make sure Bluetooth is enabled on your computer or phone. Do not pair or connect to NPG Lite from your system Bluetooth settings, only connect through the browser.</p></li>
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/M2W/">M2W</a> in a Chromium-based browser.</p></li>
+</ol>
+<figure class="align-center" id="id10">
+<img alt="M2W app with the theme toggle, connection status and Connect button at the top right" class="dark-light" src="../../../_images/m2w-step1.png" />
+<figcaption>
+<p><span class="caption-text">Open M2W</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click <strong>Connect</strong> at the top right of the app.</p></li>
+</ol>
+<figure class="align-center" id="id11">
+<img alt="Clicking the green Connect button" class="dark-light" src="../../../_images/m2w-step2.png" />
+<figcaption>
+<p><span class="caption-text">Connect</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>Select <strong>ESP32C6_EEG</strong> from the browser’s Bluetooth pairing popup and click <strong>Pair</strong>.</p></li>
+</ol>
+<figure class="align-center" id="id12">
+<img alt="Bluetooth pairing popup listing ESP32C6_EEG" class="dark-light" src="../../../_images/m2w-step3.png" />
+<figcaption>
+<p><span class="caption-text">Pair Your NPG Lite</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Once connected, the status changes to <strong>Connected</strong> and you’re ready to use the menu.</p></li>
+</ol>
+<figure class="align-center" id="id13">
+<img alt="M2W app showing Connected status with a Disconnect button" class="dark-light" src="../../../_images/m2w-step4.png" />
+<figcaption>
+<p><span class="caption-text">Connected</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="using-the-menu">
+<h2>Using the menu<a class="headerlink" href="#using-the-menu" title="Link to this heading">#</a></h2>
+<p>The menu is controlled entirely with blinks, detected from the forehead electrode.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Step</strong></p></th>
+<th class="head"><p><strong>Gesture</strong></p></th>
+<th class="head"><p><strong>What happens</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Activate Menu</strong></p></td>
+<td><p>Double blink</p></td>
+<td><p>Opens the menu and highlights the first option (Food).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Switch Option</strong></p></td>
+<td><p>Double blink</p></td>
+<td><p>Moves the highlight to the next option, cycling through Food, Help, Outing, Television, Washroom and Water.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Select</strong></p></td>
+<td><p>Triple blink</p></td>
+<td><p>Chooses the highlighted option. The app plays that need’s spoken audio out loud and highlights it green until you move to another option or the menu closes.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The menu also shows a <strong>Menu Active</strong> badge next to the connection status while it’s open. If the device disconnects, the menu closes automatically.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While connected, you can also click a tile directly with a mouse or touch to hear its audio, which is useful for testing electrode placement and volume before relying on blinks alone.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../npg-lite-snes/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">NPG Lite SNES</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../tools/npg-lite-flasher/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NPG Lite Flasher</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flashing-the-firmware">Flashing the firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-your-skin">Preparing your skin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-the-electrodes">Placing the electrodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-the-cables">Connecting the cables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-m2w">Connecting to M2W</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-menu">Using the menu</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/applications/m2w/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/applications/m2w/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Sep 23, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
