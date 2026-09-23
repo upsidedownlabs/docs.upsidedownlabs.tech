@@ -1,0 +1,1115 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NPG Lite SNES &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/applications/npg-lite-snes/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/applications/npg-lite-snes/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NPG Lite Flasher" href="../../tools/npg-lite-flasher/index.html" />
+    <link rel="prev" title="NPG Lite Cardio" href="../npg-lite-cardio/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Sep 23, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-python/index.html">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-csv-plotter/index.html">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../npg-lite-cardio/index.html">NPG Lite Cardio</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NPG Lite SNES</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/bioamp-filter-designer/index.html">BioAmp Filter Designer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NPG Lite SNES</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="npg-lite-snes">
+<span id="id1"></span><h1>NPG Lite SNES<a class="headerlink" href="#npg-lite-snes" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>NPG Lite SNES connects to <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a> over Bluetooth to read your body’s electrical signals (EMG, EEG, EOG, ECG). It records bio-potential signals such as flexing a muscle, blinking your eyes, clenching your jaw or focusing, and converts them into standard Xbox controller button presses. This lets you play almost any PC game using just your mind and body.</p>
+<p>The app is a free download for Windows from the <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-SNES">NPG-Lite-SNES</a> repository.</p>
+<figure class="align-center" id="id3">
+<img alt="NPG Lite SNES tutorial video showing signal bars reacting to gestures and a game being controlled" class="dark-light" src="../../../_images/tutorial-video.gif" />
+<figcaption>
+<p><span class="caption-text">NPG Lite SNES Tutorial</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Wireless</strong></p></td>
+<td><p>Connects wirelessly to the NPG Lite device over Bluetooth Low Energy (BLE).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Up to 6 Bio-potential Signals</strong></p></td>
+<td><p>Supports up to 6 channels processing muscles (EMG), brainwaves and blinks (EEG), eye movements (EOG) and heartbeats (ECG).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Custom Mapping</strong></p></td>
+<td><p>A simple UI that lets you choose which action (like a “Double Jaw Clench”) triggers which button (like the “A” button or “DPAD” keys).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Zero Config</strong></p></td>
+<td><p>The app automatically handles and installs the required virtual Xbox controller driver (<code class="docutils literal notranslate"><span class="pre">ViGEmBus</span></code>) on Windows for you.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Built-in Tester</strong></p></td>
+<td><p>See your body signals light up in real time and test your virtual controller before jumping into a game.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="hardware-requirements">
+<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround Lite</span></a> (<a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-explorer/index.html#npg-lite-explorer"><span class="std std-ref">Explorer</span></a>, <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-ninja/index.html#npg-lite-ninja"><span class="std std-ref">Ninja</span></a> or <a class="reference internal" href="../../../kits/npg-lite-kits/npg-lite-beast/index.html#npg-lite-beast"><span class="std std-ref">Beast</span></a> pack)</p></li>
+<li><p>BioAmp snap cables and gel electrodes (2 per signal, plus 1 shared reference)</p></li>
+<li><p>NuPrep skin preparation gel (optional) and alcohol swabs</p></li>
+<li><p>USB Type-C cable</p></li>
+<li><p>A Windows PC with Bluetooth</p></li>
+</ul>
+</section>
+<section id="software-requirements">
+<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Windows 10 or 11 with Bluetooth Low Energy support</p></li>
+<li><p>NPG-Lite BLE Wireless firmware flashed on the device, using <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> desktop app</p></li>
+</ul>
+</section>
+<section id="setting-up-the-hardware">
+<h2>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<section id="flashing-the-firmware">
+<h3>Flashing the firmware<a class="headerlink" href="#flashing-the-firmware" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Turn on your NPG Lite using the power switch and make sure the battery is connected correctly.</p></li>
+<li><p>Connect the NPG Lite to your computer with the USB Type-C cable.</p></li>
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG-Lite-Flasher-Web</a> in a Chromium-based browser (Chrome, Edge, Brave, etc.).</p></li>
+<li><p>Click <strong>Connect</strong> and select the USB device named <strong>USB JTAG</strong>.</p></li>
+<li><p>Select the <strong>BLE Wireless</strong> firmware and click <strong>Flash</strong>.</p></li>
+<li><p>Wait a few seconds while the firmware is uploaded, then disconnect the USB cable.</p></li>
+</ol>
+</section>
+<section id="preparing-your-skin">
+<h3>Preparing your skin<a class="headerlink" href="#preparing-your-skin" title="Link to this heading">#</a></h3>
+<p>Good skin preparation gives a much cleaner signal.</p>
+<ol class="arabic simple">
+<li><p>Clean the areas where the electrodes will go with an alcohol swab or wet wipe.</p></li>
+<li><p>For an even better signal, you can first apply a small amount of NuPrep skin preparation gel and then clean the skin.</p></li>
+<li><p>Let the skin dry before placing the electrodes.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more details, see <a class="reference internal" href="../../../guides/usage-guides/skin-preparation/index.html#skin-preparation"><span class="std std-ref">Skin Preparation</span></a> and <a class="reference internal" href="../../../guides/usage-guides/using-gel-electrodes/index.html#using-gel-electrodes"><span class="std std-ref">Using Gel Electrodes</span></a>.</p>
+</div>
+</section>
+<section id="placing-the-electrodes">
+<h3>Placing the electrodes<a class="headerlink" href="#placing-the-electrodes" title="Link to this heading">#</a></h3>
+<p>Choose the signals you want to use and place the electrodes as shown in the diagrams. Each signal needs one <strong>positive (red)</strong> and one <strong>negative (black)</strong> electrode. The reference (yellow) electrode is shared across all channels, so you only need to place <strong>one</strong>.</p>
+<section id="emg-flexing-a-muscle">
+<h4>EMG (flexing a muscle)<a class="headerlink" href="#emg-flexing-a-muscle" title="Link to this heading">#</a></h4>
+<p>Place the positive and negative electrodes close together on the muscle you will flex, for example your forearm.</p>
+<figure class="align-center" id="id4">
+<img alt="EMG placement diagram with the positive and negative electrodes on the forearm, and the reference electrode on the wrist" class="dark-light" src="../../../_images/emg-placement.png" />
+<figcaption>
+<p><span class="caption-text">EMG Placement</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="eeg-focus-blink-jaw-clench">
+<h4>EEG (focus, blink, jaw clench)<a class="headerlink" href="#eeg-focus-blink-jaw-clench" title="Link to this heading">#</a></h4>
+<p>Place the positive electrode on the centre of your forehead and the negative electrode behind one ear.</p>
+<figure class="align-center" id="id5">
+<img alt="EEG placement diagram with the positive electrode on the forehead, and the negative and reference electrodes behind the ears" class="dark-light" src="../../../_images/eeg-placement.png" />
+<figcaption>
+<p><span class="caption-text">EEG Placement</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="eog-eye-movement">
+<h4>EOG (eye movement)<a class="headerlink" href="#eog-eye-movement" title="Link to this heading">#</a></h4>
+<p>Place the negative electrode at the outer corner of your right eye and the positive electrode at the outer corner of your left eye. If left and right eye movements appear swapped in the app, swap the red and black cables.</p>
+<figure class="align-center" id="id6">
+<img alt="EOG placement diagram with the negative and positive electrodes at the outer corners of the eyes, and the reference electrode near the ear" class="dark-light" src="../../../_images/eog-placement.png" />
+<figcaption>
+<p><span class="caption-text">EOG Placement</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ecg-heartbeat">
+<h4>ECG (heartbeat)<a class="headerlink" href="#ecg-heartbeat" title="Link to this heading">#</a></h4>
+<p>Place the negative electrode on the left side of your chest just below the collarbone, and the positive electrode slightly to its right with a small gap between them.</p>
+<figure class="align-center" id="id7">
+<img alt="ECG placement diagram with the negative and positive electrodes on the upper chest, and the reference electrode on the right chest" class="dark-light" src="../../../_images/ecg-placement1.png" />
+<figcaption>
+<p><span class="caption-text">ECG Placement</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="connecting-the-cables">
+<h3>Connecting the cables<a class="headerlink" href="#connecting-the-cables" title="Link to this heading">#</a></h3>
+<p>Connect the red and black cables of each signal to the <strong>+</strong> and <strong>-</strong> pins of one channel, and the reference cable to <strong>REF</strong>. You can use any channel for any signal.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 34.0%" />
+<col style="width: 33.0%" />
+<col style="width: 33.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Channel</strong></p></th>
+<th class="head"><p><strong>+ pin</strong></p></th>
+<th class="head"><p><strong>- pin</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Channel 1</p></td>
+<td><p>A0P</p></td>
+<td><p>A0N</p></td>
+</tr>
+<tr class="row-odd"><td><p>Channel 2</p></td>
+<td><p>A1P</p></td>
+<td><p>A1N</p></td>
+</tr>
+<tr class="row-even"><td><p>Channel 3</p></td>
+<td><p>A2P</p></td>
+<td><p>A2N</p></td>
+</tr>
+<tr class="row-odd"><td><p>Channel 4</p></td>
+<td><p>A3P</p></td>
+<td><p>A3N</p></td>
+</tr>
+<tr class="row-even"><td><p>Channel 5</p></td>
+<td><p>A4P</p></td>
+<td><p>A4N</p></td>
+</tr>
+<tr class="row-odd"><td><p>Channel 6</p></td>
+<td><p>A5P</p></td>
+<td><p>A5N</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only the NPG Lite Beast pack comes with 6 channels. The Explorer and Ninja packs support only 3 channels.</p>
+</div>
+<p>Remember which channel you used for each signal, because you will select it in the app. For example: EMG on Channel 1, EEG on Channel 2 and EOG on Channel 3.</p>
+</section>
+</section>
+<section id="installing-the-application">
+<h2>Installing the application<a class="headerlink" href="#installing-the-application" title="Link to this heading">#</a></h2>
+<p>The easiest way to use the app is to grab the pre-built standalone <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p>
+<ol class="arabic simple">
+<li><p>Download the latest <code class="docutils literal notranslate"><span class="pre">NPG-Controller.exe</span></code> from the <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-SNES/releases">Releases</a> / GitHub Actions tab.</p></li>
+<li><p>Double-click the file to open it. The first time you run it, it will ask for admin permissions to quickly install the <code class="docutils literal notranslate"><span class="pre">ViGEmBus</span></code> driver. This allows Windows to see your body as a real Xbox controller.</p></li>
+<li><p>Follow the steps below.</p></li>
+</ol>
+</section>
+<section id="connecting-to-npg-lite-snes">
+<h2>Connecting to NPG Lite SNES<a class="headerlink" href="#connecting-to-npg-lite-snes" title="Link to this heading">#</a></h2>
+<p>Turn on your NPG Lite with the On/Off switch and click <strong>CONNECT</strong>. The app scans for NPG Lite devices for up to 10 seconds and connects to yours. If it finds more than one, pick yours from the list. When it is connected, the button changes to <strong>DISCONNECT</strong>, and the battery level and “Virtual gamepad connected” appear at the bottom left.</p>
+<figure class="align-center" id="id8">
+<img alt="The Connect button at the bottom right of the app" class="dark-light" src="../../../_images/connect1.png" />
+<figcaption>
+<p><span class="caption-text">Connect</span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="using-the-application">
+<h2>Using the application<a class="headerlink" href="#using-the-application" title="Link to this heading">#</a></h2>
+<section id="selecting-the-channels">
+<h3>Selecting the channels<a class="headerlink" href="#selecting-the-channels" title="Link to this heading">#</a></h3>
+<p>Tick the box of every channel you connected in the setup. Only ticked channels are used.</p>
+<figure class="align-center" id="id9">
+<img alt="Channel 1 ticked in the Signal Configuration panel" class="dark-light" src="../../../_images/select-channels.png" />
+<figcaption>
+<p><span class="caption-text">Select Channels</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="selecting-the-filters">
+<h3>Selecting the filters<a class="headerlink" href="#selecting-the-filters" title="Link to this heading">#</a></h3>
+<p>For each ticked channel, choose the signal it records: <strong>EMG</strong>, <strong>EEG</strong>, <strong>EOG</strong> or <strong>ECG</strong>. This applies the right filters for that signal. EEG, EOG and ECG can each be used on only one channel, and any other channels must be EMG.</p>
+<figure class="align-center" id="id10">
+<img alt="Signal type buttons (EMG, EEG, EOG, ECG) under each ticked channel" class="dark-light" src="../../../_images/select-filters.png" />
+<figcaption>
+<p><span class="caption-text">Select Filters</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="enabling-the-notch-filter">
+<h3>Enabling the notch filter<a class="headerlink" href="#enabling-the-notch-filter" title="Link to this heading">#</a></h3>
+<p>Tick <strong>NOTCH FILTER</strong> and choose <strong>50 Hz</strong> or <strong>60 Hz</strong> to match the power line frequency in your region. Most countries use 50 Hz, and countries like the USA and Canada use 60 Hz. This removes power line noise from the signals.</p>
+<figure class="align-center" id="id11">
+<img alt="The Notch Filter option with the 50 Hz button selected" class="dark-light" src="../../../_images/enable-notch.png" />
+<figcaption>
+<p><span class="caption-text">Enable Notch Filter</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="setting-the-thresholds">
+<h3>Setting the thresholds<a class="headerlink" href="#setting-the-thresholds" title="Link to this heading">#</a></h3>
+<p>In the <strong>Signal Inputs</strong> panel, open the tab of a channel (or <strong>All</strong>). Each signal has a bar with a red marker, which is its threshold. Perform the gesture and watch the bar. When the signal goes past the marker, the gesture is detected. Drag the marker to just below the level your gesture reaches, and above the level when you are relaxed, so it does not trigger by accident.</p>
+<p>The signals you can set, depending on the type you chose above:</p>
+<ul class="simple">
+<li><p><strong>EMG:</strong> one bar for each EMG channel. With two or more EMG channels, extra bars such as <code class="docutils literal notranslate"><span class="pre">EMG(Ch1+Ch3)</span></code> appear for using both muscles together.</p></li>
+<li><p><strong>EEG:</strong> Focus, Blink and Jaw Clench.</p></li>
+<li><p><strong>EOG:</strong> Left Eye, Right Eye and Jaw Clench.</p></li>
+<li><p><strong>ECG:</strong> your heartbeat.</p></li>
+</ul>
+<figure class="align-center" id="id12">
+<img alt="Dragging the red threshold marker on the EMG bar of Channel 1" class="dark-light" src="../../../_images/set-thresholds.png" />
+<figcaption>
+<p><span class="caption-text">Set Thresholds</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mapping-gestures-to-controller-keys">
+<h3>Mapping gestures to controller keys<a class="headerlink" href="#mapping-gestures-to-controller-keys" title="Link to this heading">#</a></h3>
+<p>Next to each bar, use the drop-down to choose the controller key that the gesture presses: <strong>A, B, X, Y, Dpad Up, Dpad Down, Dpad Left, Dpad Right, L, R</strong> or <strong>Start</strong>. Choose <strong>None</strong> to leave a gesture unused. The key stays pressed for as long as the gesture is detected.</p>
+<p>For EEG channels, you can also tick <strong>Double Blink</strong> or <strong>Triple Blink</strong>, and for EEG and EOG channels <strong>Double Jaw Clench</strong>, then choose a key for each. These press the key once each time you do the gesture.</p>
+<figure class="align-center" id="id13">
+<img alt="The key drop-down list open next to the Focus bar, with Blink and Jaw Clench bars below it" class="dark-light" src="../../../_images/configure-controls.png" />
+<figcaption>
+<p><span class="caption-text">Configure Controls</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="testing-the-controls">
+<h3>Testing the controls<a class="headerlink" href="#testing-the-controls" title="Link to this heading">#</a></h3>
+<p>Click <strong>TESTER</strong> to open a virtual SNES controller. Perform your gestures and watch the matching buttons light up. If a button lights up by mistake or does not light up, go back and adjust its threshold or key. Click <strong>CLOSE TESTER</strong> when you are done.</p>
+<figure class="align-center" id="id14">
+<img alt="The TESTER button, with the Live Controller Diagnostics window open showing the SNES controller" class="dark-light" src="../../../_images/open-tester.png" />
+<figcaption>
+<p><span class="caption-text">Open Tester</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<img alt="A gesture pressing the left button of the controller in the tester" class="dark-light" src="../../../_images/test-controls.png" />
+<figcaption>
+<p><span class="caption-text">Test Controls</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Once everything works, open your game. It sees your body as a real Xbox controller, so you can launch it and play!</p>
+</section>
+</section>
+<section id="running-from-source-for-developers">
+<h2>Running from source (for developers)<a class="headerlink" href="#running-from-source-for-developers" title="Link to this heading">#</a></h2>
+<p>If you want to view or edit the code directly, you need a Windows PC with Python 3.11.</p>
+<ol class="arabic">
+<li><p>Clone the <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-SNES">NPG-Lite-SNES</a> repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/upsidedownlabs/NPG-Lite-SNES.git
+</pre></div>
+</div>
+</li>
+<li><p>Open a terminal in the project folder, then create and activate a virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+.venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
+</pre></div>
+</div>
+</li>
+<li><p>Install the required libraries:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>Run the main script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>main.py
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The first time you run it on a PC that does not have the <code class="docutils literal notranslate"><span class="pre">ViGEmBus</span></code> driver, the app downloads the installer and Windows asks for admin permission to install it.</p>
+<section id="building-the-exe-yourself">
+<h3>Building the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> yourself<a class="headerlink" href="#building-the-exe-yourself" title="Link to this heading">#</a></h3>
+<p>After installing the requirements above, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyinstaller<span class="w"> </span>build.spec
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.exe</span></code> is created in the <code class="docutils literal notranslate"><span class="pre">dist</span></code> folder as <code class="docutils literal notranslate"><span class="pre">NPG</span> <span class="pre">Lite</span> <span class="pre">SNES.exe</span></code>. The first build downloads the <code class="docutils literal notranslate"><span class="pre">ViGEmBus</span></code> installer (about 6 MB) and bundles it into the <code class="docutils literal notranslate"><span class="pre">.exe</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../npg-lite-cardio/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">NPG Lite Cardio</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../tools/npg-lite-flasher/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NPG Lite Flasher</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flashing-the-firmware">Flashing the firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-your-skin">Preparing your skin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#placing-the-electrodes">Placing the electrodes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#emg-flexing-a-muscle">EMG (flexing a muscle)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eeg-focus-blink-jaw-clench">EEG (focus, blink, jaw clench)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eog-eye-movement">EOG (eye movement)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-heartbeat">ECG (heartbeat)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-the-cables">Connecting the cables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-application">Installing the application</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-npg-lite-snes">Connecting to NPG Lite SNES</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-application">Using the application</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-the-channels">Selecting the channels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-the-filters">Selecting the filters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-the-notch-filter">Enabling the notch filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-thresholds">Setting the thresholds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mapping-gestures-to-controller-keys">Mapping gestures to controller keys</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-the-controls">Testing the controls</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-from-source-for-developers">Running from source (for developers)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-exe-yourself">Building the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> yourself</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/applications/npg-lite-snes/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/applications/npg-lite-snes/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Sep 23, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
