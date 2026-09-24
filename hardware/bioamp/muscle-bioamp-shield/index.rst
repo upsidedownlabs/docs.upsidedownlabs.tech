@@ -118,21 +118,6 @@ There are 2 variants available for Muscle BioAmp Shield v0.3 kit - one comes wit
 
     `Assembled Muscle BioAmp Shield kit content`
 
-
-
-.. figure:: media/kit-contents-unassembled.*
-    :align: center
-    :width: 80%
-
-    `Unassembled Muscle BioAmp Shield kit content`
-
-
-Click on the link below to see the unboxing of the kit:
-
-.. youtube:: w8yw12SUe6Q
-  :width: 100%
-  :align: center
-
 Software requirements
 **********************
 
