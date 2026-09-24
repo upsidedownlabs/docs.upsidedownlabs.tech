@@ -315,21 +315,40 @@ This guide walks you through setup, connections, and running your experiments wi
 Compatible Software
 ************************
 
-NPG Lite Flasher
+Flasher Tools
 ===================
-  
-- :ref:`NPG Lite Flasher <npg-lite-flasher>` is a cross-platform, flashing utility for the Neuro PlayGround Lite board, providing seamless firmware updates over serial or DFU via a simple CLI.
 
-.. figure:: ../../../software/tools/npg-lite-flasher/media/npg-lite-flasher-launch-page.*
-    :align: center
-    :alt: NPG Lite Flasher Landing Page
+.. tab-set::
 
-    NPG Lite Flasher Landing Page
+   .. tab-item:: NPG Lite Flasher Web
 
-- To know more about NPG Lite Flasher watch the YouTube video.
+      - `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ is a browser-based flashing tool for the Neuro PlayGround Lite and other ESP32-based boards. It needs no Arduino IDE or additional setup: connect your device, select the BLE, Wi-Fi or Serial firmware you need, and flash it directly from the browser in seconds.
 
-.. youtube:: NDk-P3nob_0
-    :align: center
+      .. figure:: media/npg-lite-flasher-web.png
+          :align: center
+          :alt: NPG Lite Flasher Web Landing Page
+
+          NPG Lite Flasher Web Landing Page
+
+      - To know more about NPG Lite Flasher Web watch the YouTube video.
+
+      .. youtube:: sKYY074Yg3A
+          :align: center
+
+   .. tab-item:: NPG Lite Flasher App
+
+      - :ref:`NPG Lite Flasher <npg-lite-flasher>` is a cross-platform, flashing utility for the Neuro PlayGround Lite board, providing seamless firmware updates over serial or DFU via a simple CLI.
+
+      .. figure:: ../../../software/tools/npg-lite-flasher/media/npg-lite-flasher-launch-page.*
+          :align: center
+          :alt: NPG Lite Flasher Landing Page
+
+          NPG Lite Flasher Landing Page
+
+      - To know more about NPG Lite Flasher watch the YouTube video.
+
+      .. youtube:: NDk-P3nob_0
+          :align: center
 
 Chords Web
 =============
@@ -403,7 +422,7 @@ inspire you, but the possibilities cover so many more use cases.
 
     Each of these projects runs on the ``BLE firmware``, which you can flash using the following flasher tools: 
     
-    - We recommend using :ref:`NPG Lite Flasher <npg-lite-flasher-uploading-firmware>` for flashing BLE Firmware.
+    - For flashing BLE Firmware, you may use either the `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`__ or the :ref:`NPG Lite Flasher App <npg-lite-flasher-uploading-firmware>`.
     - Alternatively, you can use `Arduino IDE <https://github.com/upsidedownlabs/Chords-Arduino-Firmware>`_ to manually upload the firmware.
     - It is recommended to use ESP32 version ``3.2.0`` to ensure error free operations. 
 
