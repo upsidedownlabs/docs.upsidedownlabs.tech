@@ -353,7 +353,7 @@ Flasher Tools
 Chords Web
 =============
 
-- Visit `Chords Web <https://chords.upsidedownlabs.tech/>`_ for real-time biopotential signal visualization (EEG, EMG, ECG, EOG), featuring advanced plotting, filtering, snapshotting and CSV recording.
+- Visit `Chords Web <https://chords.upsidedownlabs.tech/>`_ for real-time biopotential signal visualization (EEG, EMG, ECG, EOG), featuring advanced plotting, filtering, snapshotting and CSV recording. Flash the `Chords-Arduino-Firmware <https://github.com/upsidedownlabs/chords-arduino-firmware>`_ on your board to visualize signals on Chords Web.
 
 .. figure:: ../../../software/chords/chords-web/media/chords_landing_page.*
     :align: center

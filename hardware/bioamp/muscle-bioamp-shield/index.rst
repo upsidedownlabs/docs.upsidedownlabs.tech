@@ -133,7 +133,7 @@ Software requirements
 
 2. **Chords Web Visualizer**
    
-   Use `Chords Web <https://chords.upsidedownlabs.tech>`_, our custom web interface designed to visualize biopotential signals data directly in your browser. `(Plug-and-play signal visualization directly in any modern web browser.)`
+   Use `Chords Web <https://chords.upsidedownlabs.tech>`_, our custom web interface designed to visualize biopotential signals data directly in your browser. `(Plug-and-play signal visualization directly in any modern web browser.)` Flash the `Chords-Arduino-Firmware <https://github.com/upsidedownlabs/chords-arduino-firmware>`_ on your board to visualize signals on Chords Web.
    
    .. figure:: ../../../software/chords/chords-web/media/chords_landing_page.*
     :align: center
