@@ -3,7 +3,7 @@
 BioAmp v1.5
 ############
 
-:bdg-danger:`2023 Edition`
+:bdg-danger:`Discontinued`
 
 Overview
 *********

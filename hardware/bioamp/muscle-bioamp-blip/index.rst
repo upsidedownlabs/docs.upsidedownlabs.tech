@@ -3,6 +3,8 @@
 Muscle BioAmp Blip
 ###################
 
+:bdg-danger:`Discontinued`
+
 Overview
 *********
 
