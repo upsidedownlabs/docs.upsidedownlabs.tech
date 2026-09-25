@@ -40,19 +40,9 @@ You can find the complete documentations for different hardwares by clicking the
          :link: muscle-bioamp-patchy
          :link-type: ref
 
-      .. grid-item-card:: Muscle BioAmp Blip
-         :text-align: center
-         :link: muscle-bioamp-blip
-         :link-type: ref
-
       .. grid-item-card:: Heart BioAmp Candy
          :text-align: center
          :link: heart-bioamp-candy
-         :link-type: ref      
-
-      .. grid-item-card:: BioAmp v1.5
-         :text-align: center
-         :link: bioamp-v1.5
          :link-type: ref
 
       .. grid-item-card:: Muscle BioAmp Candy
@@ -65,6 +55,25 @@ You can find the complete documentations for different hardwares by clicking the
          :link: muscle-bioamp-biscute
          :link-type: ref
 
+Discontinued
+============================
+
+.. only:: html
+
+   .. grid:: 2 2 2 2
+      :margin: 4 4 0 0
+      :gutter: 2
+
+      .. grid-item-card:: Muscle BioAmp Blip
+         :text-align: center
+         :link: muscle-bioamp-blip
+         :link-type: ref
+
+      .. grid-item-card:: BioAmp v1.5
+         :text-align: center
+         :link: bioamp-v1.5
+         :link-type: ref
+
 .. toctree::
    :hidden:
    :maxdepth: 1
@@ -74,8 +83,14 @@ You can find the complete documentations for different hardwares by clicking the
    bioamp/bioamp-exg-pill/index
    bioamp/muscle-bioamp-shield/index
    bioamp/muscle-bioamp-patchy/index
-   bioamp/muscle-bioamp-blip/index
    bioamp/heart-bioamp-candy/index
-   bioamp/bioamp-v1.5/index
    bioamp/muscle-bioamp-candy/index
    bioamp/muscle-bioamp-biscute/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Discontinued
+
+   bioamp/muscle-bioamp-blip/index
+   bioamp/bioamp-v1.5/index
