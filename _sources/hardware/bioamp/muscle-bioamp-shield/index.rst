@@ -118,21 +118,6 @@ There are 2 variants available for Muscle BioAmp Shield v0.3 kit - one comes wit
 
     `Assembled Muscle BioAmp Shield kit content`
 
-
-
-.. figure:: media/kit-contents-unassembled.*
-    :align: center
-    :width: 80%
-
-    `Unassembled Muscle BioAmp Shield kit content`
-
-
-Click on the link below to see the unboxing of the kit:
-
-.. youtube:: w8yw12SUe6Q
-  :width: 100%
-  :align: center
-
 Software requirements
 **********************
 
@@ -148,7 +133,7 @@ Software requirements
 
 2. **Chords Web Visualizer**
    
-   Use `Chords Web <https://chords.upsidedownlabs.tech>`_, our custom web interface designed to visualize biopotential signals data directly in your browser. `(Plug-and-play signal visualization directly in any modern web browser.)`
+   Use `Chords Web <https://chords.upsidedownlabs.tech>`_, our custom web interface designed to visualize biopotential signals data directly in your browser. `(Plug-and-play signal visualization directly in any modern web browser.)` Flash the `Chords-Arduino-Firmware <https://github.com/upsidedownlabs/chords-arduino-firmware>`_ on your board to visualize signals on Chords Web.
    
    .. figure:: ../../../software/chords/chords-web/media/chords_landing_page.*
     :align: center
