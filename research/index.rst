@@ -16,6 +16,16 @@ This section features a collection of HCI (Human-Computer Interaction) and BCI (
          :link: experiments
          :link-type: ref
 
+      .. grid-item-card:: SSVEP using NPG Lite
+         :text-align: center
+         :link: ssvep-using-npg-lite
+         :link-type: ref
+
+      .. grid-item-card:: EMG Gesture Control using NPG Lite Armband
+         :text-align: center
+         :link: emg-gesture-control-npg-lite-armband
+         :link-type: ref
+
       .. grid-item-card:: Research papers published
          :text-align: center
          :link: research-papers
@@ -27,6 +37,14 @@ This section features a collection of HCI (Human-Computer Interaction) and BCI (
    :caption: Research Experiments
 
    experiments/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Research Projects
+
+   projects/SSVEP using NPG Lite/index
+   projects/EMG Gesture Control using NPG Lite Armband/index
 
 .. toctree::
    :hidden:
