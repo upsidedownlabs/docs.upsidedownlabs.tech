@@ -43,6 +43,9 @@ Contents of the kit
 | Muscle BioAmp Shield Kit (With 1 BioAmp Cable, 6 STEMMA Cables, 9V snap cable, BioAmp AUX Cable, Muscle BioAmp Band, 24 gel electrodes, & Muscle BioAmp Shield)   | 1      |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
 
+.. figure:: media/kit-content.*
+    :align: center
+
 Click on the link below to see the unboxing of the kit:
 
 .. youtube:: Sn389Q7Izy4
