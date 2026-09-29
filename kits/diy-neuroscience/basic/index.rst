@@ -79,7 +79,7 @@ by making a solder joint as shown in the image above.
 Step 2: Connect Arduino UNO EK R4 Minima
 =========================================
 
-.. figure:: media/connection-with-maker-uno.*
+.. figure:: media/connection-with-r4-minima.*
     :align: center
 
 Connect ``VCC`` to ``5V``, ``GND`` to ``GND``, and ``OUT`` to ``Analog pin A0`` of your Arduino UNO EK R4 Minima via jumper cables provided by us. If you are connecting OUT to any other analog pin, then you will have to change the INPUT PIN in the Arduino sketch accordingly.
