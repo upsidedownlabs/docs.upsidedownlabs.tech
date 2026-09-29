@@ -17,8 +17,18 @@ developing practical applications in the fields of human-computer interaction, a
 Contents of the kit
 ********************
 
-From development board (Maker UNO), BioAmp EXG Pill, BioAmp cable v3, jumper cables, gel electrodes,
-dry electrode-based BioAmp bands to skin preparation kit, this includes everything that you need to get started with your awesome HCI/BCI project.
+- 2 Channel Brain BioAmp Band
+- Muscle BioAmp Band
+- Heart BioAmp Band
+- BioAmp EXG Pill
+- BioAmp V3 Cable (100 cm)
+- Jumper Cables (x2)
+- Arduino Uno R4 with Type-C Cable
+- NuPrep Gel (9g)
+- Electrode Gel Pouch (100 ml)
+- Alcohol Swabs (20 pcs)
+- 12 Pcs Gel Electrodes
+- *Baby Gel Electrodes (100 pcs)*
 
 .. figure:: media/kit-contents.*
     :align: center
