@@ -57,7 +57,7 @@ Resolving software issues
 
 - **Development board selection:** Select the correct board in Arduino IDE. To select the board, go to tools from the menu bar, select the board option and then select the development board that you have connected to the laptop.
 
-  .. note:: While using Cytron Technologies Maker Uno make sure you are selecting a board as Arduino Uno as it is an Arduino Uno compatible board.
+  .. note:: For Arduino UNO R4 Minima, go to ``Tools`` > ``Board`` > ``Arduino Renesas UNO R4 Boards`` and select ``Arduino UNO R4 Minima``.
 
 - **Set baudrate:** Make sure you have selected the correct baud rate (i.e. 115200) while visualizing the biopotential signals on the serial plotter of Arduino IDE.
 
