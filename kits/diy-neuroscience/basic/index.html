@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Sep 26, 2026"/>
+    <meta name="docbuild:last-update" content="Sep 30, 2026"/>
   </head>
   
   
@@ -639,8 +639,20 @@ developing practical applications in the fields of human-computer interaction, a
 </section>
 <section id="contents-of-the-kit">
 <h2>Contents of the kit<a class="headerlink" href="#contents-of-the-kit" title="Link to this heading">#</a></h2>
-<p>From development board (Maker UNO), BioAmp EXG Pill, BioAmp cable v3, jumper cables, gel electrodes,
-dry electrode-based BioAmp bands to skin preparation kit, this includes everything that you need to get started with your awesome HCI/BCI project.</p>
+<ul class="simple">
+<li><p>2 Channel Brain BioAmp Band</p></li>
+<li><p>Muscle BioAmp Band</p></li>
+<li><p>Heart BioAmp Band</p></li>
+<li><p>BioAmp EXG Pill</p></li>
+<li><p>BioAmp V3 Cable (100 cm)</p></li>
+<li><p>Jumper Cables (x2)</p></li>
+<li><p>Arduino UNO EK R4 Minima with Type-C Cable</p></li>
+<li><p>NuPrep Gel (9g)</p></li>
+<li><p>Electrode Gel Pouch (100 ml)</p></li>
+<li><p>Alcohol Swabs (20 pcs)</p></li>
+<li><p>12 Pcs Gel Electrodes</p></li>
+<li><p><em>Baby Gel Electrodes (100 pcs)</em></p></li>
+</ul>
 <figure class="align-center">
 <img alt="../../../_images/kit-contents5.png" src="../../../_images/kit-contents5.png" />
 </figure>
@@ -682,12 +694,12 @@ by making a solder joint as shown in the image above.</p>
 <p>Even without making the solder joint the BioAmp EXG Pill is capable of recording ECG or EMG as well but the signals would be more accurate if you configure it.</p>
 </div>
 </section>
-<section id="step-2-connect-maker-uno">
-<h3>Step 2: Connect Maker UNO<a class="headerlink" href="#step-2-connect-maker-uno" title="Link to this heading">#</a></h3>
+<section id="step-2-connect-arduino-uno-ek-r4-minima">
+<h3>Step 2: Connect Arduino UNO EK R4 Minima<a class="headerlink" href="#step-2-connect-arduino-uno-ek-r4-minima" title="Link to this heading">#</a></h3>
 <figure class="align-center">
-<img alt="../../../_images/connection-with-maker-uno.png" src="../../../_images/connection-with-maker-uno.png" />
+<img alt="../../../_images/connection-with-r4-minima.png" src="../../../_images/connection-with-r4-minima.png" />
 </figure>
-<p>Connect <code class="docutils literal notranslate"><span class="pre">VCC</span></code> to <code class="docutils literal notranslate"><span class="pre">5V</span></code>, <code class="docutils literal notranslate"><span class="pre">GND</span></code> to <code class="docutils literal notranslate"><span class="pre">GND</span></code>, and <code class="docutils literal notranslate"><span class="pre">OUT</span></code> to <code class="docutils literal notranslate"><span class="pre">Analog</span> <span class="pre">pin</span> <span class="pre">A0</span></code> of your Maker UNO via jumper cables provided by us. If you are connecting OUT to any other analog pin, then you will have to change the INPUT PIN in the arduino sketch accordingly.</p>
+<p>Connect <code class="docutils literal notranslate"><span class="pre">VCC</span></code> to <code class="docutils literal notranslate"><span class="pre">5V</span></code>, <code class="docutils literal notranslate"><span class="pre">GND</span></code> to <code class="docutils literal notranslate"><span class="pre">GND</span></code>, and <code class="docutils literal notranslate"><span class="pre">OUT</span></code> to <code class="docutils literal notranslate"><span class="pre">Analog</span> <span class="pre">pin</span> <span class="pre">A0</span></code> of your Arduino UNO EK R4 Minima via jumper cables provided by us. If you are connecting OUT to any other analog pin, then you will have to change the INPUT PIN in the Arduino sketch accordingly.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Take precautions while connecting to power, if power pins (GND &amp; VCC) are to be swapped, your BioAmp EXG Pill will be fried and it’ll become unusable (DIE).</p>
@@ -717,13 +729,14 @@ by making a solder joint as shown in the image above.</p>
 <section id="step-6-uploading-the-code">
 <h3>Step 6: Uploading the code<a class="headerlink" href="#step-6-uploading-the-code" title="Link to this heading">#</a></h3>
 <ol class="arabic">
-<li><p>Connect the Maker Uno to your laptop using the USB cable (Type A to Type B). Go to Chords Arduino Firmware github repository, open <code class="docutils literal notranslate"><span class="pre">AVR-NANO-UNO-MEGA</span></code> folder and copy paste the arduino sketch in Arduino IDE that you downloaded earlier.</p>
+<li><p>Connect the Arduino UNO EK R4 Minima to your laptop using the Type-C cable. Go to the Chords Arduino Firmware GitHub repository, open the <code class="docutils literal notranslate"><span class="pre">UNO-R4</span></code> folder, and copy the Arduino sketch into the Arduino IDE that you downloaded earlier.</p>
 <blockquote>
-<div><p>Link for the arduino sketch: <span class="fab fa-github pst-color-primary"></span> <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware/blob/main/AVR-NANO-UNO-MEGA/AVR-NANO-UNO-MEGA.ino">Chords Arduino Firmware for Maker Uno</a></p>
+<div><p>Link for the Arduino sketch: <span class="fab fa-github pst-color-primary"></span> <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware/blob/main/UNO-R4/UNO-R4.ino">Chords Arduino Firmware for Arduino UNO R4</a></p>
 </div></blockquote>
 </li>
-<li><p>Uncomment <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">BOARD_MAKER_UNO</span></code> in the code.</p></li>
-<li><p>Go to <code class="docutils literal notranslate"><span class="pre">tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">board</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Arduino</span> <span class="pre">AVR</span> <span class="pre">boards</span></code> and select Arduino UNO. In the same menu, select the COM port on which your Maker Uno is connected. To find out the right COM port, disconnect your Maker UNO board and reopen the menu. The entry that disappears should be the right COM port. Now click on the upload button.</p></li>
+<li><p>In Arduino IDE, open <code class="docutils literal notranslate"><span class="pre">Tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Board</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Boards</span> <span class="pre">Manager</span></code>. Search for <code class="docutils literal notranslate"><span class="pre">Arduino</span> <span class="pre">UNO</span> <span class="pre">R4</span> <span class="pre">Boards</span></code> and install it.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Board</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Arduino</span> <span class="pre">UNO</span> <span class="pre">R4</span> <span class="pre">Boards</span></code> and select <code class="docutils literal notranslate"><span class="pre">Arduino</span> <span class="pre">UNO</span> <span class="pre">R4</span> <span class="pre">Minima</span></code>.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Port</span></code> and select the COM port on which your Arduino UNO EK R4 Minima is connected. To find the correct COM port, disconnect the board and reopen the menu. The entry that disappears is the correct port. Now click the upload button.</p></li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -749,7 +762,7 @@ by making a solder joint as shown in the image above.</p>
 </section>
 <section id="step-8-setting-up-chords-python">
 <h3>Step 8: Setting up Chords Python<a class="headerlink" href="#step-8-setting-up-chords-python" title="Link to this heading">#</a></h3>
-<p>Since you have uploaded the firmware already to your Maker UNO, use our python script and follow the steps given in the <a class="reference internal" href="../../../software/chords/chords-python/index.html#using-chords-python"><span class="std std-ref">Chords-Python documentation</span></a> for lsl streaming, CSV data logging, verbose output with detailed statistics and error reporting. Not only that, you get a complete web interface to access various applications (like ECG with heart rate, EMG with envelope, GUI of channels, CSV plotter, etc.) that you can use to further analyse your signals and create HCI/BCI projects.</p>
+<p>Since you have uploaded the firmware already to your Arduino UNO EK R4 Minima, use our Python script and follow the steps given in the <a class="reference internal" href="../../../software/chords/chords-python/index.html#using-chords-python"><span class="std std-ref">Chords-Python documentation</span></a> for LSL streaming, CSV data logging, verbose output with detailed statistics and error reporting. Not only that, you get a complete web interface to access various applications (like ECG with heart rate, EMG with envelope, GUI of channels, CSV plotter, etc.) that you can use to further analyse your signals and create HCI/BCI projects.</p>
 </section>
 </section>
 <section id="some-project-ideas">
@@ -903,7 +916,7 @@ Brain Computer Interface (BCI) projects and share them with us at <a class="refe
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software requirements</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-kit">Using the kit</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-optional-configure-for-emg-ecg">Step 1 (optional): Configure for EMG/ECG</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-connect-maker-uno">Step 2: Connect Maker UNO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-connect-arduino-uno-ek-r4-minima">Step 2: Connect Arduino UNO EK R4 Minima</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-connecting-electrode-cable">Step 3: Connecting electrode cable</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-skin-preparation">Step 4: Skin Preparation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-electrode-placement">Step 5: Electrode placement</a></li>
@@ -1003,7 +1016,7 @@ Brain Computer Interface (BCI) projects and share them with us at <a class="refe
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Sep 26, 2026.
+  Last updated on Sep 30, 2026.
   <br/>
 </p></div>
       

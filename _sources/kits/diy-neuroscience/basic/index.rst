@@ -17,8 +17,18 @@ developing practical applications in the fields of human-computer interaction, a
 Contents of the kit
 ********************
 
-From development board (Maker UNO), BioAmp EXG Pill, BioAmp cable v3, jumper cables, gel electrodes,
-dry electrode-based BioAmp bands to skin preparation kit, this includes everything that you need to get started with your awesome HCI/BCI project.
+- 2 Channel Brain BioAmp Band
+- Muscle BioAmp Band
+- Heart BioAmp Band
+- BioAmp EXG Pill
+- BioAmp V3 Cable (100 cm)
+- Jumper Cables (x2)
+- Arduino UNO EK R4 Minima with Type-C Cable
+- NuPrep Gel (9g)
+- Electrode Gel Pouch (100 ml)
+- Alcohol Swabs (20 pcs)
+- 12 Pcs Gel Electrodes
+- *Baby Gel Electrodes (100 pcs)*
 
 .. figure:: media/kit-contents.*
     :align: center
@@ -66,13 +76,13 @@ by making a solder joint as shown in the image above.
 
 .. note:: Even without making the solder joint the BioAmp EXG Pill is capable of recording ECG or EMG as well but the signals would be more accurate if you configure it.
 
-Step 2: Connect Maker UNO
-==========================
+Step 2: Connect Arduino UNO EK R4 Minima
+=========================================
 
-.. figure:: media/connection-with-maker-uno.*
+.. figure:: media/connection-with-r4-minima.*
     :align: center
 
-Connect ``VCC`` to ``5V``, ``GND`` to ``GND``, and ``OUT`` to ``Analog pin A0`` of your Maker UNO via jumper cables provided by us. If you are connecting OUT to any other analog pin, then you will have to change the INPUT PIN in the arduino sketch accordingly.
+Connect ``VCC`` to ``5V``, ``GND`` to ``GND``, and ``OUT`` to ``Analog pin A0`` of your Arduino UNO EK R4 Minima via jumper cables provided by us. If you are connecting OUT to any other analog pin, then you will have to change the INPUT PIN in the Arduino sketch accordingly.
 
 .. warning:: Take precautions while connecting to power, if power pins (GND & VCC) are to be swapped, your BioAmp EXG Pill will be fried and it’ll become unusable (DIE).
 
@@ -105,13 +115,15 @@ Once you have made the connections, return here to proceed to the next steps.
 Step 6: Uploading the code
 ===========================
 
-1. Connect the Maker Uno to your laptop using the USB cable (Type A to Type B). Go to Chords Arduino Firmware github repository, open ``AVR-NANO-UNO-MEGA`` folder and copy paste the arduino sketch in Arduino IDE that you downloaded earlier.
+1. Connect the Arduino UNO EK R4 Minima to your laptop using the Type-C cable. Go to the Chords Arduino Firmware GitHub repository, open the ``UNO-R4`` folder, and copy the Arduino sketch into the Arduino IDE that you downloaded earlier.
 
-    Link for the arduino sketch: :fab:`github;pst-color-primary` `Chords Arduino Firmware for Maker Uno <https://github.com/upsidedownlabs/Chords-Arduino-Firmware/blob/main/AVR-NANO-UNO-MEGA/AVR-NANO-UNO-MEGA.ino>`_
+    Link for the Arduino sketch: :fab:`github;pst-color-primary` `Chords Arduino Firmware for Arduino UNO R4 <https://github.com/upsidedownlabs/Chords-Arduino-Firmware/blob/main/UNO-R4/UNO-R4.ino>`_
 
-2. Uncomment ``#define BOARD_MAKER_UNO`` in the code.
+2. In Arduino IDE, open ``Tools`` > ``Board`` > ``Boards Manager``. Search for ``Arduino UNO R4 Boards`` and install it.
 
-3. Go to ``tools`` > ``board`` > ``Arduino AVR boards`` and select Arduino UNO. In the same menu, select the COM port on which your Maker Uno is connected. To find out the right COM port, disconnect your Maker UNO board and reopen the menu. The entry that disappears should be the right COM port. Now click on the upload button.
+3. Go to ``Tools`` > ``Board`` > ``Arduino UNO R4 Boards`` and select ``Arduino UNO R4 Minima``.
+
+4. Go to ``Tools`` > ``Port`` and select the COM port on which your Arduino UNO EK R4 Minima is connected. To find the correct COM port, disconnect the board and reopen the menu. The entry that disappears is the correct port. Now click the upload button.
 
 .. warning:: Make sure your laptop is not connected to a charger and sit 5m away from any AC appliances for best signal acquisition.
 
@@ -130,7 +142,7 @@ Step 7: Setting up Chords Web
 Step 8: Setting up Chords Python
 =================================
 
-Since you have uploaded the firmware already to your Maker UNO, use our python script and follow the steps given in the :ref:`Chords-Python documentation <using-chords-python>` for lsl streaming, CSV data logging, verbose output with detailed statistics and error reporting. Not only that, you get a complete web interface to access various applications (like ECG with heart rate, EMG with envelope, GUI of channels, CSV plotter, etc.) that you can use to further analyse your signals and create HCI/BCI projects.
+Since you have uploaded the firmware already to your Arduino UNO EK R4 Minima, use our Python script and follow the steps given in the :ref:`Chords-Python documentation <using-chords-python>` for LSL streaming, CSV data logging, verbose output with detailed statistics and error reporting. Not only that, you get a complete web interface to access various applications (like ECG with heart rate, EMG with envelope, GUI of channels, CSV plotter, etc.) that you can use to further analyse your signals and create HCI/BCI projects.
 
 Some Project Ideas
 *********************
