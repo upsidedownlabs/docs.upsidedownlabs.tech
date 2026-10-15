@@ -16,6 +16,9 @@ pdf_build: all
 #     name:
 #         path: First level hardware documentation path for hardware 'index.rst'
 #         pdf: RST source for PDF generatation from _static/latex folder
+#
+# Datasheet first page (optional): add <pdf>.yml next to the RST source,
+# e.g. _static/latex/bioamp-exg-pill.yml. Without it, the default title page is used.
 
 PDFs:
    BioAmp EXG Pill:

@@ -1,0 +1,46 @@
+# Datasheet first page for the BioAmp EXG Pill PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+version: v1.0
+tagline: Small, powerful analog front-end for recording ECG, EMG, EOG and EEG
+image: media/bioamp-exg-pill.png
+
+overview: >-
+  BioAmp EXG Pill is a small, powerful analog-front-end (AFE) biopotential
+  signal-acquisition board that can be paired with any microcontroller unit (MCU)
+  or single-board computer (SBC) with an analog-to-digital converter (ADC) such as
+  Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, and
+  Raspberry Pi Pico, to name just a few. It also works with any dedicated ADC,
+  like the Texas Instruments ADS1115 and ADS131M0x, among others.
+
+note: >-
+  It is recommended to use Arduino UNO R4 while recording biopotential signals
+  since it has 14-bit ADC and can record the signals much accurately.
+
+features:
+  - Records publication-quality ECG, EMG, EOG and EEG
+  - Small size (25.4 x 10.0 mm) for mobile and space-constrained projects
+  - Powerful noise rejection, usable even close to AC mains
+  - Any 1.5 mm wire works as a strain-relieving electrode cable
+  - Pairs with any MCU with an ADC; 5 V by default, 3.3 V with a voltage divider
+  - Configurable gain, band-pass filter and electrode count
+
+applications:
+  - AI-assisted detection of congestive heart failure using CNN (ECG)
+  - Heart-rate variability calculation to detect heart ailments (ECG)
+  - Prosthetic arm (servo) control (EMG)
+  - Controlling a 3DOF robotic arm (EMG)
+  - Real-time game controllers (EOG)
+  - Blink detection and capturing photos with a blink of an eye (EOG)
+
+specifications:
+  - [Operating Voltage, 3.3 V / 5 V]
+  - [Input Impedance, 10¹² ohm]
+  - [Compatible Hardware, "Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or any standalone ADC of your choice"]
+  - [Bio-potential Signals, "EMG, ECG, EOG, EEG (configurable band-pass, by default configured for EEG & EOG)"]
+  - [No. of Channels, "1"]
+  - [Electrodes, 2 or 3 (by default configured for 3 electrodes)]
+  - [Dimensions, 25.4 x 10 mm]
+  - [Open Source, Hardware + Software]

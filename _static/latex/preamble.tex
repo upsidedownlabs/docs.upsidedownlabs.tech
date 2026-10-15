@@ -1,1 +1,123 @@
 \let\cleardoublepage\clearpage
+
+\makeatletter
+
+% Compact chapter headings (also used by "Contents"), in the same style as section headings
+\titleformat{\chapter}[block]{\py@HeaderFamily\huge\py@TitleColor}{\thechapter}{0.6em}{}
+\titlespacing*{\chapter}{0pt}{-24pt}{20pt}% negative: titlesec adds its own space above chapters
+
+% Chapter-start and contents pages get the same header as all other pages
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[R]{{\py@HeaderFamily \@title\sphinxheadercomma\py@release}}%
+  \fancyfoot[R]{{\py@HeaderFamily\thepage}}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% Datasheet first page values, set per PDF by conf.py from _static/latex/<pdf>.yml
+% \udlset{<tex file name>}{<key>}{<value>}
+\newcommand{\udlset}[3]{\@namedef{udl@#1@#2}{#3}}
+\newcommand{\udlget}[1]{\@nameuse{udl@\jobname @#1}}
+\newcommand{\udlifset}[3]{\@ifundefined{udl@\jobname @#1}{#3}{#2}}
+
+% Header and footer of the first page, same rules and fonts as Sphinx's "normal" page style
+\fancypagestyle{udlfirstpage}{%
+  \fancyhf{}%
+  \fancyhead[L]{{\py@HeaderFamily \@title}}%
+  \fancyhead[R]{{\py@HeaderFamily Datasheet\udlifset{version}{\ \textbar\ \udlget{version}}{}}}%
+  \fancyfoot[L]{{\py@HeaderFamily docs.upsidedownlabs.tech\ \textbar\ \@date}}%
+  \fancyfoot[R]{{\py@HeaderFamily\thepage}}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+% Contents entry for first page headings: top level like chapters, but unnumbered
+% and without the extra space chapters get above them
+\newcommand*\toclevel@udlfront{0}% PDF bookmark level
+\newcommand*\l@udlfront[2]{%
+  \begingroup
+    \parindent \z@ \rightskip \@pnumwidth \parfillskip -\@pnumwidth
+    \leavevmode \bfseries
+    #1\nobreak\hfil\nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+  \endgroup}
+
+% Unnumbered heading in the same style as section headings, listed in the contents
+\newcommand{\udlheading}[1]{%
+  \par\phantomsection\addcontentsline{toc}{udlfront}{#1}%
+  {\Large\py@HeaderFamily\py@TitleColor #1\par}\vspace{3mm}}
+
+% Use the datasheet first page when the PDF has a .yml, otherwise Sphinx's title page
+\newcommand{\udlmaketitle}{%
+  \udlifset{datasheet}{\udldatasheettitle}{\sphinxmaketitle}}
+
+% With a datasheet first page, pages are numbered 1, 2, 3, ... throughout (first page,
+% contents, chapters), so contents entries for the first page point to page 1.
+% Otherwise keep Sphinx's roman-numbered contents.
+\newcommand{\udltableofcontents}{%
+  \udlifset{datasheet}{%
+    \begingroup
+      \parskip \z@skip
+      \sphinxtableofcontentshook
+      \tableofcontents
+    \endgroup
+    \clearpage}{\sphinxtableofcontents}}
+
+\newcommand{\udldatasheettitle}{%
+  \begingroup
+    \thispagestyle{udlfirstpage}%
+    \setlength{\parindent}{0pt}%
+    \begingroup % for PDF information dictionary
+      \def\endgraf{ }\def\and{\& }%
+      \pdfstringdefDisableCommands{\def\\{, }}%
+      \hypersetup{pdfauthor={\@author}, pdftitle={\@title}}%
+    \endgroup
+    % Title and tagline
+    {\py@HeaderFamily\huge \@title\par}
+    \udlifset{tagline}{\vspace{2mm}{\raggedright\sffamily\large \udlget{tagline}\par}}{}%
+    \vspace{3mm}
+    \rule{\textwidth}{0.4pt}\par
+    \vspace{5mm}
+    % Overview (left half), product image (right half); same split as features/applications
+    \begin{minipage}[c]{0.48\textwidth}
+      \udlifset{overview}{%
+        \udlheading{Overview}
+        \udlget{overview}\par
+        \udlifset{note}{\vspace{2mm}\textbf{Note:} \udlget{note}\par}{}}{}%
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.48\textwidth}\centering
+      \udlifset{image}{%
+        \includegraphics[width=\linewidth,height=6cm,keepaspectratio]{\udlget{image}}}{}%
+    \end{minipage}\par
+    \vspace{7mm}
+    % Features (left), applications (right)
+    \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright
+      \udlifset{features}{%
+        \udlheading{Features}
+        \begin{itemize}\setlength{\itemsep}{3pt}\udlget{features}\end{itemize}}{}%
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright
+      \udlifset{applications}{%
+        \udlheading{Applications}
+        \begin{itemize}\setlength{\itemsep}{3pt}\udlget{applications}\end{itemize}}{}%
+    \end{minipage}\par
+    \vspace{7mm}
+    % Specifications, in the same table style as the rest of the document
+    \udlifset{specifications}{%
+      \udlheading{Specifications}
+      \begingroup
+      \sphinxthistablewithglobalstyle
+      \begin{tabular}{p{\dimexpr0.26\linewidth-2\tabcolsep\relax}p{\dimexpr0.74\linewidth-2\tabcolsep\relax}}
+      \sphinxtoprule
+      \sphinxtableatstartofbodyhook
+      \udlget{specifications}
+      \sphinxbottomrule
+      \end{tabular}\par
+      \endgroup}{}%
+    \vfill
+  \endgroup
+  \clearpage
+  \let\thanks\relax\let\maketitle\relax
+}
+
+\makeatother
