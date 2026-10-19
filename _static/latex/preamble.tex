@@ -3,8 +3,23 @@
 \makeatletter
 
 % Compact chapter headings (also used by "Contents"), in the same style as section headings
-\titleformat{\chapter}[block]{\py@HeaderFamily\huge\py@TitleColor}{\thechapter}{0.6em}{}
+\titleformat{\chapter}[block]{\py@HeaderFamily\huge\py@TitleColor}{\thechapter}{0.6em}{}[\udl@afterchapter]
 \titlespacing*{\chapter}{0pt}{-24pt}{20pt}% negative: titlesec adds its own space above chapters
+
+% Contents: chapter lines without a page number (report class \l@chapter minus the number)
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth \parfillskip \z@ \@plus 1fil
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima \hskip -\leftskip
+      #1\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
 
 % Header: Upside Down Labs logo and product name, alternating sides like a book
 % (odd pages: logo left, name right; even pages: name left, logo right)
@@ -46,11 +61,32 @@
   \fancyfoot[RO]{{\py@HeaderFamily\thepage}}%
 }
 
-% First page heading in the same style as section headings, listed in the contents
-% like the chapters (unnumbered, title aligned with the numbered chapter titles)
+% First page heading in the same style as section headings. In the contents it is listed
+% as a section of chapter 1 (1.1, 1.2, ...), pointing to page 1; chapter 1's own sections
+% are numbered after them.
+\newcounter{udlfront}
+\def\udl@frontentries{}
 \newcommand{\udlheading}[1]{%
-  \par\phantomsection\addcontentsline{toc}{chapter}{\protect\numberline{}#1}%
-  {\Large\py@HeaderFamily\py@TitleColor #1\par}\vspace{3mm}}
+  \par\stepcounter{udlfront}%
+  \pdfbookmark[0]{#1}{udlfront.\arabic{udlfront}}%
+  \edef\udl@tmp{\noexpand\udl@frontentry{\arabic{udlfront}}{\thepage}{\unexpanded{#1}}}%
+  \expandafter\g@addto@macro\expandafter\udl@frontentries\expandafter{\udl@tmp}%
+  {\Large\py@HeaderFamily\py@TitleColor\hypertarget{udlfront.\arabic{udlfront}}{#1}\par}\vspace{3mm}}
+
+% Contents line for one first page heading: {number}{page}{title}
+\newcommand{\udl@frontentry}[3]{%
+  \edef\udl@tmp{\noexpand\addtocontents{toc}{\noexpand\protect\noexpand\contentsline{section}%
+    {\noexpand\protect\noexpand\numberline{\thechapter.#1}\unexpanded{#3}}{#2}{udlfront.#1}}}%
+  \udl@tmp}
+
+% After the first numbered chapter's title: add the first page headings to the contents
+% (right after the chapter's own entry) and continue section numbering after them
+\newcommand{\udl@afterchapter}{%
+  \ifnum\c@chapter=\@ne \ifnum\c@udlfront>\z@
+    \udl@frontentries
+    \setcounter{section}{\value{udlfront}}%
+    \global\let\udl@frontentries\@empty \setcounter{udlfront}{0}%
+  \fi\fi}
 
 % The summary sections of a product's docs page (marked with udlsummary-<pdf name> in its
 % index.rst) are on that product's datasheet first page, so they are left out of its own PDF.
