@@ -1,0 +1,24 @@
+# Datasheet first page for the Heart BioAmp Candy PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are left out of this PDF, so this is
+# the only place this content appears in it.
+
+tagline: Candy-sized sensor for recording ElectroCardioGraphy (ECG) signals
+image: hardware/bioamp/heart-bioamp-candy/media/candy-angled.png
+
+overview: >-
+  Heart BioAmp Candy is a candy-sized sensor for recording ECG signals easily. It is
+  perfect for students and researchers as it offers reliable and accurate ECG
+  recordings, making heart monitoring accessible and convenient for educational and
+  research purposes.
+
+specifications:
+  - [Input Voltage, 2.7 V - 5 V]
+  - [Fixed Gain, x2157]
+  - [Bandpass Filter, 0.5 - 34 Hz]
+  - [Compatible Hardware, "Any development board with an ADC (Arduino UNO R3/R4, Arduino Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or any standalone ADC of your choice"]
+  - [BioPotentials, ECG]
+  - [No. of Channels, "1"]
+  - [Electrodes, "3 (Positive, Negative, and Reference)"]
+  - [Dimensions, 3.5 x 1.5 cm]
+  - [Open Source, Hardware + Software]

@@ -36,6 +36,9 @@ PDFs:
    Muscle BioAmp Candy:
       path: hardware/bioamp/muscle-bioamp-candy
       pdf: _static/latex/muscle-bioamp-candy
+   Heart BioAmp Candy:
+      path: hardware/bioamp/heart-bioamp-candy
+      pdf: _static/latex/heart-bioamp-candy
    Muscle BioAmp Patchy:
       path: hardware/bioamp/muscle-bioamp-patchy
       pdf: _static/latex/muscle-bioamp-patchy
