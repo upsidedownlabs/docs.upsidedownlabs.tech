@@ -5,54 +5,49 @@ BioAmp EXG Pill
 
 :bdg-danger:`v1.0`
 
-.. Overview, features, specifications and applications are on the datasheet first page in the PDF
-   (_static/latex/bioamp-exg-pill.yml), so they are only included in HTML.
+Overview
+*********
 
-.. only:: html
+BioAmp EXG Pill is a small, powerful analog-front-end (AFE) biopotential signal-acquisition board that can be paired 
+with any microcontroller unit (MCU) or single-board computer (SBC) with an analog-to-digital converter (ADC) such as 
+Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, and Raspberry Pi Pico, to name 
+just a few. It also works with any dedicated ADC, like the Texas Instruments ADS1115 and ADS131M0x, among others.
 
-    Overview
-    *********
+.. note:: It is recommended to use Arduino UNO R4 while recording biopotential signals since it has 14-bit ADC and can record the signals much accurately.
 
-    BioAmp EXG Pill is a small, powerful analog-front-end (AFE) biopotential signal-acquisition board that can be paired 
-    with any microcontroller unit (MCU) or single-board computer (SBC) with an analog-to-digital converter (ADC) such as 
-    Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, and Raspberry Pi Pico, to name 
-    just a few. It also works with any dedicated ADC, like the Texas Instruments ADS1115 and ADS131M0x, among others.
+.. figure:: ../../../media/bioamp-exg-pill.*
+    :align: center
 
-    .. note:: It is recommended to use Arduino UNO R4 while recording biopotential signals since it has 14-bit ADC and can record the signals much accurately.
+What makes it different?
+**************************
 
-    .. figure:: ../../../media/bioamp-exg-pill.*
-        :align: center
+1. Record publication-quality biopotential signals like ECG, EMG, EOG, or EEG.
+2. Small size (25.4 x 10.0mm) allows easy integration into mobile and space-constrained projects.
+3. Powerful noise rejection makes it usable even when the device is close to the AC mains supply.
+4. Any 1.5 mm diameter wire can be used as a strain-relieving electrode cable, making it very cost-effective.
+5. Pair it with any MCU with an ADC. It is by default compatible with 5V but you can make it compatible with 3.3V as well using a voltage divider.
+6. Configure the gain, band pass filter and electrode count according to your requirements.
 
-    What makes it different?
-    **************************
+Features & Specifications
+**************************
 
-    1. Record publication-quality biopotential signals like ECG, EMG, EOG, or EEG.
-    2. Small size (25.4 x 10.0mm) allows easy integration into mobile and space-constrained projects.
-    3. Powerful noise rejection makes it usable even when the device is close to the AC mains supply.
-    4. Any 1.5 mm diameter wire can be used as a strain-relieving electrode cable, making it very cost-effective.
-    5. Pair it with any MCU with an ADC. It is by default compatible with 5V but you can make it compatible with 3.3V as well using a voltage divider.
-    6. Configure the gain, band pass filter and electrode count according to your requirements.
-
-    Features & Specifications
-    **************************
-
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Operating Voltage    | 3.3 V / 5 V                                                                                                                                                                          |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Input Impedance      | 10^12 ohm                                                                                                                                                                            |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Compatible Hardware  | Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or any standalone ADC of your choice |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Bio-potential Signals| EMG, ECG, EOG, EEG (configurable band-pass, by default configured for EEG & EOG)                                                                                                     |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | No. of channels      | 1                                                                                                                                                                                    |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Electrodes           | 2 or 3 (By default configured for 3 electrodes)                                                                                                                                      |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Dimensions           | 25.4 x 10 mm                                                                                                                                                                         |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-    | Open Source          | Hardware + Software                                                                                                                                                                  |
-    +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Operating Voltage    | 3.3 V / 5 V                                                                                                                                                                          |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Input Impedance      | 10^12 ohm                                                                                                                                                                            |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Compatible Hardware  | Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or any standalone ADC of your choice |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Bio-potential Signals| EMG, ECG, EOG, EEG (configurable band-pass, by default configured for EEG & EOG)                                                                                                     |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| No. of channels      | 1                                                                                                                                                                                    |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Electrodes           | 2 or 3 (By default configured for 3 electrodes)                                                                                                                                      |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Dimensions           | 25.4 x 10 mm                                                                                                                                                                         |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Open Source          | Hardware + Software                                                                                                                                                                  |
++----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Board layout
 *************
@@ -589,21 +584,19 @@ below shows the ECG, EMG, EOG, and EEG recording using ``v1.0b`` of device.
     :align: center
     :width: 100%
 
-.. only:: html
+Real-world Applications
+************************
 
-    Real-world Applications
-    ************************
+BioAmp EXG Pill is perfect for researchers, makers, and hobbyists looking for novel ways to sample biopotential data. It can 
+be used for a wide variety of interesting biosensing projects, including:
 
-    BioAmp EXG Pill is perfect for researchers, makers, and hobbyists looking for novel ways to sample biopotential data. It can 
-    be used for a wide variety of interesting biosensing projects, including:
-
-    - AI-assisted detection of congestive heart failure using CNN (ECG)
-    - Heart-rate variability calculation to detect heart ailments (ECG)
-    - Prosthetic arm (servo) control (EMG)
-    - Controlling a 3DOF robotic arm (EMG)
-    - Real-time game controllers (EOG)
-    - Blink detection (EOG)
-    - Capturing photos with a blink of an eye (EOG) and many more examples. 
+- AI-assisted detection of congestive heart failure using CNN (ECG)
+- Heart-rate variability calculation to detect heart ailments (ECG)
+- Prosthetic arm (servo) control (EMG)
+- Controlling a 3DOF robotic arm (EMG)
+- Real-time game controllers (EOG)
+- Blink detection (EOG)
+- Capturing photos with a blink of an eye (EOG) and many more examples. 
 
 
 Project ideas & tutorials
