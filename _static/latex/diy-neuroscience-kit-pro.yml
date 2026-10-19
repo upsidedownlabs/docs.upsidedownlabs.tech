@@ -1,0 +1,30 @@
+# Datasheet first page for the DIY Neuroscience Kit Pro PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: Advanced DIY Neuroscience Kit with BioAmp EXG Pill and Muscle BioAmp Shield
+image: kits/diy-neuroscience/pro/media/diy-neuroscience-kit-pro.png
+
+overview: >-
+  This is the advanced DIY Neuroscience Kit with Muscle BioAmp Shield - an EMG Shield for
+  Arduino UNO! The shield offers multiple plug-and-play options, and additional data
+  acquisition while the BioAmp EXG Pill enhances versatility by enabling the measurement
+  of various biopotential signals, including EEG (brain), EOG (eyes), EMG (muscles), and
+  ECG (heart). Start your journey of discovery, as you build exciting projects, develop
+  HCI/BCI applications, and gain valuable insights.
+
+contents:
+  - 2 Channel Brain BioAmp Band
+  - Muscle BioAmp Band
+  - Heart BioAmp Band
+  - BioAmp EXG Pill
+  - BioAmp V3 Cable (100 cm)
+  - Jumper Cables (x2)
+  - Arduino Uno R4 with Type-C Cable
+  - NuPrep Gel (25g)
+  - Electrode Gel Pouch (100 ml)
+  - Alcohol Swabs (20 pcs)
+  - Baby Gel Electrodes (100 pcs)
+  - Servo claw
+  - "Muscle BioAmp Shield Kit: Muscle BioAmp Shield, Stemma cable, Aux Cable, Muscle BioAmp Band, 24 Pcs Gel Electrodes, BioAmp V3 Cable"

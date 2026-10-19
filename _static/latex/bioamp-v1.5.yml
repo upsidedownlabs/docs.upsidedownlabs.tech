@@ -1,0 +1,25 @@
+# Datasheet first page for the BioAmp v1.5 PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: Portable, no-code amplifier to record and listen to your muscle signals (EMG)
+image: hardware/bioamp/bioamp-v1.5/media/bioamp-v1.5.png
+
+overview: >-
+  It is a small size portable biopotential amplifier with a no code setup to record and
+  listen to your muscle signals (EMG) non invasively. The best part is that it doesn't
+  require any microcontroller (like Arduino) to sample the signal. You just plug a 9V
+  battery into the board, electrodes to the body, and an audio jack to a mobile/laptop,
+  and you are ready to record signals from muscles (EMG) using softwares like audacity or
+  Backyard Brain's spike recorder app.
+
+specifications:
+  - [Minimum Input Voltage, 7-9 V]
+  - [Input Impedance, 10^7 ohm]
+  - [Fixed Gain, ~200x]
+  - [BioPotentials, EMG (Electromyography)]
+  - [No. of Channels, "1"]
+  - [Electrodes, "3 (Positive, Negative, and Reference)"]
+  - [Dimensions, 5.0 x 3.0 cm]
+  - [Open Source, Hardware + Software]

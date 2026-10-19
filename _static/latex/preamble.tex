@@ -46,20 +46,24 @@
   \fancyfoot[RO]{{\py@HeaderFamily\thepage}}%
 }
 
-% Contents entry for first page headings: top level like chapters, but unnumbered
-% and without the extra space chapters get above them
-\newcommand*\toclevel@udlfront{0}% PDF bookmark level
-\newcommand*\l@udlfront[2]{%
-  \begingroup
-    \parindent \z@ \rightskip \@pnumwidth \parfillskip -\@pnumwidth
-    \leavevmode \bfseries
-    #1\nobreak\hfil\nobreak\hb@xt@\@pnumwidth{\hss #2}\par
-  \endgroup}
-
-% Unnumbered heading in the same style as section headings, listed in the contents
+% First page heading in the same style as section headings, listed in the contents
+% like the chapters (unnumbered, title aligned with the numbered chapter titles)
 \newcommand{\udlheading}[1]{%
-  \par\phantomsection\addcontentsline{toc}{udlfront}{#1}%
+  \par\phantomsection\addcontentsline{toc}{chapter}{\protect\numberline{}#1}%
   {\Large\py@HeaderFamily\py@TitleColor #1\par}\vspace{3mm}}
+
+% The summary sections of a product's docs page (marked with udlsummary-<pdf name> in its
+% index.rst) are on that product's datasheet first page, so they are left out of its own PDF.
+% Other PDFs that include the page (e.g. kits) keep them.
+\usepackage{comment}
+\newcommand{\udlsummary}[1]{%
+  \ifnum\pdfstrcmp{\jobname}{#1}=0 \excludecomment{udlsummary-#1}\else\includecomment{udlsummary-#1}\fi}
+
+% First page lists
+\usepackage{multicol}
+\newcommand{\udllist}[1]{\begin{itemize}\setlength{\itemsep}{3pt}#1\end{itemize}}
+\newcommand{\udlfeatures}{\udlheading{Features}\udllist{\udlget{features}}}
+\newcommand{\udlapplications}{\udlheading{Applications}\udllist{\udlget{applications}}}
 
 % Use the datasheet first page when the PDF has a .yml, otherwise Sphinx's title page
 \newcommand{\udlmaketitle}{%
@@ -104,18 +108,19 @@
         \includegraphics[width=\linewidth,height=6cm,keepaspectratio]{\udlget{image}}}{}%
     \end{minipage}\par
     \vspace{7mm}
-    % Features (left), applications (right)
-    \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright
-      \udlifset{features}{%
-        \udlheading{Features}
-        \begin{itemize}\setlength{\itemsep}{3pt}\udlget{features}\end{itemize}}{}%
-    \end{minipage}\hfill
-    \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright
+    % Features (left), applications (right) when both are given, otherwise full width
+    \udlifset{features}{%
       \udlifset{applications}{%
-        \udlheading{Applications}
-        \begin{itemize}\setlength{\itemsep}{3pt}\udlget{applications}\end{itemize}}{}%
-    \end{minipage}\par
-    \vspace{7mm}
+        \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright\udlfeatures\end{minipage}\hfill
+        \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}\raggedright\udlapplications\end{minipage}\par
+      }{\udlfeatures}%
+      \vspace{7mm}}{%
+      \udlifset{applications}{\udlapplications\vspace{7mm}}{}}%
+    % Kit contents, in two columns
+    \udlifset{contents}{%
+      \udlheading{Kit Contents}
+      \begin{multicols}{2}\raggedright\udllist{\udlget{contents}}\end{multicols}
+      \vspace{3mm}}{}%
     % Specifications, in the same table style as the rest of the document
     \udlifset{specifications}{%
       \udlheading{Specifications}

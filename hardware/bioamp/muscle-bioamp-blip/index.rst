@@ -5,6 +5,14 @@ Muscle BioAmp Blip
 
 :bdg-danger:`Discontinued`
 
+.. Overview and Features & Specifications are on the datasheet first page of this product's PDF
+   (_static/latex/muscle-bioamp-blip.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-muscle-bioamp-blip}
+
 Overview
 *********
 
@@ -42,6 +50,10 @@ Features & Specifications
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Open Source           | Hardware + Software                                                                                                                                              |
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. raw:: latex
+
+   \end{udlsummary-muscle-bioamp-blip}
 
 Hardware
 **********

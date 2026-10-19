@@ -5,6 +5,14 @@ BioAmp EXG Pill
 
 :bdg-danger:`v1.0`
 
+.. Overview, What makes it different? and Features & Specifications are on the datasheet first page of this product's PDF
+   (_static/latex/bioamp-exg-pill.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-bioamp-exg-pill}
+
 Overview
 *********
 
@@ -48,6 +56,10 @@ Features & Specifications
 +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Open Source          | Hardware + Software                                                                                                                                                                  |
 +----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. raw:: latex
+
+   \end{udlsummary-bioamp-exg-pill}
 
 Board layout
 *************
@@ -584,6 +596,14 @@ below shows the ECG, EMG, EOG, and EEG recording using ``v1.0b`` of device.
     :align: center
     :width: 100%
 
+.. Real-world Applications are on the datasheet first page of this product's PDF
+   (_static/latex/bioamp-exg-pill.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-bioamp-exg-pill}
+
 Real-world Applications
 ************************
 
@@ -597,6 +617,10 @@ be used for a wide variety of interesting biosensing projects, including:
 - Real-time game controllers (EOG)
 - Blink detection (EOG)
 - Capturing photos with a blink of an eye (EOG) and many more examples. 
+
+.. raw:: latex
+
+   \end{udlsummary-bioamp-exg-pill}
 
 
 Project ideas & tutorials

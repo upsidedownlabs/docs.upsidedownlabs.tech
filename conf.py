@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 import os
+import re
 import sys
 import yaml
 from pathlib import Path
@@ -26,10 +27,12 @@ latex_datasheets = []
 pdfs = []
 
 def tex_escape(text):
-    """Escape LaTeX special characters in plain text from the datasheet YAML files."""
+    """Escape LaTeX special characters in plain text from the datasheet YAML files.
+    "10^12" is written as a superscript, as in the docs tables."""
     chars = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
-             "_": r"\_", "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
-    return "".join(chars.get(c, c) for c in str(text).strip())
+             "_": r"\_", "{": r"\{", "}": r"\}", "~": r"$\sim$", "^": r"\textasciicircum{}"}
+    escaped = "".join(chars.get(c, c) for c in str(text).strip())
+    return re.sub(r"\\textasciicircum\{\}(\w+)", r"\\textsuperscript{\1}", escaped)
 
 def datasheet_tex(tex_name, ds_file):
     """LaTeX lines that set the datasheet first page values for one PDF."""
@@ -39,7 +42,7 @@ def datasheet_tex(tex_name, ds_file):
     for key in ("tagline", "overview", "note"):
         if ds.get(key):
             lines.append("\\udlset{%s}{%s}{%s}" % (tex_name, key, tex_escape(ds[key])))
-    for key in ("features", "applications"):
+    for key in ("features", "applications", "contents"):
         if ds.get(key):
             items = "".join("\\item " + tex_escape(item) for item in ds[key])
             lines.append("\\udlset{%s}{%s}{%s}" % (tex_name, key, items))
@@ -70,6 +73,11 @@ with open('conf.yml', 'r') as conf_file:
                 name = board
                 path = data['path']
                 pdf = data.get('pdf', False)
+
+                # Summary sections marked in the product's docs page, left out of its own PDF.
+                # Defined for every product, as other PDFs may include the page (e.g. kits)
+                if(pdf and os.path.exists(pdf + ".yml")):
+                    latex_datasheets.append("\\udlsummary{%s}" % pdf.split('/')[-1])
 
                 # PDF build details
                 if(pdf and (name in pdf_build or pdf_build_all)):

@@ -3,6 +3,14 @@
 DIY Neuroscience Kit Pro
 #########################
 
+.. Overview and Contents of the kit are on the datasheet first page of this product's PDF
+   (_static/latex/diy-neuroscience-kit-pro.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-diy-neuroscience-kit-pro}
+
 This is the advanced DIY Neuroscience Kit with Muscle BioAmp Shield - an EMG Shield for Arduino UNO!
 The shield offers multiple plug-and-play options, and additional data acquisition while the BioAmp EXG Pill 
 enhances versatility by enabling the measurement of various biopotential signals, including EEG (brain), EOG (eyes), 
@@ -46,6 +54,10 @@ Click on the link below to see the unboxing of the kit:
 .. youtube:: Sn389Q7Izy4
     :width: 100%
     :align: center
+
+.. raw:: latex
+
+   \end{udlsummary-diy-neuroscience-kit-pro}
 
 Software requirements
 **********************

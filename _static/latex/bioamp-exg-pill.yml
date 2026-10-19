@@ -36,7 +36,7 @@ applications:
 
 specifications:
   - [Operating Voltage, 3.3 V / 5 V]
-  - [Input Impedance, 10¹² ohm]
+  - [Input Impedance, 10^12 ohm]
   - [Compatible Hardware, "Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or any standalone ADC of your choice"]
   - [Bio-potential Signals, "EMG, ECG, EOG, EEG (configurable band-pass, by default configured for EEG & EOG)"]
   - [No. of Channels, "1"]
