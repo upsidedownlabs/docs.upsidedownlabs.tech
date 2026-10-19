@@ -42,6 +42,9 @@ PDFs:
    Muscle BioAmp Shield:
       path: hardware/bioamp/muscle-bioamp-shield
       pdf: _static/latex/muscle-bioamp-shield
+   Neuro PlayGround Lite:
+      path: hardware/bioamp/neuro-play-ground-lite
+      pdf: _static/latex/neuro-play-ground-lite
    DIY Neuroscience Kit Pro:
       path: kits/diy-neuroscience/pro
       pdf: _static/latex/diy-neuroscience-kit-pro

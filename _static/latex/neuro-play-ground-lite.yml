@@ -1,0 +1,37 @@
+# Datasheet first page for the Neuro PlayGround (NPG) Lite PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are left out of this PDF, so this is
+# the only place this content appears in it.
+
+tagline: An expandable 3-channel wireless BioAmp for HCI & BCI
+image: hardware/bioamp/neuro-play-ground-lite/media/npg-lite-front-back.jpg
+
+overview: >-
+  Neuro PlayGround Lite (NPG Lite) is a multichannel Adafruit feather form-factor
+  wireless bio-physiological signal acquisition board. It can be used for
+  Electrocardiography (ECG), Electromyography (EMG), Electrooculography (EOG), or
+  Electroencephalography (EEG). Its compact footprint and hassle-free setup ensure
+  portability, quick deployment and a clutter-free experience, making it ideal for
+  research, education and wearable applications.
+
+features:
+  - Expandable with NPG Playmate Boards and 3rd party FeatherWing boards, adding features like a vibration motor for haptic feedback, a buzzer for audio feedback, and I2C connectivity
+  - Works with the open source, cross-platform Chords software suite (Chords-Web, Chords-Python, Chords LSL Connector and Chords LSL Visualizer) to visualize signals in real-time, apply filtering, perform FFT analysis, and much more
+  - Dedicated NPG Lite Flasher tool to flash pre-built firmware binaries from GitHub or your own binary files
+  - Bluetooth, Zigbee, Wi-Fi or Thread for mesh networking, to capture bio-physiological signals how you want and where you want it
+
+specifications:
+  - [Bio-signal Channels, "3-6 Channel BioAmp (ECG, EMG, EOG, EEG)"]
+  - [Microcontroller, ESP32-C6 (RISC-V) with 4 MB Flash]
+  - [Biopotential(s), EXG]
+  - [ADC Resolution, 12 Bit]
+  - [Wireless I/O, "Wi-Fi 6, Bluetooth LE 5, Thread, Zigbee"]
+  - [USB & Programming, "USB-C for power, charging & programming; UART, JTAG"]
+  - [LEDs, "6 addressable RGB LEDs, User LED, Charging indicator LED"]
+  - [Buttons, Reset button + User/Boot Buttons]
+  - [Power Options, USB-C or LiPo battery]
+  - [Power Regulation, 600 mA LDO with LiPo battery charging onboard]
+  - [Battery Connector, PicoBlade LiPo]
+  - [Form Factor, "Standard Adafruit Feather (GPIO, Power, RX/TX pins)"]
+  - [Protection, On-board patient & USB ESD protection]
+  - [Compatible Hardware, NPG Playmates & FeatherWing boards & QWIIC]

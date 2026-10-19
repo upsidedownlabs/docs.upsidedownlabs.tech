@@ -10,6 +10,14 @@ Neuro PlayGround (NPG) Lite
     :align: center
     :alt: NPG Lite Crowd Supply Banner
 
+.. Overview and Features & Specifications are on the datasheet first page of this product's PDF
+   (_static/latex/neuro-play-ground-lite.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-neuro-play-ground-lite}
+
 Overview
 *********
 
@@ -86,6 +94,10 @@ Features & Specifications
 +---------------------+----------------------------------------------------------+
 | Compatible Hardware | NPG Playmates & FeatherWing boards & QWIIC               |
 +---------------------+----------------------------------------------------------+
+
+.. raw:: latex
+
+   \end{udlsummary-neuro-play-ground-lite}
 
 
 Board Layout & Pinout Diagram
