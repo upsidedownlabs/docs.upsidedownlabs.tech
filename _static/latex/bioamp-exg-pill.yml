@@ -3,7 +3,6 @@
 # The matching sections of the docs page are only included in HTML, so this is
 # the only place this content appears in the PDF.
 
-version: v1.0
 tagline: Small, powerful analog front-end for recording ECG, EMG, EOG and EEG
 image: media/bioamp-exg-pill.png
 

@@ -21,7 +21,7 @@ author = 'Upside Down Labs'
 
 # Configure PDF build and sidebar links
 latex_documents = []
-latex_additional_files = []
+latex_additional_files = ["_static/logo/logo_black_full.pdf"]  # header logo (PDF copy of the .svg)
 latex_datasheets = []
 pdfs = []
 
@@ -36,7 +36,7 @@ def datasheet_tex(tex_name, ds_file):
     with open(ds_file, 'r', encoding='utf-8') as f:
         ds = yaml.safe_load(f) or {}
     lines = ["\\udlset{%s}{datasheet}{}" % tex_name]
-    for key in ("version", "tagline", "overview", "note"):
+    for key in ("tagline", "overview", "note"):
         if ds.get(key):
             lines.append("\\udlset{%s}{%s}{%s}" % (tex_name, key, tex_escape(ds[key])))
     for key in ("features", "applications"):

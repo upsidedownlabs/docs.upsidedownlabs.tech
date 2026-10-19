@@ -6,13 +6,30 @@
 \titleformat{\chapter}[block]{\py@HeaderFamily\huge\py@TitleColor}{\thechapter}{0.6em}{}
 \titlespacing*{\chapter}{0pt}{-24pt}{20pt}% negative: titlesec adds its own space above chapters
 
-% Chapter-start and contents pages get the same header as all other pages
+% Header: Upside Down Labs logo and product name, alternating sides like a book
+% (odd pages: logo left, name right; even pages: name left, logo right)
+\geometry{headheight=22pt}
+\newcommand{\udllogo}{\includegraphics[height=18pt]{logo_black_full.pdf}}
+\newcommand{\udlheader}{%
+  \fancyhead[LO,RE]{\udllogo}%
+  \fancyhead[RO,LE]{{\py@HeaderFamily \@title\sphinxheadercomma\py@release}}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\footrulewidth}{0.4pt}}
+
+% Regular pages: footer with page number and chapter/section name (as in Sphinx)
+\fancypagestyle{normal}{%
+  \fancyhf{}%
+  \udlheader
+  \fancyfoot[RO,LE]{{\py@HeaderFamily\thepage}}%
+  \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}%
+  \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}%
+}
+
+% Chapter-start and contents pages: same header, footer with page number only
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyhead[R]{{\py@HeaderFamily \@title\sphinxheadercomma\py@release}}%
-  \fancyfoot[R]{{\py@HeaderFamily\thepage}}%
-  \renewcommand{\headrulewidth}{0.4pt}%
-  \renewcommand{\footrulewidth}{0.4pt}%
+  \udlheader
+  \fancyfoot[RO,LE]{{\py@HeaderFamily\thepage}}%
 }
 
 % Datasheet first page values, set per PDF by conf.py from _static/latex/<pdf>.yml
@@ -21,15 +38,12 @@
 \newcommand{\udlget}[1]{\@nameuse{udl@\jobname @#1}}
 \newcommand{\udlifset}[3]{\@ifundefined{udl@\jobname @#1}{#3}{#2}}
 
-% Header and footer of the first page, same rules and fonts as Sphinx's "normal" page style
+% Datasheet first page: same header, footer with website, date and page number
 \fancypagestyle{udlfirstpage}{%
   \fancyhf{}%
-  \fancyhead[L]{{\py@HeaderFamily \@title}}%
-  \fancyhead[R]{{\py@HeaderFamily Datasheet\udlifset{version}{\ \textbar\ \udlget{version}}{}}}%
-  \fancyfoot[L]{{\py@HeaderFamily docs.upsidedownlabs.tech\ \textbar\ \@date}}%
-  \fancyfoot[R]{{\py@HeaderFamily\thepage}}%
-  \renewcommand{\headrulewidth}{0.4pt}%
-  \renewcommand{\footrulewidth}{0.4pt}%
+  \udlheader
+  \fancyfoot[LO]{{\py@HeaderFamily docs.upsidedownlabs.tech\ \textbar\ \@date}}%
+  \fancyfoot[RO]{{\py@HeaderFamily\thepage}}%
 }
 
 % Contents entry for first page headings: top level like chapters, but unnumbered
