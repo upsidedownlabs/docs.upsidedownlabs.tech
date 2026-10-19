@@ -23,10 +23,16 @@
 
 % Header: Upside Down Labs logo and product name, alternating sides like a book
 % (odd pages: logo left, name right; even pages: name left, logo right)
-\geometry{headheight=22pt}
-\newcommand{\udllogo}{\includegraphics[height=18pt]{logo_black_full.pdf}}
+% The logo has the website link under it; #1 = l or r, the side it is aligned to
+\geometry{headheight=33pt}
+\newcommand{\udllogo}[1]{%
+  \begin{tabular}[b]{@{}#1@{}}
+    \includegraphics[height=18pt]{logo_black_full.pdf}\\[-1pt]
+    \href{https://www.upsidedownlabs.in}{\color{black}\sffamily\fontsize{6.5}{7}\selectfont www.upsidedownlabs.in}
+  \end{tabular}}
 \newcommand{\udlheader}{%
-  \fancyhead[LO,RE]{\udllogo}%
+  \fancyhead[LO]{\udllogo{l}}%
+  \fancyhead[RE]{\udllogo{r}}%
   \fancyhead[RO,LE]{{\py@HeaderFamily \@title\sphinxheadercomma\py@release}}%
   \renewcommand{\headrulewidth}{0.4pt}%
   \renewcommand{\footrulewidth}{0.4pt}}
