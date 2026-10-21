@@ -81,6 +81,11 @@ Tools
       :gutter: 2
 
 
+      .. grid-item-card:: NPG Lite Flasher Web
+         :text-align: center
+         :link: npg-lite-flasher-web
+         :link-type: ref
+
       .. grid-item-card:: NPG Lite Flasher
          :text-align: center
          :link: npg-lite-flasher
@@ -148,6 +153,7 @@ BioAmp Firmware
    :maxdepth: 1
    :caption: Tools
 
+   tools/npg-lite-flasher-web/index
    tools/npg-lite-flasher/index
    tools/bioamp-filter-designer/index
 
