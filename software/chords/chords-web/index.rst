@@ -20,7 +20,7 @@ Chords-Web runs completely in your browser - there is nothing to install. Open `
 
 .. note::
 
-   Chords-Web is made for **educational and research purposes**. It is not a medical device and must not be used for diagnosis.
+   Chords-Web is made for **educational and research purposes**. It is not medical software and must not be used for diagnosis.
 
 Quick Start
 ***********
@@ -47,13 +47,39 @@ Chords-Web talks to your board directly from the browser using these web APIs:
 - **Web Bluetooth API**: to connect the NPG Lite over Bluetooth Low Energy (BLE).
 - **WebUSB API**: to update the firmware of some boards from the browser.
 
-These APIs are available in the latest versions of Chromium-based desktop browsers:
+Not every browser supports all three APIs, so some features may not work in your browser:
 
-- **Google Chrome**
-- **Microsoft Edge**
-- **Opera**
+.. list-table::
+   :widths: 28 24 24 24
+   :header-rows: 1
 
-If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser. Firefox and Safari are not supported.
+   * - **Browser**
+     - **Serial (USB)**
+     - **Bluetooth (BLE)**
+     - **Firmware update**
+   * - Google Chrome, Microsoft Edge, Opera
+     - ✅
+     - ✅
+     - ✅ All boards
+   * - Mozilla Firefox
+     - ✅
+     - ❌
+     - ⚠️ Some boards only
+   * - Safari
+     - ❌
+     - ❌
+     - ❌
+
+For all features, use the latest version of **Google Chrome**, **Microsoft Edge** or **Opera**.
+
+If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser.
+
+.. warning::
+
+   **Using Firefox?** You can connect your board over **Serial** and use all the applications. But Firefox doesn't support Web Bluetooth or WebUSB, so:
+
+   - The **BLE** button won't work, so you can't connect the NPG Lite over Bluetooth. Connect it over Serial instead.
+   - The in-browser :ref:`firmware update <chords-firmware-update>` doesn't work for boards that are flashed over WebUSB: Arduino UNO R4 Minima, Arduino GIGA R1, STM32G4 Core Board, STM32F4 Black Pill and Raspberry Pi Pico. Update these boards using Chrome/Edge or the Arduino IDE. Other boards can be updated in Firefox, because they are flashed over Web Serial.
 
 .. important::
 
@@ -713,7 +739,7 @@ Running the Application
 
 .. note::
 
-   The ECG Visualizer is for learning and experiments only. It is not a medical device.
+   The ECG Visualizer is for learning and experiments only. It is not medical software.
 
 .. _chords-web-serial-wizard:
 
