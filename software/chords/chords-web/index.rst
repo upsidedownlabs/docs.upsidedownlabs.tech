@@ -58,17 +58,17 @@ Not every browser supports all three APIs, so some features may not work in your
      - **Bluetooth (BLE)**
      - **Firmware update**
    * - Google Chrome, Microsoft Edge, Opera
-     - ✅
-     - ✅
-     - ✅ All boards
+     - Yes
+     - Yes
+     - Yes (all boards)
    * - Mozilla Firefox
-     - ✅
-     - ❌
-     - ⚠️ Some boards only
+     - Yes
+     - No
+     - Some boards only
    * - Safari
-     - ❌
-     - ❌
-     - ❌
+     - No
+     - No
+     - No
 
 For all features, use the latest version of **Google Chrome**, **Microsoft Edge** or **Opera**.
 
