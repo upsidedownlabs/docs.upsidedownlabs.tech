@@ -61,7 +61,7 @@ Both tools upload firmware to the NPG Lite. Use whichever is easier for you:
      - Not needed
      - Download and install
    * - **Browser needed**
-     - Chrome, Edge, Opera or Firefox
+     - Chrome, Edge, Opera or Firefox 151+
      - Not needed (it is a desktop app)
    * - **Best for**
      - Quick flashing on any computer
@@ -78,13 +78,13 @@ NPG Lite Flasher Web uses the **Web Serial API**, which works in the latest vers
 - **Google Chrome**
 - **Microsoft Edge**
 - **Opera**
-- **Mozilla Firefox**
+- **Mozilla Firefox** (version 151 or later)
 
 Safari and mobile browsers are not supported.
 
 .. note::
 
-   NPG Lite Flasher Web only needs Web Serial, so it works fully in Firefox. Firefox doesn't support Web Bluetooth or WebUSB, but the flasher doesn't use them.
+   NPG Lite Flasher Web only needs Web Serial, so it works fully in Firefox 151 or later (the first version with Web Serial). Firefox doesn't support Web Bluetooth or WebUSB, but the flasher doesn't use them.
 
 Hardware
 ========

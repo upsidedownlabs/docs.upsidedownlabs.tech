@@ -61,7 +61,7 @@ Not every browser supports all three APIs, so some features may not work in your
      - Yes
      - Yes
      - Yes (all boards)
-   * - Mozilla Firefox
+   * - Mozilla Firefox 151 or later
      - Yes
      - No
      - Some boards only
@@ -70,13 +70,13 @@ Not every browser supports all three APIs, so some features may not work in your
      - No
      - No
 
-For all features, use the latest version of **Google Chrome**, **Microsoft Edge** or **Opera**.
+For all features, use the latest version of **Google Chrome**, **Microsoft Edge** or **Opera**. Firefox supports Web Serial from **version 151**. Older Firefox versions can't connect to your board and will show the unsupported browser message.
 
 If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser.
 
 .. warning::
 
-   **Using Firefox?** You can connect your board over **Serial** and use all the applications. But Firefox doesn't support Web Bluetooth or WebUSB, so:
+   **Using Firefox 151 or later?** You can connect your board over **Serial** and use all the applications. But Firefox doesn't support Web Bluetooth or WebUSB, so:
 
    - The **BLE** button won't work, so you can't connect the NPG Lite over Bluetooth. Connect it over Serial instead.
    - The in-browser :ref:`firmware update <chords-firmware-update>` doesn't work for boards that are flashed over WebUSB: Arduino UNO R4 Minima, Arduino GIGA R1, STM32G4 Core Board, STM32F4 Black Pill and Raspberry Pi Pico. Update these boards using Chrome/Edge or the Arduino IDE. Other boards can be updated in Firefox, because they are flashed over Web Serial.
@@ -798,16 +798,47 @@ Data Format and Data Quality
 Data Format
 ===========
 
-Chords-Web expects each sample from the board as an array:
+This section is for you if you want to use Chords-Web with your own board or firmware. The `Chords Arduino Firmware <https://github.com/upsidedownlabs/Chords-Arduino-Firmware>`_ already does all of this, so use it as a reference.
+
+Commands
+--------
+
+Chords-Web sends these text commands to the board over Serial. Each command ends with a newline (``\n``):
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - **Command**
+     - **What the board must do**
+   * - ``WHORU``
+     - Reply with its board ID on one line, for example ``UNO-R3``. Chords-Web uses this ID to set the channel count, ADC resolution and sampling rate.
+   * - ``START``
+     - Start sending data packets.
+   * - ``STOP``
+     - Stop sending data packets.
+
+The board ID must be one of the IDs Chords-Web knows: ``UNO-R3``, ``GENUINO-UNO``, ``UNO-CLONE``, ``NANO-CLASSIC``, ``NANO-CLONE``, ``MEGA-2560-R3``, ``MEGA-2560-CLONE``, ``UNO-R4``, ``GIGA-R1``, ``RPI-PICO-RP2040``, ``STM32G4-CORE-BOARD``, ``STM32F4-BLACK-PILL``, ``NPG-LITE``, ``NPG-LITE-3CH``, ``NPG-LITE-6CH`` or ``ESP32-S3``. If you use your own board, reply with the ID of a supported board that has the same channel count, ADC resolution and sampling rate (see :ref:`chords-supported-boards`).
+
+Chords-Web opens the port at **230400 baud**, unless it recognizes the board's USB ID (for example, Arduino UNO R3, Nano and MEGA boards use 115200 baud).
+
+Packet Format
+-------------
+
+After ``START``, the board sends one binary packet for every sample:
 
 .. code-block:: text
 
-   [counter, A0, A1, ..., An]
+   | 0xC7 | 0x7C | counter | CH1 high | CH1 low | ... | CHn high | CHn low | 0x01 |
 
-- ``counter`` is a ``uint8_t`` value from 0 to 255. It goes up by 1 with every sample and starts again from 0 after 255.
-- ``A0`` to ``An`` are the raw ADC values of each channel.
+- ``0xC7 0x7C``: two sync bytes that mark the start of a packet.
+- ``counter``: one byte (``uint8_t``) from 0 to 255. It goes up by 1 with every packet and starts again from 0 after 255.
+- ``CH high, CH low``: the raw ADC value of each channel, as two bytes in big-endian order (high byte first).
+- ``0x01``: the end byte.
 
-If you program your own microcontroller to send data in this format, you can use it with Chords-Web. See the `Chords Arduino Firmware <https://github.com/upsidedownlabs/Chords-Arduino-Firmware>`_ for examples.
+So each packet is ``2 × channels + 4`` bytes long. For example, a 6-channel board sends 16-byte packets. The board must always send all of its channels, even if only some are selected in Chords-Web.
+
+After decoding, Chords-Web uses each sample as ``[counter, CH1, CH2, ..., CHn]``. This is the same order as the columns in the recorded CSV file.
 
 Checking for Dropped Samples
 ============================
