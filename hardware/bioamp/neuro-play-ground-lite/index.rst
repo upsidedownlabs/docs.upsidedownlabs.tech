@@ -125,6 +125,9 @@ Components
 
     Neuro PlayGround (NPG) Lite Components
 
+.. PDF only: column widths and left-aligned text, so short columns are not hyphenated or stretched
+.. tabularcolumns:: >{\raggedright\arraybackslash}\Y{0.11}>{\raggedright\arraybackslash}\Y{0.28}>{\raggedright\arraybackslash}\Y{0.61}
+
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Number | Components                 | Description                                                                                                                                                       |
 +========+============================+===================================================================================================================================================================+
@@ -150,7 +153,7 @@ Components
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 11     | **Reset Button**           | The reset button restarts the microcontroller and running program without power loss, aiding debugging and firmware testing.                                      |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12     | **Charging LED**           | The Charging LED indicates battery charging status, lighting during charging and turning off when fully charged for immediate feedback.                           |
+| 12     | **Charging LED**           | The orange Charging LED indicates battery charging status, lighting during charging and turning off when fully charged for immediate feedback.                    |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 13     | **USB C**                  | USB C port for data transfer and power input.                                                                                                                     |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
