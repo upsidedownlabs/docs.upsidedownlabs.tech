@@ -232,3 +232,16 @@ latex_elements = {
     "tableofcontents": "\\udltableofcontents",
     "fncychap": "",  # compact chapter headings are defined in preamble.tex
 }
+
+# PDF links to pages that are not part of that PDF: Sphinx keeps only the link text,
+# so link them to the page on the docs site instead
+from sphinx.builders.latex import LaTeXBuilder
+
+class DocsSiteLinkLaTeXBuilder(LaTeXBuilder):
+    def get_target_uri(self, docname, typ=None):
+        if docname not in self.docnames:
+            return "%s/%s.html" % (html_context["docs_url"], docname)
+        return super().get_target_uri(docname, typ)
+
+def setup(app):
+    app.add_builder(DocsSiteLinkLaTeXBuilder, override=True)
