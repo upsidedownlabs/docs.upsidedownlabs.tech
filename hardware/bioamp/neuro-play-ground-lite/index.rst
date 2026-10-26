@@ -10,6 +10,14 @@ Neuro PlayGround (NPG) Lite
     :align: center
     :alt: NPG Lite Crowd Supply Banner
 
+.. Overview and Features & Specifications are on the datasheet first page of this product's PDF
+   (_static/latex/neuro-play-ground-lite.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-neuro-play-ground-lite}
+
 Overview
 *********
 
@@ -87,6 +95,10 @@ Features & Specifications
 | Compatible Hardware | NPG Playmates & FeatherWing boards & QWIIC               |
 +---------------------+----------------------------------------------------------+
 
+.. raw:: latex
+
+   \end{udlsummary-neuro-play-ground-lite}
+
 
 Board Layout & Pinout Diagram
 ******************************
@@ -113,6 +125,9 @@ Components
 
     Neuro PlayGround (NPG) Lite Components
 
+.. PDF only: column widths and left-aligned text, so short columns are not hyphenated or stretched
+.. tabularcolumns:: >{\raggedright\arraybackslash}\Y{0.11}>{\raggedright\arraybackslash}\Y{0.28}>{\raggedright\arraybackslash}\Y{0.61}
+
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Number | Components                 | Description                                                                                                                                                       |
 +========+============================+===================================================================================================================================================================+
@@ -138,7 +153,7 @@ Components
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 11     | **Reset Button**           | The reset button restarts the microcontroller and running program without power loss, aiding debugging and firmware testing.                                      |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 12     | **Charging LED**           | The Charging LED indicates battery charging status, lighting during charging and turning off when fully charged for immediate feedback.                           |
+| 12     | **Charging LED**           | The orange Charging LED indicates battery charging status, lighting during charging and turning off when fully charged for immediate feedback.                    |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 13     | **USB C**                  | USB C port for data transfer and power input.                                                                                                                     |
 +--------+----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+

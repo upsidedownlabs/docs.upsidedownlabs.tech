@@ -1,0 +1,31 @@
+# Datasheet first page for the Muscle BioAmp Blip PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: Single-channel mikroBUS™ compatible ElectroMyography (EMG) sensor
+image: hardware/bioamp/muscle-bioamp-blip/media/muscle-bioamp-blip.jpg
+
+overview: >-
+  Muscle BioAmp Blip is single channel mikroBUS™ compatible ElectroMyography (EMG) sensor
+  for precise muscle signal recording. It allows you to add the EMG functionality to your
+  projects at ease. You can either connect it to any mikroBUS™ port or even a breadboard
+  to get started.
+
+note: >-
+  mikroBUS™ is a socket standard developed by MIKROE which enables hundreds of Click
+  boards™ to be connected to the microcontroller or microprocessor. Click board is a
+  registered trademark of MIKROE thus you might see a white mark on the Muscle BioAmp
+  Blip v0.1 pcbs (since the sensor was named as Muscle BioAmp Click earlier).
+
+specifications:
+  - [Minimum Input Voltage, 5 V]
+  - [Input Impedance, 10^12 ohm]
+  - [Fixed Gain, x2420]
+  - [Bandpass Filter, 72 – 720 Hz]
+  - [Compatible Hardware, "Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few)"]
+  - [BioPotentials, EMG (Electromyography)]
+  - [No. of Channels, "1"]
+  - [Electrodes, "3 (Positive, Negative, and Reference)"]
+  - [Dimensions, 2.54 x 2.86 cm]
+  - [Open Source, Hardware + Software]

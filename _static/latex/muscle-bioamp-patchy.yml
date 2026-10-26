@@ -1,0 +1,27 @@
+# Datasheet first page for the Muscle BioAmp Patchy PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: Wearable ElectroMyography (EMG) sensor that snaps directly to gel electrodes
+image: hardware/bioamp/muscle-bioamp-patchy/media/Patchy-All-Colors.jpg
+
+overview: >-
+  Muscle BioAmp Patchy is a wearable ElectroMyoGraphy or EMG sensor that snaps directly to
+  gel electrodes and connects to your muscle like a patch. It comes with reverse polarity
+  projection, power indicator, onboard snap connectors, and Upside Down Labs' powerful
+  BioAmp sensing technology for precise muscle signal recording. This enables you to
+  easily integrate this sensor in your EMG-based Human-Computer Interface (HCI) easily.
+
+specifications:
+  - [Operating Voltage, 5 V]
+  - [Input Impedance, 10^12 ohm]
+  - [Fixed Gain, x2420]
+  - [Bandpass Filter, 72 – 720 Hz]
+  - [Wearable, "Yes"]
+  - [Compatible Hardware, "Any development board with an ADC (Arduino UNO & Nano, Adafruit QtPy, STM32 Blue Pill, BeagleBone Black, Raspberry Pi Pico, to name just a few) or a standalone ADC of your choice"]
+  - [BioPotentials, EMG (Electromyography)]
+  - [No. of Channels, "1"]
+  - [Electrodes, "3 (Positive, Negative, and Reference)"]
+  - [Dimensions, 4.7 x 1.4 cm]
+  - [Open Source, Hardware + Software]
