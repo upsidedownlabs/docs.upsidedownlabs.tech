@@ -5,6 +5,14 @@ BioAmp v1.5
 
 :bdg-danger:`Discontinued`
 
+.. Overview and Features & Specifications are on the datasheet first page of this product's PDF
+   (_static/latex/bioamp-v1.5.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-bioamp-v1.5}
+
 Overview
 *********
 
@@ -38,6 +46,10 @@ Features & Specifications
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Open Source           | Hardware + Software                                                                                                                                              |
 +-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. raw:: latex
+
+   \end{udlsummary-bioamp-v1.5}
 
 Hardware
 **********

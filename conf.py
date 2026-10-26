@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 import os
+import re
 import sys
 import yaml
 from pathlib import Path
@@ -21,7 +22,39 @@ author = 'Upside Down Labs'
 
 # Configure PDF build and sidebar links
 latex_documents = []
+latex_additional_files = ["_static/logo/logo_black_full.pdf"]  # header logo (PDF copy of the .svg)
+latex_datasheets = []
 pdfs = []
+
+def tex_escape(text):
+    """Escape LaTeX special characters in plain text from the datasheet YAML files.
+    "10^12" is written as a superscript, as in the docs tables."""
+    chars = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
+             "_": r"\_", "{": r"\{", "}": r"\}", "~": r"$\sim$", "^": r"\textasciicircum{}"}
+    escaped = "".join(chars.get(c, c) for c in str(text).strip())
+    return re.sub(r"\\textasciicircum\{\}(\w+)", r"\\textsuperscript{\1}", escaped)
+
+def datasheet_tex(tex_name, ds_file):
+    """LaTeX lines that set the datasheet first page values for one PDF."""
+    with open(ds_file, 'r', encoding='utf-8') as f:
+        ds = yaml.safe_load(f) or {}
+    lines = ["\\udlset{%s}{datasheet}{}" % tex_name]
+    for key in ("tagline", "overview", "note"):
+        if ds.get(key):
+            lines.append("\\udlset{%s}{%s}{%s}" % (tex_name, key, tex_escape(ds[key])))
+    for key in ("features", "applications", "contents"):
+        if ds.get(key):
+            items = "".join("\\item " + tex_escape(item) for item in ds[key])
+            lines.append("\\udlset{%s}{%s}{%s}" % (tex_name, key, items))
+    if ds.get("specifications"):
+        rows = "\\sphinxhline ".join(
+            "\\textbf{%s} & %s \\\\ " % (tex_escape(name), tex_escape(value))
+            for name, value in ds["specifications"])
+        lines.append("\\udlset{%s}{specifications}{%s}" % (tex_name, rows))
+    if ds.get("image"):
+        latex_additional_files.append(ds["image"])
+        lines.append("\\udlset{%s}{image}{%s}" % (tex_name, ds["image"].split('/')[-1]))
+    return lines
 
 with open('conf.yml', 'r') as conf_file:
     conf_data = yaml.safe_load(conf_file)
@@ -40,12 +73,20 @@ with open('conf.yml', 'r') as conf_file:
                 name = board
                 path = data['path']
                 pdf = data.get('pdf', False)
-                
+
+                # Summary sections marked in the product's docs page, left out of its own PDF.
+                # Defined for every product, as other PDFs may include the page (e.g. kits)
+                if(pdf and os.path.exists(pdf + ".yml")):
+                    latex_datasheets.append("\\udlsummary{%s}" % pdf.split('/')[-1])
+
                 # PDF build details
                 if(pdf and (name in pdf_build or pdf_build_all)):
                     tex_name = pdf.split('/')[-1]
                     pdfs.append((path, tex_name))
                     latex_documents.append((pdf, tex_name+".tex", "", author, "manual"))
+                    # Datasheet first page (optional)
+                    if(os.path.exists(pdf + ".yml")):
+                        latex_datasheets += datasheet_tex(tex_name, pdf + ".yml")
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -186,5 +227,21 @@ html_context = {
 # -- Options for LaTeX output --
 latex_elements = {
     "papersize": "a4paper",
-    "preamble": open("_static/latex/preamble.tex").read(),
+    "preamble": open("_static/latex/preamble.tex").read() + "\n".join(latex_datasheets),
+    "maketitle": "\\udlmaketitle",
+    "tableofcontents": "\\udltableofcontents",
+    "fncychap": "",  # compact chapter headings are defined in preamble.tex
 }
+
+# PDF links to pages that are not part of that PDF: Sphinx keeps only the link text,
+# so link them to the page on the docs site instead
+from sphinx.builders.latex import LaTeXBuilder
+
+class DocsSiteLinkLaTeXBuilder(LaTeXBuilder):
+    def get_target_uri(self, docname, typ=None):
+        if docname not in self.docnames:
+            return "%s/%s.html" % (html_context["docs_url"], docname)
+        return super().get_target_uri(docname, typ)
+
+def setup(app):
+    app.add_builder(DocsSiteLinkLaTeXBuilder, override=True)

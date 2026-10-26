@@ -1,0 +1,34 @@
+# Datasheet first page for the Muscle BioAmp Shield PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: All-in-one ElectroMyography (EMG) shield for Arduino UNO
+image: hardware/bioamp/muscle-bioamp-shield/media/muscle-bioamp-shield.jpg
+
+overview: >-
+  Muscle BioAmp Shield is an all-in-one Arduino Uno ElectroMyography (EMG) shield for
+  learning neuroscience with ease which is inspired from BackYard Brains (BYB) Muscle
+  Spiker shield and provides similar features like hobby servo output, user buttons, LED
+  Bar, Audio output, and battery input. It is perfect for beginners as they can easily
+  stack it on top of Arduino Uno to record, visualize and listen to their muscle signals
+  to make amazing projects in the domain of Human-Computer Interface (HCI).
+
+features:
+  - Stacks directly on top of Arduino Uno
+  - Hobby servo output, user buttons, LED bar, audio output and battery input
+  - STEMMA I2C interface to connect hundreds of extension boards like OLED screens, character displays, accelerometers and servo controllers
+  - STEMMA analog port to connect an additional BioAmp EXG Pill or any other sensor with analog output
+  - STEMMA digital port to connect any digital sensor or actuator of your choice
+
+specifications:
+  - [Input Voltage, 5 V]
+  - [Input Impedance, 10^11 ohm]
+  - [Fixed Gain, x2420]
+  - [Bandpass Filter, 72 – 720 Hz]
+  - [Compatible Hardware, Arduino UNO]
+  - [BioPotentials, EMG (Electromyography)]
+  - [No. of Channels, "1"]
+  - [Electrodes, "3 (Positive, Negative, and Reference)"]
+  - [Dimensions, 6.0 x 5.3 cm]
+  - [Open Source, Hardware + Software]

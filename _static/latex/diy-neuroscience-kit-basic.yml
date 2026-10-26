@@ -1,0 +1,29 @@
+# Datasheet first page for the DIY Neuroscience Kit Basic PDF
+# Plain text only, LaTeX special characters are escaped automatically.
+# The matching sections of the docs page are only included in HTML, so this is
+# the only place this content appears in the PDF.
+
+tagline: Starter kit to explore brain, heart, muscle and eye signals
+image: kits/diy-neuroscience/basic/media/diy-neuroscience-kit-basic.png
+
+overview: >-
+  This kit is perfect for students, researchers and hobbyists alike who want to start
+  exploring neuroscience. Whether it's studying brain waves, monitoring heart rhythms,
+  analyzing muscle movements, or tracking eye movements, this DIY kit provides an
+  accessible and educational platform for understanding the complexities of human
+  physiology and developing practical applications in the fields of human-computer
+  interaction, and beyond.
+
+contents:
+  - 2 Channel Brain BioAmp Band
+  - Muscle BioAmp Band
+  - Heart BioAmp Band
+  - BioAmp EXG Pill
+  - BioAmp V3 Cable (100 cm)
+  - Jumper Cables (x2)
+  - Arduino UNO EK R4 Minima with Type-C Cable
+  - NuPrep Gel (9g)
+  - Electrode Gel Pouch (100 ml)
+  - Alcohol Swabs (20 pcs)
+  - 12 Pcs Gel Electrodes
+  - Baby Gel Electrodes (100 pcs)

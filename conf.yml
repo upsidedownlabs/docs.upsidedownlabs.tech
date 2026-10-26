@@ -16,6 +16,9 @@ pdf_build: all
 #     name:
 #         path: First level hardware documentation path for hardware 'index.rst'
 #         pdf: RST source for PDF generatation from _static/latex folder
+#
+# Datasheet first page (optional): add <pdf>.yml next to the RST source,
+# e.g. _static/latex/bioamp-exg-pill.yml. Without it, the default title page is used.
 
 PDFs:
    BioAmp EXG Pill:
@@ -33,12 +36,18 @@ PDFs:
    Muscle BioAmp Candy:
       path: hardware/bioamp/muscle-bioamp-candy
       pdf: _static/latex/muscle-bioamp-candy
+   Heart BioAmp Candy:
+      path: hardware/bioamp/heart-bioamp-candy
+      pdf: _static/latex/heart-bioamp-candy
    Muscle BioAmp Patchy:
       path: hardware/bioamp/muscle-bioamp-patchy
       pdf: _static/latex/muscle-bioamp-patchy
    Muscle BioAmp Shield:
       path: hardware/bioamp/muscle-bioamp-shield
       pdf: _static/latex/muscle-bioamp-shield
+   Neuro PlayGround Lite:
+      path: hardware/bioamp/neuro-play-ground-lite
+      pdf: _static/latex/neuro-play-ground-lite
    DIY Neuroscience Kit Pro:
       path: kits/diy-neuroscience/pro
       pdf: _static/latex/diy-neuroscience-kit-pro

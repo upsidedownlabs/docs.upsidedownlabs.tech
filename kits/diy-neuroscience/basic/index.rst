@@ -3,6 +3,14 @@
 DIY Neuroscience Kit Basic
 ###########################
 
+.. Overview and Contents of the kit are on the datasheet first page of this product's PDF
+   (_static/latex/diy-neuroscience-kit-basic.yml), so they are left out of that PDF. The website and
+   other PDFs that include this page (e.g. kits) still show them.
+
+.. raw:: latex
+
+   \begin{udlsummary-diy-neuroscience-kit-basic}
+
 Overview
 **********
 
@@ -38,6 +46,10 @@ Contents of the kit
 .. youtube:: 7O9Bw8y5fQs
     :width: 100%
     :align: center
+
+.. raw:: latex
+
+   \end{udlsummary-diy-neuroscience-kit-basic}
 
 Software requirements
 **********************
