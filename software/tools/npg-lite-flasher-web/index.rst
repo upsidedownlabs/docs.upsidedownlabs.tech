@@ -27,20 +27,22 @@ Features
      - **Description**
    * - **No Installation**
      - Runs fully in your browser using the Web Serial API. You don't need the Arduino IDE or any desktop app.
-   * - **Built-in Firmwares**
-     - Flash the **BLE** (wireless), **WiFi** or **Serial** (direct USB) firmware with one click.
-   * - **Get from GitHub**
-     - Download the latest firmware releases from the official `NPG Lite firmware <https://github.com/upsidedownlabs/npg-lite-firmware>`_ repository.
-   * - **Custom Firmware**
-     - Upload your own ``.bin`` file from your computer.
-   * - **Local Firmware Storage**
-     - Firmwares you add or download are saved in your browser, so you can flash them again without downloading them.
+   * - **Default Firmwares**
+     - Flash the **BLE** (wireless), **WiFi** or **Serial** (direct USB) build of `Chords <https://github.com/upsidedownlabs/Chords-Arduino-Firmware>`__ with one click. They are always taken from the latest release.
+   * - **NPG Lite Projects**
+     - Every project from the latest `NPG-Lite-Arduino-Firmware <https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware>`__ release, each with a short description. Download one, or all of them at once.
+   * - **Your Own Firmware**
+     - Add any ``.bin`` file with the **Add Firmware** button or by dragging it onto the page.
+   * - **Saved in the Browser**
+     - Downloaded and added firmwares are saved in your browser, so they're ready the next time you open the flasher.
    * - **Automatic Flash Address**
-     - Detects the correct flash address from the file name (merged image at ``0x0``, app-only binary at ``0x10000``).
-   * - **Console & Progress Bar**
+     - Merged images are flashed at ``0x0`` and app-only files at ``0x10000``, so you don't have to remember offsets.
+   * - **Flash Complete Firmware**
+     - Write the bootloader, partition table and app together, for a blank chip or a new partition scheme.
+   * - **Console & Progress**
      - See live logs and the flashing progress while the firmware is uploaded.
    * - **Guided Tour**
-     - Click **Guide** to get a step-by-step tour of the tool.
+     - Click **Guide** to get a step-by-step tour of the page.
 
 NPG Lite Flasher Web or NPG Lite Flasher?
 =========================================
@@ -103,42 +105,50 @@ Uploading the Firmware
 
 .. tab-set::
 
-   .. tab-item:: Built-in Firmware
+   .. tab-item:: Default Firmware
 
       Use this to flash the standard **BLE**, **WiFi** or **Serial** firmware.
 
       1. Open `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ in a supported browser.
       2. Click **Connect Device**, select your NPG Lite's port from the list and click **Connect**. The console shows the chip it connected to (for example, ``Connected to ESP32-C6``).
-      3. Select the firmware you need:
+      3. Under **Default firmwares**, select the firmware you need:
 
          - **BLE** (Wireless): to stream data over Bluetooth, for example to :ref:`Chords-Web <chords-web-npg-lite>`.
-         - **WiFi**: to stream data over Wi-Fi.
+         - **WiFi** (Wireless): to stream data over Wi-Fi.
          - **Serial** (Direct USB): to stream data over the USB cable.
 
-      4. Check the selected firmware's name and size in the **Selected Firmware** box.
-      5. Click **Flash Firmware** and wait until the progress bar reaches **100%**. Don't unplug the board while flashing.
+      4. Check the selected firmware's name and size under **Flash Firmware**.
+      5. Click **Flash Firmware** and wait until it reaches **100%**. Don't unplug the board while flashing.
       6. When the console shows **Flash completed successfully!**, the board restarts with the new firmware.
-
-   .. tab-item:: Get from GitHub
-
-      Use this to flash the latest firmware releases from Upside Down Labs.
-
-      1. Open `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ and click **Connect Device**.
-      2. Click **Get from GitHub**. The tool fetches the list of firmwares from the latest `NPG Lite firmware release <https://github.com/upsidedownlabs/npg-lite-firmware/releases>`_.
-      3. Download the firmware you need. It is saved in **Local Firmwares** so you don't need to download it again.
-      4. Select the firmware and click **Flash Firmware**.
-      5. Wait until the console shows **Flash completed successfully!**.
 
       .. note::
 
-         If the download fails, the console shows a link to download the file manually. Download it and add it using the **Custom Firmware** steps.
+         The default firmwares are downloaded from the latest `Chords-Arduino-Firmware release <https://github.com/upsidedownlabs/Chords-Arduino-Firmware/releases/latest>`__, so you always get the newest version.
 
-   .. tab-item:: Custom Firmware
+   .. tab-item:: NPG Lite Projects
+
+      Use this to flash one of the ready-made NPG Lite projects.
+
+      1. Open `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ and click **Connect Device**.
+      2. The **NPG Lite projects** list shows every project from the latest `NPG-Lite-Arduino-Firmware release <https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware/releases/latest>`__, with a short description of what it does.
+      3. Click a project to download and select it. It is saved in your browser, so you don't need to download it again.
+
+         .. tip::
+
+            Click the download-all icon next to **NPG Lite projects** to save every project at once.
+
+      4. Click **Flash Firmware** and wait until the console shows **Flash completed successfully!**.
+
+      .. note::
+
+         If a download fails, the console shows a link to the release. Download the ``.merged.bin`` file from there and add it using the **Your Own Firmware** steps.
+
+   .. tab-item:: Your Own Firmware
 
       Use this to flash a ``.bin`` file you compiled yourself.
 
       1. Open `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ and click **Connect Device**.
-      2. Click **Add Firmware** and select your ``.bin`` file. It is saved in **Local Firmwares** for future use.
+      2. Click **Add Firmware** and select your ``.bin`` file, or drag the file onto the **Your firmwares** list. It is saved in your browser for future use.
       3. The flash address is set automatically from the file name:
 
          - Files with ``merged`` in the name (for example, ``NPG-LITE-BLE.ino.merged.bin``) are flashed at ``0x0``. A merged image already has the bootloader, partition table and app in one file.
@@ -148,24 +158,63 @@ Uploading the Firmware
 
       .. tip::
 
-         In Arduino IDE, use ``Sketch > Export Compiled Binary`` to get a ``.ino.merged.bin`` file. Merged images are the easiest to flash, because you don't need to pick a bootloader or partition table.
-
-      .. dropdown:: Advanced: Flash complete firmware
-
-         If you only have an app-only binary but want to write the complete flash, turn on **Flash complete firmware**. Then select a **Bootloader** (flashed at ``0x0``) and a **Partition Table** (flashed at ``0x8000``) from your local firmwares. The tool adds the OTA data and writes the app at ``0x10000``.
+         In Arduino IDE, use ``Sketch > Export Compiled Binary`` to get a ``.ino.merged.bin`` file in the sketch's ``build`` folder. Merged images are the easiest to flash, because they're written as a single file.
 
       .. warning::
 
-         Only change the flash address under **Advanced Option** if you know what you are doing. Writing to the wrong address can stop your board from booting. If this happens, flash a merged image at ``0x0`` to fix it.
+         Only change the flash address under **Advanced Options** if you know the address your file needs. Writing to the wrong address can stop your board from booting. If this happens, flash a merged image at ``0x0`` to fix it.
 
-Managing Local Firmwares
+Merged Images and Flash Complete Firmware
+=========================================
+
+ESP32 firmware comes in two forms:
+
+.. list-table::
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - **File**
+     - **What it contains**
+     - **Written to**
+   * - ``*.merged.bin``
+     - Bootloader, partition table and app in one file
+     - ``0x0``
+   * - ``*.ino.bin``
+     - The app only
+     - ``0x10000``
+
+All default firmwares and NPG Lite projects are merged images, so they're flashed as a single file.
+
+If you flash an app-only file, the board keeps its existing bootloader and partition table. That's fine when the firmware already on the board uses the same partition scheme. For a blank chip, or when the partition scheme changes, turn on **Flash Complete Firmware**, click **Choose Files** and select all three files (or click **Add Files** to add them from your computer):
+
+.. list-table::
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - **Part**
+     - **File from Arduino IDE**
+     - **Written to**
+   * - Bootloader
+     - ``sketch.ino.bootloader.bin``
+     - ``0x0``
+   * - Partition table
+     - ``sketch.ino.partitions.bin``
+     - ``0x8000``
+   * - App
+     - ``sketch.ino.bin``
+     - ``0x10000``
+
+The flasher also writes the OTA data (``boot_app0.bin``) at ``0xe000``. Bootloader and partition table files are matched by name, so keep the names that Arduino IDE gives them.
+
+Managing Saved Firmwares
 ========================
 
-The **Local Firmwares** list shows all firmwares saved in your browser, with their name, size and date.
+Firmwares you download or add are saved in your browser:
 
-- Click **Load** to select a firmware for flashing.
-- Click **Delete** to remove a custom firmware. Built-in firmwares (with colored badges) can't be deleted.
-- Click **Clear All Custom** to remove all your custom firmwares at once.
+- **NPG Lite projects** you downloaded are marked as saved. Projects that are no longer in the latest release still show up, so you can flash or delete them.
+- **Your firmwares** lists the files you added yourself. Click one to select it.
+- Click the **Delete** icon next to a firmware to remove it, or **Delete All** to remove all your firmwares at once. Default firmwares can't be deleted.
+- Click the **X** under **Flash Firmware** to clear the selection.
 
 Real-Time Visualization
 ***********************
@@ -201,9 +250,15 @@ Troubleshooting
 .. dropdown:: The board doesn't work after flashing
    :icon: alert
 
-   - Toggle the power switch OFF and ON to restart the board.
+   - Press **RESET**, or toggle the power switch OFF and ON to restart the board.
    - Make sure you flashed the right firmware for how you want to connect (BLE, WiFi or Serial).
    - If you flashed a custom file, check that it was flashed at the right address. Flashing a merged image at ``0x0`` fixes most problems.
+
+.. dropdown:: A firmware won't download
+   :icon: alert
+
+   - Check your internet connection and reload the page.
+   - Download the ``.merged.bin`` file from the `Chords-Arduino-Firmware <https://github.com/upsidedownlabs/Chords-Arduino-Firmware/releases/latest>`__ or `NPG-Lite-Arduino-Firmware <https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware/releases/latest>`__ release and add it with **Add Firmware**.
 
 GitHub Repository
 *****************
