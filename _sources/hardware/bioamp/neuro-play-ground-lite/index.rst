@@ -337,9 +337,9 @@ Flasher Tools
 
    .. tab-item:: NPG Lite Flasher Web
 
-      - `NPG Lite Flasher Web <https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/>`_ is a browser-based flashing tool for the Neuro PlayGround Lite and other ESP32-based boards. It needs no Arduino IDE or additional setup: connect your device, select the BLE, Wi-Fi or Serial firmware you need, and flash it directly from the browser in seconds.
+      - :ref:`NPG Lite Flasher Web <npg-lite-flasher-web>` is a browser-based flashing tool for the Neuro PlayGround Lite and other ESP32-based boards. It needs no Arduino IDE or additional setup: connect your device, select the BLE, Wi-Fi or Serial firmware you need, and flash it directly from the browser in seconds.
 
-      .. figure:: media/npg-lite-flasher-web.png
+      .. figure:: ../../../software/tools/npg-lite-flasher-web/media/npg-lite-flasher-web.png
           :align: center
           :alt: NPG Lite Flasher Web Landing Page
 

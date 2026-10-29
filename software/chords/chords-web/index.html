@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Oct 26, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 29, 2026"/>
   </head>
   
   
@@ -577,6 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher-web/index.html">NPG Lite Flasher Web</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/bioamp-filter-designer/index.html">BioAmp Filter Designer</a></li>
 </ul>
@@ -644,58 +645,275 @@
   <section id="chords-web">
 <span id="chords"></span><h1>Chords-Web<a class="headerlink" href="#chords-web" title="Link to this heading">#</a></h1>
 <div class="video_wrapper" style="">
-<iframe allowfullscreen="true" src="https://www.youtube.com/embed/fM0c6JVh3uE" style="border: 0; height: 345px; width: 560px">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/vwmID4WjRrE?si=QdjEdg9xENhE_Ubp" style="border: 0; height: 345px; width: 560px">
 </iframe></div><section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
-<p>Chords-Web is an open-source web application designed for real-time signal visualization, particularly tailored for bio-potential signals like EEG, EMG, ECG and EOG. This tool serves as an advanced alternative to the standard Arduino IDE serial plotter, offering enhanced functionality for students, researchers and hobbyists alike who want to record biopotential data using  <a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">BioAmp hardware</a>.</p>
-<figure class="align-center">
+<p>Chords-Web is an open-source web application for real-time visualization of bio-potential signals like EEG, EMG, ECG and EOG. It is an advanced alternative to the standard Arduino IDE serial plotter, made for students, researchers and hobbyists who want to record biopotential data using <a class="reference external" href="https://docs.upsidedownlabs.tech/hardware/index.html">BioAmp hardware</a>.</p>
+<p>Chords-Web runs completely in your browser - there is nothing to install. Open <a class="reference external" href="https://chords.upsidedownlabs.tech/">chords.upsidedownlabs.tech</a>, connect your board over USB or Bluetooth, and start visualizing.</p>
+<figure class="align-center" id="id20">
 <img alt="Chords-Web Landing Page" src="../../../_images/chords_landing_page.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Landing Page</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
+</figcaption>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Chords-Web is made for <strong>educational and research purposes</strong>. It is not medical software and must not be used for diagnosis.</p>
+</div>
 </section>
+<section id="quick-start">
+<h2>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h2>
+<p>If you are new to Chords-Web, follow these five steps. Each step is explained in detail in the sections below.</p>
+<ol class="arabic simple">
+<li><p><strong>Hardware</strong>: Connect your BioAmp sensor to a <a class="reference internal" href="#chords-supported-boards"><span class="std std-ref">supported development board</span></a> and place the electrodes on your body.</p></li>
+<li><p><strong>Firmware</strong>: Upload the Chords firmware to your board (see <a class="reference internal" href="#chords-uploading-firmware"><span class="std std-ref">Uploading the Firmware</span></a>).</p></li>
+<li><p><strong>Open Chords-Web</strong>: Go to <a class="reference external" href="https://chords.upsidedownlabs.tech/">chords.upsidedownlabs.tech</a> in a <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">supported browser</span></a> and click <strong>Visualize Now</strong>.</p></li>
+<li><p><strong>Connect</strong>: Click <strong>Serial</strong> (USB cable) or <strong>BLE</strong> (Bluetooth, NPG Lite only) in the bottom bar and select your device.</p></li>
+<li><p><strong>Choose a view</strong>: Use the app switcher in the bottom bar to open the <a class="reference internal" href="#chords-visualizer"><span class="std std-ref">Chords Visualizer</span></a>, <a class="reference internal" href="#chords-web-fft-visualizer"><span class="std std-ref">FFT Visualizer</span></a>, <a class="reference internal" href="#chords-web-rep-forge"><span class="std std-ref">Rep-Forge</span></a> or <a class="reference internal" href="#chords-web-ecg-visualizer"><span class="std std-ref">ECG Visualizer</span></a>.</p></li>
+</ol>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <section id="browser-compatibility">
-<span id="chords-browsers-compatibility"></span><h2>Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Link to this heading">#</a></h2>
-<p>The web application is compatible with the <strong>Web Serial API</strong>, which is essential for its functionality. Supported browsers include the latest versions of:</p>
+<span id="chords-browsers-compatibility"></span><h3>Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Link to this heading">#</a></h3>
+<p>Chords-Web talks to your board directly from the browser using these web APIs:</p>
 <ul class="simple">
-<li><p><strong>Google Chrome</strong></p></li>
-<li><p><strong>Microsoft Edge</strong></p></li>
-<li><p><strong>Opera</strong></p></li>
+<li><p><strong>Web Serial API</strong>: to connect boards over a USB cable.</p></li>
+<li><p><strong>Web Bluetooth API</strong>: to connect the NPG Lite over Bluetooth Low Energy (BLE).</p></li>
+<li><p><strong>WebUSB API</strong>: to update the firmware of some boards from the browser.</p></li>
 </ul>
-<p>If the user’s browser does not support the Web Serial API, a message will inform them of the incompatibility, recommending the use of a supported browser.</p>
-<p>For more information, refer to MDN Web Docs on the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial API</a>.</p>
+<p>Not every browser supports all three APIs, so some features may not work in your browser:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 28.0%" />
+<col style="width: 24.0%" />
+<col style="width: 24.0%" />
+<col style="width: 24.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Browser</strong></p></th>
+<th class="head"><p><strong>Serial (USB)</strong></p></th>
+<th class="head"><p><strong>Bluetooth (BLE)</strong></p></th>
+<th class="head"><p><strong>Firmware update</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Google Chrome, Microsoft Edge, Opera</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes (all boards)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mozilla Firefox 151 or later</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Some boards only</p></td>
+</tr>
+<tr class="row-even"><td><p>Safari</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For all features, use the latest version of <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> or <strong>Opera</strong>. Firefox supports Web Serial from <strong>version 151</strong>. Older Firefox versions can’t connect to your board and will show the unsupported browser message.</p>
+<p>If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Using Firefox 151 or later?</strong> You can connect your board over <strong>Serial</strong> and use all the applications. But Firefox doesn’t support Web Bluetooth or WebUSB, so:</p>
+<ul class="simple">
+<li><p>The <strong>BLE</strong> button won’t work, so you can’t connect the NPG Lite over Bluetooth. Connect it over Serial instead.</p></li>
+<li><p>The in-browser <a class="reference internal" href="#chords-firmware-update"><span class="std std-ref">firmware update</span></a> doesn’t work for boards that are flashed over WebUSB: Arduino UNO R4 Minima, Arduino GIGA R1, STM32G4 Core Board, STM32F4 Black Pill and Raspberry Pi Pico. Update these boards using Chrome/Edge or the Arduino IDE. Other boards can be updated in Firefox, because they are flashed over Web Serial.</p></li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Chords-Web works only on <strong>desktop/laptop</strong> computers. If you open it on a phone, you will see an “Oops! Mobile Detected” message.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Brave</strong> is Chromium-based, but it turns off Web Serial and Web Bluetooth by default. If you use Brave, enable them from <code class="docutils literal notranslate"><span class="pre">brave://settings/content</span></code> or use Chrome/Edge instead.</p>
+</div>
+<p>For more information, refer to MDN Web Docs on the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API">Web Serial API</a> and the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a>.</p>
 </section>
 <section id="software-requirements">
-<h2>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h2>
+<h3>Software Requirements<a class="headerlink" href="#software-requirements" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Arduino Firmware</a> (Use this software to upload Chords Arduino firmware to your development board).</p></li>
-<li><p><a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> (Use this software to upload NPG Lite firmware to your NPG Lite board or any ESP32 based board).</p></li>
-<li><p>Chromium-based browsers (Know more about  <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">Browser Compatibility</span></a>).</p></li>
+<li><p>A <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">supported browser</span></a>.</p></li>
+<li><p>Chords firmware on your board. You can upload it in any of these ways:</p>
+<ul>
+<li><p>Directly from Chords-Web (see <a class="reference internal" href="#chords-firmware-update"><span class="std std-ref">Option 1: Update firmware from Chords-Web (Recommended)</span></a>).</p></li>
+<li><p>Using the Arduino IDE and the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a>.</p></li>
+<li><p>Using the <a class="reference internal" href="../../tools/npg-lite-flasher-web/index.html#npg-lite-flasher-web"><span class="std std-ref">NPG Lite Flasher Web</span></a> (in your browser) or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> (desktop app) for the NPG Lite or other ESP32 based boards.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="hardware-requirements">
-<h2>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h2>
+<h3>Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>A development board (see the list of <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Compatible Development Boards</a>)</p></li>
-<li><p>A USB cable (type depends on board)</p></li>
-<li><p><a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a> and its accessories</p></li>
+<li><p>A <a class="reference internal" href="#chords-supported-boards"><span class="std std-ref">supported development board</span></a> (or an <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">NPG Lite</span></a>, which has a built-in BioAmp).</p></li>
+<li><p>A USB cable (type depends on your board).</p></li>
+<li><p><a class="reference internal" href="../../../hardware/index.html#upsidedownlabs-hardware-home"><span class="std std-ref">BioAmp Hardware</span></a> and its accessories (cables, electrodes, gel).</p></li>
 </ul>
 </section>
+<section id="supported-boards">
+<span id="chords-supported-boards"></span><h3>Supported Boards<a class="headerlink" href="#supported-boards" title="Link to this heading">#</a></h3>
+<p>Chords-Web detects your board automatically and sets the ADC resolution, number of channels and sampling rate for you.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 15.0%" />
+<col style="width: 15.0%" />
+<col style="width: 20.0%" />
+<col style="width: 10.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Board</strong></p></th>
+<th class="head"><p><strong>ADC Resolution</strong></p></th>
+<th class="head"><p><strong>Channels</strong></p></th>
+<th class="head"><p><strong>Sampling Rate</strong></p></th>
+<th class="head"><p><strong>Connection</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Arduino UNO R3 / Genuino UNO / Maker UNO (UNO clone)</p></td>
+<td><p>10-bit</p></td>
+<td><p>6</p></td>
+<td><p>250 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-odd"><td><p>Arduino Nano Classic / Nano clone</p></td>
+<td><p>10-bit</p></td>
+<td><p>8</p></td>
+<td><p>250 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-even"><td><p>Arduino MEGA 2560 R3 / MEGA 2560 clone</p></td>
+<td><p>10-bit</p></td>
+<td><p>16</p></td>
+<td><p>250 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-odd"><td><p>Arduino UNO R4 Minima / UNO R4 WiFi</p></td>
+<td><p>14-bit</p></td>
+<td><p>6</p></td>
+<td><p>500 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-even"><td><p>Arduino GIGA R1</p></td>
+<td><p>16-bit</p></td>
+<td><p>6</p></td>
+<td><p>500 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-odd"><td><p>Raspberry Pi Pico (RP2040)</p></td>
+<td><p>12-bit</p></td>
+<td><p>3</p></td>
+<td><p>500 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-even"><td><p>STM32G4 Core Board</p></td>
+<td><p>12-bit</p></td>
+<td><p>16</p></td>
+<td><p>250 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-odd"><td><p>STM32F4 Black Pill (STM32F401CC / STM32F411CE)</p></td>
+<td><p>12-bit</p></td>
+<td><p>8</p></td>
+<td><p>500 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-even"><td><p>ESP32-S3</p></td>
+<td><p>12-bit</p></td>
+<td><p>16</p></td>
+<td><p>250 Hz</p></td>
+<td><p>Serial</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">NPG Lite</span></a> (3 channel / 6 channel)</p></td>
+<td><p>12-bit</p></td>
+<td><p>3 or 6</p></td>
+<td><p>500 Hz</p></td>
+<td><p>Serial or BLE</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can also use any other microcontroller, as long as it sends data in the <a class="reference internal" href="#chords-data-format"><span class="std std-ref">Chords data format</span></a>.</p>
+</div>
+</section>
+</section>
 <section id="setting-up-the-hardware">
-<h2>Setting up the hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
-<p>Make all the connections according to the hardware you are using, including sensor connections with the development board, body connections with the sensor, and connections from the development board to your laptop.</p>
-<section id="uploading-the-code">
-<h3>Uploading the code<a class="headerlink" href="#uploading-the-code" title="Link to this heading">#</a></h3>
+<h2>Setting up the Hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<p>Make all the connections for the hardware you are using:</p>
 <ol class="arabic simple">
-<li><p>Connect your Arduino board to the laptop using a USB cable.</p></li>
-<li><p>Open the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Arduino Firmware</a> for your board in the Arduino IDE.</p></li>
-<li><p>Navigate to <cite>Tools &gt; Board</cite> and select your board.</p></li>
-<li><p>In the tools menu, choose the correct COM port (the one that disappears when the board is disconnected).</p></li>
-<li><p>Upload the code and open Chords-Web in your web browser.</p></li>
+<li><p>Connect the BioAmp sensor to the analog input pins of your development board.</p></li>
+<li><p>Connect the electrodes from the BioAmp sensor to your body.</p></li>
+<li><p>Connect the development board to your laptop using a USB cable.</p></li>
 </ol>
-<p>Once ready, upload the firmware to your development board. Visit the Chords Arduino Firmware GitHub repository, scroll to the supported boards table, locate your board, and click on the corresponding Arduino sketch.</p>
-<p>Copy the sketch, paste it into the Arduino IDE, go to <cite>Tools</cite>, select your board and the correct COM port, then click the upload button.</p>
-<p>To learn about how to flash the code on the NPG Lite Board, checkout:</p>
+<p>You can see diagrams of these connections (cable connections, BioAmp to board connections and electrode placement for ECG and EOG) on the Chords-Web page after you click <strong>Visualize Now</strong>, before you connect a device.</p>
+</section>
+<section id="uploading-the-firmware">
+<span id="chords-uploading-firmware"></span><h2>Uploading the Firmware<a class="headerlink" href="#uploading-the-firmware" title="Link to this heading">#</a></h2>
+<p>Your board needs the Chords firmware so that it can send data to Chords-Web. Choose any one of the options below.</p>
+<section id="option-1-update-firmware-from-chords-web-recommended">
+<span id="chords-firmware-update"></span><h3>Option 1: Update firmware from Chords-Web (Recommended)<a class="headerlink" href="#option-1-update-firmware-from-chords-web-recommended" title="Link to this heading">#</a></h3>
+<p>You don’t need the Arduino IDE for this option.</p>
+<ol class="arabic simple">
+<li><p>Connect your board to your laptop with a USB cable.</p></li>
+<li><p>Open <a class="reference external" href="https://chords.upsidedownlabs.tech/">chords.upsidedownlabs.tech</a>, click <strong>Visualize Now</strong> and then click <strong>Serial</strong>.</p></li>
+<li><p>Select your board’s port and click <strong>Connect</strong>.</p></li>
+<li><p>If the board is supported but doesn’t have the latest Chords firmware, a <strong>“Your firmware is not updated”</strong> dialog opens.</p></li>
+<li><p>If several boards share the same USB ID (for example, UNO clones and Nano clones), select which board you have.</p></li>
+<li><p>Click <strong>Flash firmware</strong>. Chords-Web downloads the latest firmware release and uploads it to your board.</p></li>
+<li><p>When it shows <strong>Firmware updated</strong>, Chords-Web reconnects to your board automatically.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><strong>STM32 boards</strong>: If the board is still in normal mode, put it in boot mode first. Hold <strong>BOOT0</strong>, tap <strong>NRST</strong>, release <strong>BOOT0</strong>, and click <strong>Flash firmware</strong> again.</p></li>
+<li><p><strong>Windows</strong>: Some boards need a USB driver before they can be flashed (only once per PC). If flashing doesn’t start within 15 seconds, follow the steps in the dialog to install the driver using <strong>ChordsDriverSetup.exe</strong> or <strong>Zadig</strong> (choose <strong>WinUSB</strong> and click <strong>Install Driver</strong>). Then replug the board and click <strong>Flash firmware</strong> again.</p></li>
+</ul>
+</div>
+</section>
+<section id="option-2-upload-firmware-with-the-arduino-ide">
+<h3>Option 2: Upload firmware with the Arduino IDE<a class="headerlink" href="#option-2-upload-firmware-with-the-arduino-ide" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Connect your board to your laptop with a USB cable.</p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a> GitHub repository, scroll to the supported boards table and open the sketch for your board.</p></li>
+<li><p>Copy the sketch and paste it into the Arduino IDE.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">&gt;</span> <span class="pre">Board</span></code> and select your board.</p></li>
+<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">&gt;</span> <span class="pre">Port</span></code> and select your board’s port. This is the port that disappears when you unplug the board:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong>: <code class="docutils literal notranslate"><span class="pre">COM3</span></code>, <code class="docutils literal notranslate"><span class="pre">COM4</span></code>, etc.</p></li>
+<li><p><strong>Linux</strong>: <code class="docutils literal notranslate"><span class="pre">/dev/ttyACM0</span></code> or <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code></p></li>
+<li><p><strong>macOS</strong>: <code class="docutils literal notranslate"><span class="pre">/dev/cu.usbmodem...</span></code> or <code class="docutils literal notranslate"><span class="pre">/dev/cu.usbserial...</span></code></p></li>
+</ul>
+</li>
+<li><p>Click the <strong>Upload</strong> button.</p></li>
+<li><p>Close the Arduino IDE Serial Monitor/Plotter (only one app can use the port at a time) and open Chords-Web.</p></li>
+</ol>
+</section>
+<section id="option-3-npg-lite-and-esp32-boards">
+<h3>Option 3: NPG Lite and ESP32 boards<a class="headerlink" href="#option-3-npg-lite-and-esp32-boards" title="Link to this heading">#</a></h3>
+<p>Use one of these tools to upload the Serial or BLE firmware to your NPG Lite or any ESP32 based board:</p>
+<ul class="simple">
+<li><p><strong>NPG Lite Flasher Web</strong>: Runs in your browser, nothing to install. Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">upsidedownlabs.github.io/NPG-Lite-Flasher-Web</a>, click <strong>Connect Device</strong>, select the <strong>BLE</strong> or <strong>Serial</strong> firmware and click <strong>Flash Firmware</strong>.</p></li>
+<li><p><strong>NPG Lite Flasher</strong>: A desktop app for Windows, macOS and Linux.</p></li>
+</ul>
 <div class="sd-container-fluid sd-sphinx-override sd-mt-4 sd-mb-4 sd-ml-0 sd-mr-0 docutils">
-<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-1 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+NPG Lite Flasher Web</div>
+</div>
+<a class="sd-stretched-link reference internal" href="../../tools/npg-lite-flasher-web/index.html#npg-lite-flasher-web"><span class="std std-ref"></span></a></div>
+</div>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
 <div class="sd-card-body docutils">
@@ -708,21 +926,254 @@ NPG Lite Flasher</div>
 </div>
 </section>
 </section>
-<section id="opening-chords-web">
-<h2>Opening Chords-web<a class="headerlink" href="#opening-chords-web" title="Link to this heading">#</a></h2>
+<section id="connecting-to-chords-web">
+<h2>Connecting to Chords-Web<a class="headerlink" href="#connecting-to-chords-web" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Open a Chromium-based browser like Google Chrome, Microsoft Edge, Opera, brave, etc.</p></li>
-<li><p>Search <a class="reference external" href="https://chords.upsidedownlabs.tech/">chords.upsidedownlabs.tech</a> .</p></li>
-<li><p>Click on visualize now.</p></li>
-<li><p>The images in the center show an overview of your hardware connections so far.</p></li>
-<li><p>At the bottom, you can see buttons to access various applications, which are discussed below:</p></li>
+<li><p>Open a <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">supported browser</span></a> and go to <a class="reference external" href="https://chords.upsidedownlabs.tech/">chords.upsidedownlabs.tech</a>.</p></li>
+<li><p>Click <strong>Visualize Now</strong>.</p></li>
+<li><p>The images in the center show how to connect your hardware.</p></li>
+<li><p>The bottom bar has three buttons:</p>
+<ul class="simple">
+<li><p><strong>BLE</strong>: Connect an NPG Lite over Bluetooth.</p></li>
+<li><p><strong>Serial</strong>: Connect any supported board over a USB cable.</p></li>
+<li><p><strong>Serial Wizard</strong>: Open the <a class="reference internal" href="#chords-web-serial-wizard"><span class="std std-ref">Serial Wizard Plotter &amp; Monitor</span></a>.</p></li>
+</ul>
+</li>
 </ol>
+<figure class="align-center" id="id21">
+<img alt="Chords-Web Connect Page" src="../../../_images/chords_connectpage.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Connect Page</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="connecting-over-serial-usb">
+<h3>Connecting over Serial (USB)<a class="headerlink" href="#connecting-over-serial-usb" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Click <strong>Serial</strong>.</p></li>
+<li><p>Your browser shows a list of serial ports. Select your board and click <strong>Connect</strong>.</p></li>
+<li><p>Chords-Web detects your board, and the Chords Visualizer starts plotting your signals.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>Linux: Board not listed or “permission denied”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">On Linux your user must be allowed to access serial ports. Add yourself to the right group, then log out and log back in:</p>
+<ul>
+<li><p class="sd-card-text"><strong>Arch / Manjaro</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>uucp<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</li>
+<li><p class="sd-card-text"><strong>Ubuntu / Debian</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>dialout<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</details></section>
+<section id="connecting-over-bluetooth-npg-lite">
+<span id="chords-web-npg-lite"></span><h3>Connecting over Bluetooth (NPG Lite)<a class="headerlink" href="#connecting-over-bluetooth-npg-lite" title="Link to this heading">#</a></h3>
+<p>The <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">NPG Lite</span></a> can stream data wirelessly over Bluetooth Low Energy (BLE). It has a built-in BioAmp and a 12-bit ADC (ESP32-C6), so you don’t need any other development board.</p>
+<figure class="align-center" id="id22">
+<img alt="Chords-Web NPG Lite" src="../../../_images/chords_npg_lite.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web NPG Lite</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p><strong>Flash the BLE firmware</strong>: Use the <a class="reference internal" href="../../tools/npg-lite-flasher-web/index.html#npg-lite-flasher-web"><span class="std std-ref">NPG Lite Flasher Web</span></a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a> to upload the <strong>BLE firmware</strong> (3 channel or 6 channel) to your NPG Lite.</p></li>
+<li><p><strong>Power on</strong> the NPG Lite using its on/off switch.</p></li>
+<li><p><strong>Turn on Bluetooth</strong> on your computer.</p></li>
+<li><p>Open Chords-Web, click <strong>Visualize Now</strong> and then click <strong>BLE</strong>.</p></li>
+<li><p>Select your NPG Lite (its name starts with <code class="docutils literal notranslate"><span class="pre">NPG</span></code>) from the list and click <strong>Pair</strong>.</p></li>
+<li><p>Your signals start plotting. You can now use any of the <a class="reference internal" href="#chords-applications"><span class="std std-ref">applications</span></a> below.</p></li>
+</ol>
+<p><strong>Features over BLE:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Wireless Streaming</strong></p></td>
+<td><p>Stream 3 or 6 channels of biopotential data at 500 Hz without a cable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Battery Indicator</strong></p></td>
+<td><p>The bottom bar shows the battery level of your NPG Lite. You get a warning when the battery is low and a message when it is fully charged (3CH/6CH firmware only).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Interactive Controls</strong></p></td>
+<td><p>Select channels, play/pause the stream, apply filters and record to CSV, just like over Serial.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don’t see the battery level, your NPG Lite has older BLE firmware. Update it with the <a class="reference internal" href="../../tools/npg-lite-flasher-web/index.html#npg-lite-flasher-web"><span class="std std-ref">NPG Lite Flasher Web</span></a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Checkout our YouTube video for more information:</p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/3YCioyc4uKs" style="border: 0; height: 345px; width: 560px">
+</iframe></div></div>
+</section>
+</section>
+<section id="common-controls">
+<h2>Common Controls<a class="headerlink" href="#common-controls" title="Link to this heading">#</a></h2>
+<p>These controls are in the bottom bar and work in all the applications, unless mentioned otherwise.</p>
+<figure class="align-center" id="id23">
+<img alt="Chords-Web Icons" src="../../../_images/chords_icon.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Icons</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="app-switcher">
+<h3>App Switcher<a class="headerlink" href="#app-switcher" title="Link to this heading">#</a></h3>
+<p>After you connect, use the app switcher in the bottom bar to move between the four applications. You don’t need to reconnect your board when you switch.</p>
+<ul class="simple">
+<li><p><strong>Chords Visualizer</strong>: Raw multi-channel waveform.</p></li>
+<li><p><strong>FFT Visualizer</strong>: Spectrum and EEG band power.</p></li>
+<li><p><strong>Rep-Forge</strong>: EMG envelope and muscle strength.</p></li>
+<li><p><strong>ECG Visualizer</strong>: Heart rate with R-peaks.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filters are reset every time you switch to another application, so a filter you chose in one view doesn’t keep running in another.</p>
+</div>
+</section>
+<section id="play-pause-and-data-windows">
+<h3>Play/Pause and Data Windows<a class="headerlink" href="#play-pause-and-data-windows" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Click <strong>Pause</strong> to freeze the screen on the current data window.</p></li>
+<li><p>While paused, use the <strong>Previous Data Window</strong> (left) and <strong>Next Data Window</strong> (right) buttons to go back through up to <strong>5 earlier data windows</strong>.</p></li>
+<li><p>Click <strong>Play</strong> to continue the live stream.</p></li>
+<li><p>Changing the selected channels resets the saved data windows.</p></li>
+<li><p>Pause is not available while recording.</p></li>
+</ul>
+</section>
+<section id="settings-zoom-time-base-and-channels">
+<h3>Settings (Zoom, Time Base and Channels)<a class="headerlink" href="#settings-zoom-time-base-and-channels" title="Link to this heading">#</a></h3>
+<p>Click the <strong>Settings</strong> icon to open the settings popover:</p>
+<ul class="simple">
+<li><p><strong>Zoom Level</strong>: Zoom from <strong>1x to 10x</strong> to see small signal details or the full signal.</p></li>
+<li><p><strong>Time Base</strong>: Show <strong>1 to 10 seconds</strong> of data on the screen.</p></li>
+<li><p><strong>Channels</strong>: Select the channels you want to plot. The number of available channels depends on your board (up to 16). Use <strong>Select All</strong> to choose all channels and <strong>Reset</strong> to go back to your previous selection.</p></li>
+</ul>
+<figure class="align-center" id="id24">
+<img alt="Chords-Web Channel Support" src="../../../_images/chords_channelsupport.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Channel Support</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="filters">
+<span id="chords-web-filters"></span><h3>Filters<a class="headerlink" href="#filters" title="Link to this heading">#</a></h3>
+<p>Click <strong>Filter</strong> to clean up your signal. You can apply a filter to one channel or to all channels at once using the master buttons at the top.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Filter</strong></p></th>
+<th class="head"><p><strong>Type</strong></p></th>
+<th class="head"><p><strong>Use it for</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Muscle</strong></p></td>
+<td><p>70 Hz high-pass</p></td>
+<td><p>EMG (muscle) signals</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Heart</strong></p></td>
+<td><p>30 Hz low-pass</p></td>
+<td><p>ECG (heart) signals</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Eye</strong></p></td>
+<td><p>10 Hz low-pass</p></td>
+<td><p>EOG (eye) signals</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Brain</strong></p></td>
+<td><p>45 Hz low-pass</p></td>
+<td><p>EEG (brain) signals</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>50 Hz / 60 Hz</strong></p></td>
+<td><p>Notch</p></td>
+<td><p>Removes power line noise. Use 50 Hz in India, Europe, etc. and 60 Hz in the USA, etc.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="align-center" id="id25">
+<img alt="Chords-Web Filters" src="../../../_images/chords_filters.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Filters</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>A <strong>1 Hz high-pass</strong> filter is always applied to remove DC drift, even when no other filter is selected.</p></li>
+<li><p>The Muscle, Heart, Eye and Brain filters are available in the <strong>Chords Visualizer</strong>. <strong>Rep-Forge</strong> has only the Muscle filter and the 50/60 Hz notch filter.</p></li>
+</ul>
+</div>
+</section>
+<section id="recording-the-data">
+<h3>Recording the Data<a class="headerlink" href="#recording-the-data" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id26">
+<img alt="Recording Time" src="../../../_images/chords_recordingTime.png" />
+<figcaption>
+<p><span class="caption-text">Recording Time</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>Click the <strong>Record</strong> (red circle) button to start recording in <strong>CSV format</strong>.</p></li>
+<li><p>To stop automatically, set an end time: choose <strong>1, 10, 20 or 30 minutes</strong>, or type your own time in minutes. You can also record without a time limit and click <strong>Stop</strong> when you are done.</p></li>
+<li><p>Recordings can be at most <strong>24 hours</strong> (1440 minutes) long.</p></li>
+</ol>
+<p>Recorded files are saved in your browser (using <strong>IndexedDB</strong>), so they are not lost if you disconnect your board. Click the <strong>Files</strong> button to manage them:</p>
+<ul class="simple">
+<li><p><strong>Download</strong> or <strong>delete</strong> a single file.</p></li>
+<li><p><strong>Download All as Zip</strong> or <strong>Delete All</strong> with one click.</p></li>
+</ul>
+<figure class="align-center" id="id27">
+<img alt="Save and Delete Option" src="../../../_images/chords_filesaveordelete.png" />
+<figcaption>
+<p><span class="caption-text">Save and Delete Option</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Each CSV file has a <code class="docutils literal notranslate"><span class="pre">Counter</span></code> column followed by one column per selected channel (<code class="docutils literal notranslate"><span class="pre">Channel1</span></code>, <code class="docutils literal notranslate"><span class="pre">Channel2</span></code>, …). You can plot these files with the <a class="reference internal" href="../chords-csv-plotter/index.html#chords-csv-plotter"><span class="std std-ref">Chords CSV Plotter</span></a>.</p>
+</section>
+<section id="disconnecting">
+<h3>Disconnecting<a class="headerlink" href="#disconnecting" title="Link to this heading">#</a></h3>
+<p>Click the <strong>Disconnect</strong> button to stop the data stream and disconnect your board.</p>
+</section>
+<section id="other-options-to-explore">
+<h3>Other Options to Explore<a class="headerlink" href="#other-options-to-explore" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Switch Theme</strong>: Switch between light and dark mode using the theme button in the navigation bar.</p></li>
+<li><p><strong>Version</strong>: The navigation bar shows the version of Chords-Web you are using.</p></li>
+<li><p><strong>GitHub Repository</strong>: Open the Chords-Web GitHub repository using the link in the navigation bar.</p></li>
+<li><p><strong>Contributors</strong>: See the list of contributors using the link in the top-right corner of the navigation bar.</p></li>
+</ul>
+</section>
 </section>
 <section id="applications">
-<h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
+<span id="chords-applications"></span><h2>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h2>
 <section id="chords-visualizer">
-<span id="id2"></span><h3>Chords Visualizer<a class="headerlink" href="#chords-visualizer" title="Link to this heading">#</a></h3>
-<p>The Chords Visualizer is a powerful web-based tool designed for seamless real-time biopotential signal acquisition and analysis. Designed for researchers, developers, and enthusiasts, this app provides an intuitive interface for monitoring multiple channels, applying advanced filters, and managing recorded data efficiently. Whether you’re analyzing EMG, ECG, EOG, or EEG signals, the app ensures a smooth and interactive experience, simplifying data acquisition and enhancing signal interpretation.</p>
+<span id="id5"></span><h3>Chords Visualizer<a class="headerlink" href="#chords-visualizer" title="Link to this heading">#</a></h3>
+<p>The Chords Visualizer is the default application. It plots your raw biopotential signals from multiple channels in real time. Use it to monitor EMG, ECG, EOG or EEG signals, apply filters and record your data.</p>
 <section id="features">
 <h4>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h4>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -736,107 +1187,57 @@ NPG Lite Flasher</div>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Effortless Connectivity</strong></p></td>
-<td><p>Instantly detects <strong>BioAmp Hardware</strong> running <strong>Chords-Web Arduino Firmware</strong>, simplifying setup and ensuring smooth workflow from data acquisition to visualization.</p></td>
+<tr class="row-even"><td><p><strong>Auto Board Detection</strong></p></td>
+<td><p>Instantly detects <strong>BioAmp Hardware</strong> running the <strong>Chords firmware</strong> and sets the ADC resolution, channels and sampling rate automatically.</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Real-time Visualization</strong></p></td>
-<td><p>Experience smooth, real-time data rendering powered by <a class="reference external" href="https://github.com/danchitnis/webgl-plot">WebGL-Plot</a>. Ensures uninterrupted signal display for seamless data monitoring.</p></td>
+<td><p>Smooth, real-time data rendering powered by <a class="reference external" href="https://github.com/danchitnis/webgl-plot">WebGL-Plot</a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Frame Buffer &amp; Snapshots</strong></p></td>
-<td><p>Stores the <strong>last five snapshots</strong>, with left/right controls for navigation. Changing the <strong>channel count resets snapshots</strong> for accuracy. Users can <strong>zoom in and out</strong> for detailed or broad views.</p></td>
+<tr class="row-even"><td><p><strong>Multi-channel Plotting</strong></p></td>
+<td><p>Plots <strong>up to 16 channels</strong>, depending on your board, each in a different color.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Recording &amp; Data Management</strong></p></td>
-<td><p>Record data in <strong>CSV format</strong> indefinitely or with a timer. Manage files via a popover menu and <strong>download or delete</strong> them individually or as a ZIP with one click.</p></td>
+<tr class="row-odd"><td><p><strong>Data Windows</strong></p></td>
+<td><p>Pause and go back through the <strong>last 5 data windows</strong>.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Zoom &amp; Time Base</strong></p></td>
-<td><p>Use <strong>Zoom-In &amp; Zoom-Out</strong> controls to focus on signal details. Adjust the <strong>Time Base Slider</strong> from <strong>1 to 10 seconds per frame</strong> for flexible data visualization.</p></td>
+<td><p>Zoom from 1x to 10x and show 1 to 10 seconds of data on the screen.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Filter Options</strong></p></td>
-<td><p>Enhance biopotential signals using the <strong>notch filter</strong> and <strong>bandpass filters</strong>. Apply them individually per channel or collectively via the <strong>master filter</strong>.</p></td>
+<tr class="row-odd"><td><p><strong>Filters</strong></p></td>
+<td><p>Muscle, Heart, Eye and Brain filters, and 50/60 Hz notch filters, per channel or for all channels.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Channel Support</strong></p></td>
-<td><p>Supports <strong>real-time multi-channel plotting</strong> with color-coded streams. Accommodates <strong>up to 16 channels</strong>, depending on the connected device, for flexible bio-potential signal applications.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>One-Click Disconnect</strong></p></td>
-<td><p>Easily disconnect from the development board with a single click, ensuring a hassle-free disconnection process after data collection or visualization.</p></td>
+<tr class="row-even"><td><p><strong>Recording &amp; Data Management</strong></p></td>
+<td><p>Record data in <strong>CSV format</strong> with or without a timer. Download or delete files individually or as a ZIP.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="chords-web-icons">
-<h4>Chords-Web Icons<a class="headerlink" href="#chords-web-icons" title="Link to this heading">#</a></h4>
-<figure class="align-center" id="id16">
-<img alt="Chords-Web Icons" src="../../../_images/chords_icon.png" />
-<figcaption>
-<p><span class="caption-text">Chords-Web Icons</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="running-the-application">
+<h4>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Connect your board (see <a class="reference internal" href="#connecting-to-chords-web">Connecting to Chords-Web</a>). The Chords Visualizer opens automatically.</p></li>
+<li><p>Open <strong>Settings</strong> to select channels and adjust the zoom and time base.</p></li>
+<li><p>Click <strong>Filter</strong> and choose a filter for the signal you are recording (for example, <strong>Muscle</strong> for EMG).</p></li>
+<li><p>Click <strong>Record</strong> to save your data, and use the <strong>Files</strong> button to download it.</p></li>
+</ol>
 </section>
-<section id="play-pause-data-stream">
-<h4>Play/Pause Data Stream<a class="headerlink" href="#play-pause-data-stream" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Clicking the pause button displays the last saved frame.</p></li>
-<li><p>You can view and save up to the last five snapshots of your data.</p></li>
-<li><p>Snapshots are automatically captured per frame.</p></li>
-<li><p>Navigate snapshots using the left and right buttons.</p></li>
-</ul>
-</section>
-<section id="setting-channel-count">
-<h4>Setting Channel Count<a class="headerlink" href="#setting-channel-count" title="Link to this heading">#</a></h4>
-<figure class="align-center" id="id17">
-<img alt="Chords-Web Channel Support" src="../../../_images/chords_channelsupport.png" />
-<figcaption>
-<p><span class="caption-text">Chords-Web Channel Support</span><a class="headerlink" href="#id17" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p>The number of available channels depends on the development board in use.</p></li>
-<li><p>Select a specific channel by clicking the channel button.</p></li>
-<li><p>Use the “Select All” button to choose all available channels at once.</p></li>
-<li><p>Click the reset button to revert to your previously selected channels.</p></li>
-</ul>
-</section>
-<section id="recording-the-data">
-<h4>Recording the Data<a class="headerlink" href="#recording-the-data" title="Link to this heading">#</a></h4>
-<figure class="align-center" id="id18">
-<img alt="Recording Time" src="../../../_images/chords_recordingTime.png" />
-<figcaption>
-<p><span class="caption-text">Recording Time</span><a class="headerlink" href="#id18" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<ul class="simple">
-<li><p><strong>Record</strong> data in <strong>CSV format</strong> for a set duration or indefinitely until manually stopped.</p></li>
-<li><p>Start recording with a set time limit or record freely and stop anytime using the stop icon.</p></li>
-<li><p>Efficiently <strong>download</strong> or <strong>delete</strong> recorded files through the popover menu.</p></li>
-<li><p>Files are securely stored in <strong>IndexedDB</strong> for seamless management.</p></li>
-<li><p>Manage individual files by downloading specific files and removing them as needed.</p></li>
-<li><p>Easily download all files as a ZIP or delete them with a single click for seamless file management.</p></li>
-</ul>
-<figure class="align-center" id="id19">
-<img alt="Save and Delete Option" src="../../../_images/chords_filesaveordelete.png" />
-<figcaption>
-<p><span class="caption-text">Save and Delete Option</span><a class="headerlink" href="#id19" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="visualizing-emg-electromyography-signal">
-<h4>Visualizing EMG (Electromyography) signal<a class="headerlink" href="#visualizing-emg-electromyography-signal" title="Link to this heading">#</a></h4>
-<p>EMG captures the electrical activity produced by skeletal muscles.</p>
-<figure class="align-center" id="id20">
+<section id="visualizing-emg-electromyography-signals">
+<h4>Visualizing EMG (Electromyography) signals<a class="headerlink" href="#visualizing-emg-electromyography-signals" title="Link to this heading">#</a></h4>
+<p>EMG captures the electrical activity produced by skeletal muscles. Use the <strong>Muscle</strong> filter.</p>
+<figure class="align-center" id="id28">
 <a class="reference internal image-reference" href="../../../_images/chords_emg_signal.png"><img alt="EMG Signal Example" src="../../../_images/chords_emg_signal.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">EMG Signal Example</span><a class="headerlink" href="#id20" title="Link to this image">#</a></p>
+<p><span class="caption-text">EMG Signal Example</span><a class="headerlink" href="#id28" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="visualizing-eeg-electroencephalography-signals">
 <h4>Visualizing EEG (Electroencephalography) signals<a class="headerlink" href="#visualizing-eeg-electroencephalography-signals" title="Link to this heading">#</a></h4>
-<p>EEG records the electrical activity of the brain and is commonly used for diagnosing neurological conditions and studying brain activity.</p>
-<figure class="align-center" id="id21">
+<p>EEG records the electrical activity of the brain. Use the <strong>Brain</strong> filter.</p>
+<figure class="align-center" id="id29">
 <a class="reference internal image-reference" href="../../../_images/chords_eeg_signal.png"><img alt="EEG Signal Example" src="../../../_images/chords_eeg_signal.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">EEG Signal Example</span><a class="headerlink" href="#id21" title="Link to this image">#</a></p>
+<p><span class="caption-text">EEG Signal Example</span><a class="headerlink" href="#id29" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -846,126 +1247,34 @@ NPG Lite Flasher</div>
 </section>
 <section id="visualizing-eog-electrooculography-signals">
 <h4>Visualizing EOG (Electrooculography) signals<a class="headerlink" href="#visualizing-eog-electrooculography-signals" title="Link to this heading">#</a></h4>
-<p>EOG measures the electrical potential generated by eye movements.</p>
-<figure class="align-center" id="id22">
+<p>EOG measures the electrical potential generated by eye movements. Use the <strong>Eye</strong> filter.</p>
+<figure class="align-center" id="id30">
 <a class="reference internal image-reference" href="../../../_images/chords_eog_signal.png"><img alt="EOG Signal Example" src="../../../_images/chords_eog_signal.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">EOG Signal Example</span><a class="headerlink" href="#id22" title="Link to this image">#</a></p>
+<p><span class="caption-text">EOG Signal Example</span><a class="headerlink" href="#id30" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="visualizing-ecg-electrocardiography-signals">
 <h4>Visualizing ECG (Electrocardiography) signals<a class="headerlink" href="#visualizing-ecg-electrocardiography-signals" title="Link to this heading">#</a></h4>
-<p>The ECG (Electrocardiography) signal represents the electrical activity of the heart. This custom ECG signal is used both in clinical practice and research to evaluate heart rhythm, detect abnormalities, and assess cardiac health.</p>
-<figure class="align-center" id="id23">
+<p>ECG records the electrical activity of the heart and shows your heart rhythm. Use the <strong>Heart</strong> filter.</p>
+<figure class="align-center" id="id31">
 <a class="reference internal image-reference" href="../../../_images/chords_ecg_signal.png"><img alt="ECG Signal Example" src="../../../_images/chords_ecg_signal.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-text">ECG Signal Example</span><a class="headerlink" href="#id23" title="Link to this image">#</a></p>
+<p><span class="caption-text">ECG Signal Example</span><a class="headerlink" href="#id31" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="other-options-to-explore">
-<h4>Other Options to Explore<a class="headerlink" href="#other-options-to-explore" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Switch Theme</strong>
-Quickly switch between light and dark modes using the theme button in the navigation bar.</p></li>
-<li><p><strong>Visit the GitHub Repository</strong>
-Access the Chords Web GitHub repository via the link in the navigation bar.</p></li>
-<li><p><strong>Contributors</strong>
-View the list of contributors using the link in the navigation bar’s top-right corner.</p></li>
-</ul>
 </section>
-<section id="running-the-application">
-<h4>Running the Application<a class="headerlink" href="#running-the-application" title="Link to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Visualize</span> <span class="pre">Now</span></code> button to navigate to the applications page. Here, you will find two options.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Chords</span> <span class="pre">Visualizer</span></code> button to establish a connection with the Arduino and start streaming data.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">ZoomIn/ZoomOut</span></code> buttons to adjust data visualization.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">Play/Pause</span></code> button to control the data stream. Navigate the last five snapshots with the <code class="docutils literal notranslate"><span class="pre">Left/Right</span></code> buttons in the <strong>Frame Buffer</strong> feature.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Record</span></code> button to start recording data into a CSV file.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button to save the recorded data.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Delete</span></code> button to remove recorded data.</p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Filter</span></code> button to apply filters for EMG, ECG, EOG, and EEG signals:
-- <code class="docutils literal notranslate"><span class="pre">Muscle</span></code> (70Hz high-pass for EMG)
-- <code class="docutils literal notranslate"><span class="pre">Heart</span></code> (30Hz low-pass for ECG)
-- <code class="docutils literal notranslate"><span class="pre">Eye</span></code> (10Hz low-pass for EOG)
-- <code class="docutils literal notranslate"><span class="pre">Brain</span></code> (45Hz low-pass for EEG)
-- Use the <strong>Master button</strong> to apply filters across all channels.
-- Apply <strong>50Hz or 60Hz</strong> filters to individual or all channels.</p></li>
-<li><p>Select channels via the <code class="docutils literal notranslate"><span class="pre">Channels</span></code> button in the settings popover.</p></li>
-<li><p>Adjust zoom using the <code class="docutils literal notranslate"><span class="pre">Zoom</span></code> slider for a detailed or overall view.</p></li>
-</ol>
-</section>
-</section>
-<section id="serial-wizard-plotter-monitor">
-<span id="chords-web-serial-wizard"></span><h3>Serial Wizard Plotter &amp; Monitor<a class="headerlink" href="#serial-wizard-plotter-monitor" title="Link to this heading">#</a></h3>
-<section id="id3">
-<h4>Overview<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<p>The <strong>Serial Wizard Plotter &amp; Monitor</strong> is a standalone feature within Chords-Web that provides real‑time serial data visualization.</p>
-<figure class="align-center" id="id24">
-<img alt="Chords-Web Filter" src="../../../_images/chords_serialwizard.png" />
-<figcaption>
-<p><span class="caption-text">Chords-Web Filter</span><a class="headerlink" href="#id24" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="id4">
-<h4>Features<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
-<div class="pst-scrollable-table-container"><table class="table">
-<colgroup>
-<col style="width: 25.0%" />
-<col style="width: 75.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
-<th class="head"><p><strong>Description</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Dual View Modes</strong></p></td>
-<td><p>This tool allows you to toggle between the <strong>Plotter</strong>, <strong>Monitor</strong>, or a combined view for comprehensive visualization.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Optimized Data Rendering</strong></p></td>
-<td><p>In newer Arduino versions, fast data plotting can lead to cluttered displays. The Serial Plotter &amp; Monitor is optimized to handle high-frequency data, ensuring clear and accurate visual representation.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Footer Button Bar</strong></p></td>
-<td><p>Easily switch between different viewing modes using an intuitive footer button bar.</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Baud Rate Selection</strong></p></td>
-<td><p>Choose from multiple baud rates to optimize serial communication based on your device’s requirements.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Navigation Bar</strong></p></td>
-<td><p>Access features such as theme switching (light/dark), visit the GitHub repository, view contributor details, or return to the previous page.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="id5">
-<h4>Running the Application<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p>Click the <strong>Serial Wizard</strong> button to launch the Serial Plotter &amp; Monitor.</p></li>
-<li><p>Click on Connect button select board.</p></li>
-<li><p>Use the footer button bar to toggle between the Plotter, Monitor, or a combined view.</p></li>
-<li><p>Navigate using the top bar to switch themes, visit the GitHub repository, view contributors, or return to the previous page.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Checkout our YouTube video for more information:</p>
-<div class="video_wrapper" style="">
-<iframe allowfullscreen="true" src="https://www.youtube.com/embed/-C_QUpwcEJQ" style="border: 0; height: 345px; width: 560px">
-</iframe></div></div>
-</section>
-</section>
-<section id="fft-analysis-and-eeg-band-spectrum-plotting">
-<span id="chords-web-fft-visualizer"></span><h3>FFT Analysis and EEG Band Spectrum Plotting<a class="headerlink" href="#fft-analysis-and-eeg-band-spectrum-plotting" title="Link to this heading">#</a></h3>
+<section id="fft-visualizer">
+<span id="chords-web-fft-visualizer"></span><h3>FFT Visualizer<a class="headerlink" href="#fft-visualizer" title="Link to this heading">#</a></h3>
 <section id="id6">
 <h4>Overview<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<p>We have introduced <strong>FFT (Fast Fourier Transform) analysis</strong> and <strong>EEG band spectrum plotting</strong> to improve real-time signal processing. These features enable you to visualize and analyze EEG frequency bands, providing deeper insights into brain activity.</p>
-<figure class="align-center" id="id25">
+<p>The FFT Visualizer uses <strong>FFT (Fast Fourier Transform)</strong> to show the frequencies present in your signal and the power of each <strong>EEG band</strong>. Use it to see your brainwaves and track your focus in real time.</p>
+<figure class="align-center" id="id32">
 <img alt="Chords-Web FFT Visualiser" src="../../../_images/chords_fft_visualiser.png" />
 <figcaption>
-<p><span class="caption-text">Chords-Web FFT Visualiser</span><a class="headerlink" href="#id25" title="Link to this image">#</a></p>
+<p><span class="caption-text">Chords-Web FFT Visualiser</span><a class="headerlink" href="#id32" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -982,14 +1291,20 @@ View the list of contributors using the link in the navigation bar’s top-right
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Download EEG Data</strong></p></td>
-<td><p>Save recorded channel data as a <strong>CSV file</strong> for further analysis, storage, or external visualization.</p></td>
+<tr class="row-even"><td><p><strong>Live EEG Band Monitoring</strong></p></td>
+<td><p>View real-time EEG band power values to track brain activity.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Live EEG Band Monitoring</strong></p></td>
-<td><p>View real-time plots of EEG band values for better brain activity tracking.</p></td>
+<tr class="row-odd"><td><p><strong>Beta Candle</strong></p></td>
+<td><p>A candle that glows brighter when your beta (focus) activity is higher.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Channel Selection</strong></p></td>
-<td><p>Toggle individual channels (CH0-CH2) on or off to customize which electrode inputs are displayed and recorded.</p></td>
+<td><p>Choose which channel to analyze from the <strong>Settings</strong> icon (Channel 1 by default).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Data Windows</strong></p></td>
+<td><p>Pause and go back through the last 5 data windows.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Recording</strong></p></td>
+<td><p>Record the data as a <strong>CSV file</strong> for further analysis.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1008,21 +1323,17 @@ View the list of contributors using the link in the navigation bar’s top-right
 <section id="id8">
 <h4>Running the Application<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p>Select <strong>“FFT Visualizer”</strong> to see your brainwaves in real time.</p></li>
-<li><p>You will get two option, select the appropriate option based on how your device is connected:</p>
+<li><p>Connect your board over <strong>Serial</strong> or <strong>BLE</strong> (see <a class="reference internal" href="#connecting-to-chords-web">Connecting to Chords-Web</a>).</p></li>
+<li><p>Select <strong>FFT Visualizer</strong> from the app switcher.</p></li>
+<li><p>Open <strong>Settings</strong> and select the channel connected to your EEG electrodes.</p></li>
+<li><p>The <strong>top section</strong> shows your EEG signal, filtered with the <strong>Brain</strong> filter (45 Hz low-pass) to remove noise.</p></li>
+<li><p>The <strong>bottom section</strong> is divided into two parts:</p>
 <ul class="simple">
-<li><p>Serial</p></li>
-<li><p>Bluetooth</p></li>
-</ul>
-</li>
-<li><p>The <strong>top segment</strong> displays filtered EEG data using a <strong>45Hz low-pass filter</strong> to remove noise.</p></li>
-<li><p>The <strong>bottom segment</strong> is divided into two sections:</p>
-<ul class="simple">
-<li><p><strong>Left side</strong> → Shows EEG frequency values in Hz.</p></li>
-<li><p><strong>Right side</strong> → Offers two interactive modes:</p>
+<li><p><strong>Left side</strong> → The frequency spectrum (FFT) of your signal in Hz.</p></li>
+<li><p><strong>Right side</strong> → Two modes:</p>
 <ul>
-<li><p><strong>Band Power Mode</strong> → Displays real-time EEG band power values.</p></li>
-<li><p><strong>Beta Candle Mode</strong> → A unique visualization where a glowing candle represents your focus level.</p>
+<li><p><strong>Band Power Mode</strong> → Real-time power of each EEG band.</p></li>
+<li><p><strong>Beta Candle Mode</strong> → A glowing candle that shows your focus level.</p>
 <ul>
 <li><p><strong>Brighter candle</strong> = Higher beta waves = Strong focus.</p></li>
 <li><p><strong>Dim candle</strong> = Lower beta waves = Distraction.</p></li>
@@ -1041,18 +1352,18 @@ View the list of contributors using the link in the navigation bar’s top-right
 </iframe></div></div>
 </section>
 </section>
-<section id="npg-lite">
-<span id="chords-web-npg-lite"></span><h3>NPG Lite<a class="headerlink" href="#npg-lite" title="Link to this heading">#</a></h3>
+<section id="rep-forge">
+<span id="chords-web-rep-forge"></span><h3>Rep-Forge<a class="headerlink" href="#rep-forge" title="Link to this heading">#</a></h3>
 <section id="id9">
 <h4>Overview<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
-<p>We have added support for <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">NPG Lite</span></a>, enabling real-time visualization of signals directly
-from the onboard 3-channel BioAmp. Powered by the ESP32-C6 with a built-in 12-bit ADC, setup is seamless: simply upload the firmware, power on the board, and begin streaming instantly.</p>
-<figure class="align-center" id="id26">
-<img alt="Chords-Web NPG Lite" src="../../../_images/chords_npg_lite.png" />
+<p>Rep-Forge shows the strength of your muscle contractions (EMG) in real time. Use it to monitor your muscles while you work out or during rehabilitation, directly in your browser.</p>
+<figure class="align-center" id="id33">
+<img alt="Chords-Web Rep-Forge showing EMG signals on three channels with strength bars" src="../../../_images/chords_rep_forge.png" />
 <figcaption>
-<p><span class="caption-text">Chords-Web NPG Lite</span><a class="headerlink" href="#id26" title="Link to this image">#</a></p>
+<p><span class="caption-text">Chords-Web Rep-Forge</span><a class="headerlink" href="#id33" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
+<p>On the left, each channel shows the raw EMG signal (red) with its envelope (blue) on top. On the right, the strength bar of each channel rises as the muscle contracts. In the image above, only CH1 is active.</p>
 </section>
 <section id="id10">
 <h4>Features<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
@@ -1067,56 +1378,59 @@ from the onboard 3-channel BioAmp. Powered by the ESP32-C6 with a built-in 12-bi
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Wireless Bluetooth LE</strong></p></td>
-<td><p>Stream up to 3 channels of biopotential data over BLE - no cables after initial power-on.</p></td>
+<tr class="row-even"><td><p><strong>Multi-channel EMG</strong></p></td>
+<td><p>Monitor <strong>up to 6 EMG channels</strong> at the same time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Built-in BioAmp &amp; 12-bit ADC</strong></p></td>
-<td><p>On-board amplifier and ESP32-C6 ADC ensure high-quality signal capture.</p></td>
+<tr class="row-odd"><td><p><strong>EMG Envelope</strong></p></td>
+<td><p>Shows the envelope of your EMG signal, which follows how strongly your muscle is contracting.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Interactive Controls</strong></p></td>
-<td><p>Select channels, play/pause live stream, apply bandpass &amp; 50/60 Hz notch filters, and record to CSV.</p></td>
+<tr class="row-even"><td><p><strong>Live Strength Bars</strong></p></td>
+<td><p>A bar for each channel shows the contraction level in real time, with the channel name at the top and the current value at the bottom.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Filters</strong></p></td>
+<td><p>Muscle filter and 50/60 Hz notch filter to remove noise.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Data Windows &amp; Recording</strong></p></td>
+<td><p>Pause and go back through the last 5 data windows, and record to CSV.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Serial or BLE</strong></p></td>
+<td><p>Works with any supported board over Serial, or with the NPG Lite over BLE.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="id11">
-<h4>Running the application<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
+<h4>Running the Application<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p><strong>Flash the correct firmware</strong>
-- Visit the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG-Lite Flasher</span></a> and upload the <strong>BLE firmware</strong> to your board.</p></li>
-<li><p><strong>Open Chords-Web</strong>
-- Navigate to <a class="reference external" href="https://chords.upsidedownlabs.tech">https://chords.upsidedownlabs.tech</a> and click <strong>Visualize Now</strong>.</p></li>
-<li><p><strong>Select “NPG-Lite”</strong>
-- From the application list, choose <strong>NPG-Lite</strong>.</p></li>
-<li><p><strong>Enable Bluetooth on your computer</strong>
-- Turn on your system’s Bluetooth, then click <strong>Connect</strong> in Chords-Web.</p></li>
-<li><p><strong>Choose your device</strong>
-- Select your NPG-Lite from the list of available devices.</p></li>
-<li><p><strong>Begin streaming</strong>
-- Visualize your biopotential signals in real time, select 1-3 channels, toggle play/pause, apply filters, or record to CSV.</p></li>
+<li><p>Place the electrodes on the muscle you want to monitor and connect them to your BioAmp sensor.</p></li>
+<li><p>Connect your board over <strong>Serial</strong> or <strong>BLE</strong> (see <a class="reference internal" href="#connecting-to-chords-web">Connecting to Chords-Web</a>).</p></li>
+<li><p>Select <strong>Rep-Forge</strong> from the app switcher.</p></li>
+<li><p>Open <strong>Settings</strong> and select up to 6 channels.</p></li>
+<li><p>Contract your muscle and watch the strength bar for that channel go up.</p></li>
 </ol>
 </section>
 <section id="use-cases">
 <h4>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>Neurofeedback &amp; Focus Training</strong>: Monitor alpha/beta power to track attention.</p></li>
-<li><p><strong>Rehabilitation &amp; Sports Science</strong>: Quantify muscle (EMG) activity during exercises.</p></li>
-<li><p><strong>Research &amp; Education</strong>: Capture synchronized EEG/ECG/EOG data for analysis.</p></li>
+<li><p><strong>Strength Training</strong>: Quantify muscle activation during lifts or repetitions.</p></li>
+<li><p><strong>Rehabilitation</strong>: Monitor recovery progress in injured muscle groups.</p></li>
+<li><p><strong>Research</strong>: Capture EMG data for neuromuscular studies.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Checkout our YouTube video for more information:</p>
-<div class="video_wrapper" style="">
-<iframe allowfullscreen="true" src="https://www.youtube.com/embed/3YCioyc4uKs" style="border: 0; height: 345px; width: 560px">
-</iframe></div></div>
 </section>
 </section>
-<section id="rep-forge">
-<span id="chords-web-rep-forge"></span><h3>Rep Forge<a class="headerlink" href="#rep-forge" title="Link to this heading">#</a></h3>
+<section id="ecg-visualizer">
+<span id="chords-web-ecg-visualizer"></span><h3>ECG Visualizer<a class="headerlink" href="#ecg-visualizer" title="Link to this heading">#</a></h3>
 <section id="id12">
 <h4>Overview<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
-<p>We’ve added <strong>Rep-Forge</strong> - a real-time, 3-channel EMG visualization tool for the NPG Lite. Rep-Forge lets you monitor your muscle strength as you work out or rehabilitate, directly in your browser. No external ADC or development board required: simply flash your firmware, apply electrodes, and start streaming.</p>
+<p>The ECG Visualizer shows your <strong>heart rate</strong> in real time. It detects the <strong>R-peaks</strong> (the tallest spike of each heartbeat) in your ECG signal and calculates your heart rate in beats per minute (BPM).</p>
+<figure class="align-center" id="id34">
+<img alt="Chords-Web ECG Visualizer showing an ECG signal with marked R-peaks and heart rate in BPM" src="../../../_images/chords_ecg_visualiser.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web ECG Visualizer</span><a class="headerlink" href="#id34" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Each detected R-peak is marked with a red dot and arrow, and your heart rate is shown in BPM at the top.</p>
 </section>
 <section id="id13">
 <h4>Features<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
@@ -1131,45 +1445,218 @@ from the onboard 3-channel BioAmp. Powered by the ESP32-C6 with a built-in 12-bi
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>3-Channel EMG Streaming</strong></p></td>
-<td><p>Stream up to three simultaneous EMG signals from your NPG Lite’s onboard BioAmp.</p></td>
+<tr class="row-even"><td><p><strong>Heart Rate (BPM)</strong></p></td>
+<td><p>Shows your live heart rate, with a heart icon that beats with each detected heartbeat.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Intelligent Channel Detection</strong></p></td>
-<td><p>Automatically highlights the active muscle channel so you can quickly identify which muscle you’re engaging.</p></td>
+<tr class="row-odd"><td><p><strong>R-peak Detection</strong></p></td>
+<td><p>Detects R-peaks using the Pan-Tompkins algorithm.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Live Strength Bars</strong></p></td>
-<td><p>Dynamic bar graphs update in real time to show relative contraction levels for each channel.</p></td>
+<tr class="row-even"><td><p><strong>Automatic ECG Filter</strong></p></td>
+<td><p>The <strong>Heart</strong> filter is turned on for all channels automatically, for a clean ECG trace.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Noise-Reducing Filters</strong></p></td>
-<td><p>Built-in signal filters remove 50/60 Hz mains interference and high-frequency artifacts for a cleaner EMG trace.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Wireless BLE Connectivity</strong></p></td>
-<td><p>Stream data over Bluetooth LE—no cables needed once your board is powered on.</p></td>
+<tr class="row-odd"><td><p><strong>Channel Selection</strong></p></td>
+<td><p>Choose which channel to analyze from the <strong>Settings</strong> icon (Channel 1 by default).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
 <section id="id14">
-<h4>Running the application<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<h4>Running the Application<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p><strong>Power on your NPG Lite</strong> by flipping its on/off switch.</p></li>
-<li><p><strong>Connect</strong> via USB-C and flash the <strong>Rep-Forge</strong> firmware using the NPG Lite Flasher.</p></li>
-<li><p><strong>Unplug</strong> USB and enable Bluetooth on your computer (or use Serial/Wi-Fi as needed).</p></li>
-<li><p>Open your browser to <strong>chords.upsidedownlabs.tech</strong>, click <strong>Visualize Now</strong>, then choose <strong>Rep-Forge</strong>.</p></li>
-<li><p>Click <strong>Connect</strong>, select your NPG Lite device from the list, and wait for the live EMG bars to appear.</p></li>
-<li><p><strong>Place electrodes</strong> on the target muscle group; watch Rep-Forge dynamically highlight and plot the active channel’s strength.</p></li>
+<li><p>Place the ECG electrodes on your body (the electrode placement diagram is shown on the Chords-Web connect page).</p></li>
+<li><p>Connect your board over <strong>Serial</strong> or <strong>BLE</strong> (see <a class="reference internal" href="#connecting-to-chords-web">Connecting to Chords-Web</a>).</p></li>
+<li><p>Select <strong>ECG Visualizer</strong> from the app switcher.</p></li>
+<li><p>Open <strong>Settings</strong> and select the channel connected to your ECG sensor.</p></li>
+<li><p>Sit still and relaxed. After a few heartbeats, your heart rate appears on the screen.</p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ECG Visualizer is for learning and experiments only. It is not medical software.</p>
+</div>
 </section>
+</section>
+<section id="serial-wizard-plotter-monitor">
+<span id="chords-web-serial-wizard"></span><h3>Serial Wizard Plotter &amp; Monitor<a class="headerlink" href="#serial-wizard-plotter-monitor" title="Link to this heading">#</a></h3>
 <section id="id15">
-<h4>Use Cases<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<h4>Overview<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>The <strong>Serial Wizard Plotter &amp; Monitor</strong> is a standalone tool in Chords-Web that plots and prints data from any serial device, similar to the Arduino IDE Serial Plotter and Serial Monitor. Unlike the other applications, it works with any sketch - it doesn’t need the Chords firmware.</p>
+<figure class="align-center" id="id35">
+<img alt="Chords-Web Serial Wizard" src="../../../_images/chords_serialwizard.png" />
+<figcaption>
+<p><span class="caption-text">Chords-Web Serial Wizard</span><a class="headerlink" href="#id35" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id16">
+<h4>Features<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Dual View Modes</strong></p></td>
+<td><p>Switch between the <strong>Plotter</strong>, the <strong>Monitor</strong>, or both together.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Optimized Data Rendering</strong></p></td>
+<td><p>Handles high-speed data without cluttering the display, so your plot stays clear and accurate.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Footer Button Bar</strong></p></td>
+<td><p>Switch between viewing modes using the buttons at the bottom.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Baud Rate Selection</strong></p></td>
+<td><p>Choose from 9600, 19200, 38400, 57600, 115200 (default), 230400, 460800 or 921600 baud.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Navigation Bar</strong></p></td>
+<td><p>Switch theme (light/dark), visit the GitHub repository, view contributors or go back to the previous page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id17">
+<h4>Running the Application<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Open Chords-Web, click <strong>Visualize Now</strong> and then click <strong>Serial Wizard</strong>.</p></li>
+<li><p>Select the <strong>Baud Rate</strong>. It must match the value in your sketch’s <code class="docutils literal notranslate"><span class="pre">Serial.begin()</span></code>.</p></li>
+<li><p>Click <strong>Connect</strong> and select your board’s port.</p></li>
+<li><p>Use the footer buttons to switch between the Plotter, the Monitor or both.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Checkout our YouTube video for more information:</p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/-C_QUpwcEJQ" style="border: 0; height: 345px; width: 560px">
+</iframe></div></div>
+</section>
+</section>
+</section>
+<section id="data-format-and-data-quality">
+<span id="chords-data-format"></span><h2>Data Format and Data Quality<a class="headerlink" href="#data-format-and-data-quality" title="Link to this heading">#</a></h2>
+<section id="data-format">
+<h3>Data Format<a class="headerlink" href="#data-format" title="Link to this heading">#</a></h3>
+<p>This section is for you if you want to use Chords-Web with your own board or firmware. The <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords Arduino Firmware</a> already does all of this, so use it as a reference.</p>
+<section id="commands">
+<h4>Commands<a class="headerlink" href="#commands" title="Link to this heading">#</a></h4>
+<p>Chords-Web sends these text commands to the board over Serial. Each command ends with a newline (<code class="docutils literal notranslate"><span class="pre">\n</span></code>):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Command</strong></p></th>
+<th class="head"><p><strong>What the board must do</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WHORU</span></code></p></td>
+<td><p>Reply with its board ID on one line, for example <code class="docutils literal notranslate"><span class="pre">UNO-R3</span></code>. Chords-Web uses this ID to set the channel count, ADC resolution and sampling rate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">START</span></code></p></td>
+<td><p>Start sending data packets.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">STOP</span></code></p></td>
+<td><p>Stop sending data packets.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The board ID must be one of the IDs Chords-Web knows: <code class="docutils literal notranslate"><span class="pre">UNO-R3</span></code>, <code class="docutils literal notranslate"><span class="pre">GENUINO-UNO</span></code>, <code class="docutils literal notranslate"><span class="pre">UNO-CLONE</span></code>, <code class="docutils literal notranslate"><span class="pre">NANO-CLASSIC</span></code>, <code class="docutils literal notranslate"><span class="pre">NANO-CLONE</span></code>, <code class="docutils literal notranslate"><span class="pre">MEGA-2560-R3</span></code>, <code class="docutils literal notranslate"><span class="pre">MEGA-2560-CLONE</span></code>, <code class="docutils literal notranslate"><span class="pre">UNO-R4</span></code>, <code class="docutils literal notranslate"><span class="pre">GIGA-R1</span></code>, <code class="docutils literal notranslate"><span class="pre">RPI-PICO-RP2040</span></code>, <code class="docutils literal notranslate"><span class="pre">STM32G4-CORE-BOARD</span></code>, <code class="docutils literal notranslate"><span class="pre">STM32F4-BLACK-PILL</span></code>, <code class="docutils literal notranslate"><span class="pre">NPG-LITE</span></code>, <code class="docutils literal notranslate"><span class="pre">NPG-LITE-3CH</span></code>, <code class="docutils literal notranslate"><span class="pre">NPG-LITE-6CH</span></code> or <code class="docutils literal notranslate"><span class="pre">ESP32-S3</span></code>. If you use your own board, reply with the ID of a supported board that has the same channel count, ADC resolution and sampling rate (see <a class="reference internal" href="#chords-supported-boards"><span class="std std-ref">Supported Boards</span></a>).</p>
+<p>Chords-Web opens the port at <strong>230400 baud</strong>, unless it recognizes the board’s USB ID (for example, Arduino UNO R3, Nano and MEGA boards use 115200 baud).</p>
+</section>
+<section id="packet-format">
+<h4>Packet Format<a class="headerlink" href="#packet-format" title="Link to this heading">#</a></h4>
+<p>After <code class="docutils literal notranslate"><span class="pre">START</span></code>, the board sends one binary packet for every sample:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>| 0xC7 | 0x7C | counter | CH1 high | CH1 low | ... | CHn high | CHn low | 0x01 |
+</pre></div>
+</div>
 <ul class="simple">
-<li><p><strong>Strength Training</strong>: Quantify muscle activation during lifts or repetitions.</p></li>
-<li><p><strong>Rehabilitation</strong>: Monitor recovery progress in injured muscle groups.</p></li>
-<li><p><strong>Research</strong>: Capture high-quality EMG data for neuromuscular studies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0xC7</span> <span class="pre">0x7C</span></code>: two sync bytes that mark the start of a packet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">counter</span></code>: one byte (<code class="docutils literal notranslate"><span class="pre">uint8_t</span></code>) from 0 to 255. It goes up by 1 with every packet and starts again from 0 after 255.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CH</span> <span class="pre">high,</span> <span class="pre">CH</span> <span class="pre">low</span></code>: the raw ADC value of each channel, as two bytes in big-endian order (high byte first).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0x01</span></code>: the end byte.</p></li>
+</ul>
+<p>So each packet is <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">×</span> <span class="pre">channels</span> <span class="pre">+</span> <span class="pre">4</span></code> bytes long. For example, a 6-channel board sends 16-byte packets. The board must always send all of its channels, even if only some are selected in Chords-Web.</p>
+<p>After decoding, Chords-Web uses each sample as <code class="docutils literal notranslate"><span class="pre">[counter,</span> <span class="pre">CH1,</span> <span class="pre">CH2,</span> <span class="pre">...,</span> <span class="pre">CHn]</span></code>. This is the same order as the columns in the recorded CSV file.</p>
+</section>
+</section>
+<section id="checking-for-dropped-samples">
+<h3>Checking for Dropped Samples<a class="headerlink" href="#checking-for-dropped-samples" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Counter</strong>: In your recorded CSV file, the <code class="docutils literal notranslate"><span class="pre">Counter</span></code> value should go up by exactly 1 in each row (after 255 it goes back to 0). If it skips a number, samples were dropped.</p></li>
+<li><p><strong>Number of samples</strong>: The total number of rows should be close to <em>sampling rate × recording time in seconds</em>. For example, a 10-minute recording at 500 Hz should have about 500 × 60 × 10 = 300,000 samples. A big difference means samples were dropped or the timing has drifted.</p></li>
 </ul>
 </section>
 </section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>“Browser not supported” message<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Use the latest version of Google Chrome, Microsoft Edge or Opera on a desktop/laptop. See <a class="reference internal" href="#chords-browsers-compatibility"><span class="std std-ref">Browser Compatibility</span></a>.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>My board doesn’t appear in the port list<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Make sure you are using a USB <strong>data</strong> cable, not a charge-only cable.</p></li>
+<li><p class="sd-card-text">Close the Arduino IDE Serial Monitor/Plotter and any other app using the port.</p></li>
+<li><p class="sd-card-text">On Linux, add your user to the <code class="docutils literal notranslate"><span class="pre">uucp</span></code> (Arch/Manjaro) or <code class="docutils literal notranslate"><span class="pre">dialout</span></code> (Ubuntu/Debian) group (see <a class="reference internal" href="#connecting-over-serial-usb">Connecting over Serial (USB)</a>).</p></li>
+<li><p class="sd-card-text">On Windows, some boards need a USB driver (see <a class="reference internal" href="#chords-firmware-update"><span class="std std-ref">Option 1: Update firmware from Chords-Web (Recommended)</span></a>).</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>“Your firmware is not updated” dialog appears<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Your board doesn’t have the latest Chords firmware. Click <strong>Flash firmware</strong> to update it (see <a class="reference internal" href="#chords-firmware-update"><span class="std std-ref">Option 1: Update firmware from Chords-Web (Recommended)</span></a>), or upload it with the Arduino IDE.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>My NPG Lite doesn’t appear in the Bluetooth list<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Make sure the NPG Lite is switched on and has the <strong>BLE firmware</strong> (upload it with the <a class="reference internal" href="../../tools/npg-lite-flasher-web/index.html#npg-lite-flasher-web"><span class="std std-ref">NPG Lite Flasher Web</span></a> or the <a class="reference internal" href="../../tools/npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a>).</p></li>
+<li><p class="sd-card-text">Turn on Bluetooth on your computer.</p></li>
+<li><p class="sd-card-text">Make sure the NPG Lite isn’t already connected to another device or browser tab.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>My signal is noisy<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Apply the 50 Hz or 60 Hz notch filter, and the filter for your signal type (see <a class="reference internal" href="#chords-web-filters"><span class="std std-ref">Filters</span></a>).</p></li>
+<li><p class="sd-card-text">Unplug your laptop charger while recording.</p></li>
+<li><p class="sd-card-text">Check that the electrodes are placed correctly and have good skin contact.</p></li>
+<li><p class="sd-card-text">For EEG, see <a class="reference internal" href="../../../guides/troubleshoot/recording_quality_eeg/index.html#recording-quality-eeg"><span class="std std-ref">Troubleshooting EEG Signal Quality</span></a>.</p></li>
+</ul>
+</div>
+</details><p>Have a question or found a bug? Raise an issue on the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Web/issues">Chords-Web GitHub repository</a>.</p>
 </section>
 <section id="technologies-used">
 <h2>Technologies Used<a class="headerlink" href="#technologies-used" title="Link to this heading">#</a></h2>
@@ -1243,10 +1730,11 @@ Local database for web applications.</p>
 </div>
 </div>
 </div>
-<figure class="align-center" id="id27">
+<p>Chords-Web also uses <a class="reference external" href="https://www.typescriptlang.org/">TypeScript</a>, <a class="reference external" href="https://lucide.dev/">Lucide</a> icons, the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> (for the NPG Lite) and the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB API</a> (for firmware updates).</p>
+<figure class="align-center" id="id36">
 <img alt="Chords-Web Tech Stack" src="../../../_images/chords_tech_stack.png" />
 <figcaption>
-<p><span class="caption-text">Chords-Web Tech Stack</span><a class="headerlink" href="#id27" title="Link to this image">#</a></p>
+<p><span class="caption-text">Chords-Web Tech Stack</span><a class="headerlink" href="#id36" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1300,58 +1788,84 @@ Local database for web applications.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the hardware</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-code">Uploading the code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">Quick Start</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-requirements">Hardware Requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-boards">Supported Boards</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-chords-web">Opening Chords-web</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the Hardware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-firmware">Uploading the Firmware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-update-firmware-from-chords-web-recommended">Option 1: Update firmware from Chords-Web (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-upload-firmware-with-the-arduino-ide">Option 2: Upload firmware with the Arduino IDE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-3-npg-lite-and-esp32-boards">Option 3: NPG Lite and ESP32 boards</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-chords-web">Connecting to Chords-Web</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-over-serial-usb">Connecting over Serial (USB)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-over-bluetooth-npg-lite">Connecting over Bluetooth (NPG Lite)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-controls">Common Controls</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-switcher">App Switcher</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#play-pause-and-data-windows">Play/Pause and Data Windows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings-zoom-time-base-and-channels">Settings (Zoom, Time Base and Channels)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filters">Filters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recording-the-data">Recording the Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disconnecting">Disconnecting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-options-to-explore">Other Options to Explore</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-visualizer">Chords Visualizer</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#chords-web-icons">Chords-Web Icons</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#play-pause-data-stream">Play/Pause Data Stream</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-channel-count">Setting Channel Count</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recording-the-data">Recording the Data</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-emg-electromyography-signal">Visualizing EMG (Electromyography) signal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-emg-electromyography-signals">Visualizing EMG (Electromyography) signals</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-eeg-electroencephalography-signals">Visualizing EEG (Electroencephalography) signals</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-eog-electrooculography-signals">Visualizing EOG (Electrooculography) signals</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-ecg-electrocardiography-signals">Visualizing ECG (Electrocardiography) signals</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-options-to-explore">Other Options to Explore</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-application">Running the Application</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-wizard-plotter-monitor">Serial Wizard Plotter &amp; Monitor</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Overview</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Running the Application</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fft-analysis-and-eeg-band-spectrum-plotting">FFT Analysis and EEG Band Spectrum Plotting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fft-visualizer">FFT Visualizer</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Overview</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Features</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-eeg-bands">Supported EEG Bands</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Running the Application</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npg-lite">NPG Lite</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rep-forge">Rep-Forge</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Overview</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Features</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Running the application</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Running the Application</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rep-forge">Rep Forge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecg-visualizer">ECG Visualizer</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Overview</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Features</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Running the application</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Use Cases</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Running the Application</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-wizard-plotter-monitor">Serial Wizard Plotter &amp; Monitor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Running the Application</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-format-and-data-quality">Data Format and Data Quality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-format">Data Format</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#packet-format">Packet Format</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-for-dropped-samples">Checking for Dropped Samples</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technologies-used">Technologies Used</a></li>
 </ul>
   </nav></div>
@@ -1419,7 +1933,7 @@ Local database for web applications.</p>
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Oct 26, 2026.
+  Last updated on Oct 29, 2026.
   <br/>
 </p></div>
       

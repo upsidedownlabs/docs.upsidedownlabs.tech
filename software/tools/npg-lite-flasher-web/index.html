@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NPG Lite Flasher Web &#8212; upsidedownlabs.github.io  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/tools/npg-lite-flasher-web/index';</script>
+    <link rel="canonical" href="docs.upsidedownlabs.tech/software/tools/npg-lite-flasher-web/index.html" />
+    <link rel="icon" href="../../../_static/logo_sqr_bgw.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="NPG Lite Flasher" href="../npg-lite-flasher/index.html" />
+    <link rel="prev" title="M2W" href="../../applications/m2w/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="Oct 29, 2026"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Welcome to Upside Down Labs docs site!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo_black_hr_nbg.svg" class="logo__image only-light" alt="upsidedownlabs.github.io  documentation - Home"/>
+    <img src="../../../_static/logo_white_hr_nbg.svg" class="logo__image only-dark pst-js-only" alt="upsidedownlabs.github.io  documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="ms-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../hardware/index.html">
+    Hardware
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Software
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../research/index.html">
+    Research
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../kits/index.html">
+    DIY Kits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guides/index.html">
+    Guides
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../courses/index.html">
+    Courses
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.digikey.com/en/supplier-centers/myupsidedownlab">
+    DigiKey
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.mouser.com/manufacturer/upside-down-labs/">
+    Mouser
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.tindie.com/stores/upsidedownlabs/">
+    Tindie
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://www.amazon.in/stores/UpsideDownLabs/Homepage/page/476F15A3-A296-4D5F-A91A-D266CB247355">
+    Amazon India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://store.upsidedownlabs.tech/">
+    Store India
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://t.ly/ExlaF">
+    GeM India
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/upsidedownlabs/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://docs.upsidedownlabs.tech" title="Docs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-book fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docs</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://discord.gg/SzYRVz8xRw" title="Discord" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-discord fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Discord</span></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instructables.com/member/Upside%20Down%20Labs/instructables/" title="Instructables" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/instructables.svg" class="icon-link-image" alt="Instructables"/></a>
+        </li>
+        <li class="nav-item">
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://upsidedownlabs.tech/" title="Upside Down Labs" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../../_static/logo/logo_sqr_bgw.svg" class="icon-link-image" alt="Upside Down Labs"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Chords</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-web/index.html">Chords-Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-python/index.html">Chords-Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-connector/index.html">Chords-LSL-Connector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-lsl-visualizer/index.html">Chords-LSL-Visualizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-java/index.html">Chords-Java</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../chords/chords-csv-plotter/index.html">Chords CSV Plotter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../applications/npg-lite-cardio/index.html">NPG Lite Cardio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications/npg-lite-snes/index.html">NPG Lite SNES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../applications/m2w/index.html">M2W</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NPG Lite Flasher Web</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../npg-lite-flasher/index.html">NPG Lite Flasher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bioamp-filter-designer/index.html">BioAmp Filter Designer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">BioAmp Software</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/muscle-bioamp-arduino-firmware/index.html">Muscle (EMG) BioAmp Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/eye-bioamp-arduino-firmware/index.html">Eye (EOG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/heart-bioamp-arduino-firmware/index.html">Heart (ECG) BioAmp Arduino Firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../bioamp/brain-bioamp-arduino-firmware/index.html">Brain (EEG) BioAmp Arduino Firmware</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Software</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NPG Lite Flasher Web</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="npg-lite-flasher-web">
+<span id="id1"></span><h1>NPG Lite Flasher Web<a class="headerlink" href="#npg-lite-flasher-web" title="Link to this heading">#</a></h1>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/sKYY074Yg3A" style="border: 0; height: 345px; width: 560px">
+</iframe></div><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>NPG Lite Flasher Web is an open-source, browser-based tool to flash firmware onto the <a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround (NPG) Lite</span></a> and other ESP32-based boards. There is nothing to install - open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">upsidedownlabs.github.io/NPG-Lite-Flasher-Web</a>, connect your board with a USB cable, choose a firmware and click <strong>Flash Firmware</strong>.</p>
+<figure class="align-center" id="id5">
+<img alt="NPG Lite Flasher Web Landing Page" src="../../../_images/npg-lite-flasher-web.png" />
+<figcaption>
+<p><span class="caption-text">NPG Lite Flasher Web Landing Page</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Feature</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>No Installation</strong></p></td>
+<td><p>Runs fully in your browser using the Web Serial API. You don’t need the Arduino IDE or any desktop app.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Default Firmwares</strong></p></td>
+<td><p>Flash the <strong>BLE</strong> (wireless), <strong>WiFi</strong> or <strong>Serial</strong> (direct USB) build of <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware">Chords</a> with one click. They are always taken from the latest release.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NPG Lite Projects</strong></p></td>
+<td><p>Every project from the latest <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware">NPG-Lite-Arduino-Firmware</a> release, each with a short description. Download one, or all of them at once.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Your Own Firmware</strong></p></td>
+<td><p>Add any <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file with the <strong>Add Firmware</strong> button or by dragging it onto the page.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Saved in the Browser</strong></p></td>
+<td><p>Downloaded and added firmwares are saved in your browser, so they’re ready the next time you open the flasher.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Automatic Flash Address</strong></p></td>
+<td><p>Merged images are flashed at <code class="docutils literal notranslate"><span class="pre">0x0</span></code> and app-only files at <code class="docutils literal notranslate"><span class="pre">0x10000</span></code>, so you don’t have to remember offsets.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Flash Complete Firmware</strong></p></td>
+<td><p>Write the bootloader, partition table and app together, for a blank chip or a new partition scheme.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Console &amp; Progress</strong></p></td>
+<td><p>See live logs and the flashing progress while the firmware is uploaded.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Guided Tour</strong></p></td>
+<td><p>Click <strong>Guide</strong> to get a step-by-step tour of the page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="npg-lite-flasher-web-or-npg-lite-flasher">
+<h3>NPG Lite Flasher Web or NPG Lite Flasher?<a class="headerlink" href="#npg-lite-flasher-web-or-npg-lite-flasher" title="Link to this heading">#</a></h3>
+<p>Both tools upload firmware to the NPG Lite. Use whichever is easier for you:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 35.0%" />
+<col style="width: 35.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p><strong>NPG Lite Flasher Web</strong></p></th>
+<th class="head"><p><a class="reference internal" href="../npg-lite-flasher/index.html#npg-lite-flasher"><span class="std std-ref">NPG Lite Flasher</span></a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Runs in</strong></p></td>
+<td><p>Your browser</p></td>
+<td><p>Desktop app (Windows, macOS, Linux)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Installation</strong></p></td>
+<td><p>Not needed</p></td>
+<td><p>Download and install</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Browser needed</strong></p></td>
+<td><p>Chrome, Edge, Opera or Firefox 151+</p></td>
+<td><p>Not needed (it is a desktop app)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Best for</strong></p></td>
+<td><p>Quick flashing on any computer</p></td>
+<td><p>Offline use, or when you don’t have a supported browser</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<section id="browser">
+<h3>Browser<a class="headerlink" href="#browser" title="Link to this heading">#</a></h3>
+<p>NPG Lite Flasher Web uses the <strong>Web Serial API</strong>, which works in the latest versions of these desktop browsers:</p>
+<ul class="simple">
+<li><p><strong>Google Chrome</strong></p></li>
+<li><p><strong>Microsoft Edge</strong></p></li>
+<li><p><strong>Opera</strong></p></li>
+<li><p><strong>Mozilla Firefox</strong> (version 151 or later)</p></li>
+</ul>
+<p>Safari and mobile browsers are not supported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NPG Lite Flasher Web only needs Web Serial, so it works fully in Firefox 151 or later (the first version with Web Serial). Firefox doesn’t support Web Bluetooth or WebUSB, but the flasher doesn’t use them.</p>
+</div>
+</section>
+<section id="hardware">
+<h3>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../hardware/bioamp/neuro-play-ground-lite/index.html#neuro-play-ground-lite"><span class="std std-ref">Neuro PlayGround (NPG) Lite</span></a> or any ESP32 board.</p></li>
+<li><p>A USB Type-C <strong>data</strong> cable (not a charge-only cable).</p></li>
+</ul>
+</section>
+</section>
+<section id="setting-up-the-hardware">
+<h2>Setting up the Hardware<a class="headerlink" href="#setting-up-the-hardware" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Turn ON the NPG Lite using the power switch on the side of the board.</p></li>
+<li><p>Connect the NPG Lite to your laptop using the USB Type-C cable.</p></li>
+</ol>
+</section>
+<section id="uploading-the-firmware">
+<h2>Uploading the Firmware<a class="headerlink" href="#uploading-the-firmware" title="Link to this heading">#</a></h2>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Default Firmware</label><div class="sd-tab-content docutils">
+<p>Use this to flash the standard <strong>BLE</strong>, <strong>WiFi</strong> or <strong>Serial</strong> firmware.</p>
+<ol class="arabic simple">
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG Lite Flasher Web</a> in a supported browser.</p></li>
+<li><p>Click <strong>Connect Device</strong>, select your NPG Lite’s port from the list and click <strong>Connect</strong>. The console shows the chip it connected to (for example, <code class="docutils literal notranslate"><span class="pre">Connected</span> <span class="pre">to</span> <span class="pre">ESP32-C6</span></code>).</p></li>
+<li><p>Under <strong>Default firmwares</strong>, select the firmware you need:</p>
+<ul class="simple">
+<li><p><strong>BLE</strong> (Wireless): to stream data over Bluetooth, for example to <a class="reference internal" href="../../chords/chords-web/index.html#chords-web-npg-lite"><span class="std std-ref">Chords-Web</span></a>.</p></li>
+<li><p><strong>WiFi</strong> (Wireless): to stream data over Wi-Fi.</p></li>
+<li><p><strong>Serial</strong> (Direct USB): to stream data over the USB cable.</p></li>
+</ul>
+</li>
+<li><p>Check the selected firmware’s name and size under <strong>Flash Firmware</strong>.</p></li>
+<li><p>Click <strong>Flash Firmware</strong> and wait until it reaches <strong>100%</strong>. Don’t unplug the board while flashing.</p></li>
+<li><p>When the console shows <strong>Flash completed successfully!</strong>, the board restarts with the new firmware.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default firmwares are downloaded from the latest <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware/releases/latest">Chords-Arduino-Firmware release</a>, so you always get the newest version.</p>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+NPG Lite Projects</label><div class="sd-tab-content docutils">
+<p>Use this to flash one of the ready-made NPG Lite projects.</p>
+<ol class="arabic">
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG Lite Flasher Web</a> and click <strong>Connect Device</strong>.</p></li>
+<li><p>The <strong>NPG Lite projects</strong> list shows every project from the latest <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware/releases/latest">NPG-Lite-Arduino-Firmware release</a>, with a short description of what it does.</p></li>
+<li><p>Click a project to download and select it. It is saved in your browser, so you don’t need to download it again.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Click the download-all icon next to <strong>NPG Lite projects</strong> to save every project at once.</p>
+</div>
+</li>
+<li><p>Click <strong>Flash Firmware</strong> and wait until the console shows <strong>Flash completed successfully!</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a download fails, the console shows a link to the release. Download the <code class="docutils literal notranslate"><span class="pre">.merged.bin</span></code> file from there and add it using the <strong>Your Own Firmware</strong> steps.</p>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Your Own Firmware</label><div class="sd-tab-content docutils">
+<p>Use this to flash a <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file you compiled yourself.</p>
+<ol class="arabic simple">
+<li><p>Open <a class="reference external" href="https://upsidedownlabs.github.io/NPG-Lite-Flasher-Web/">NPG Lite Flasher Web</a> and click <strong>Connect Device</strong>.</p></li>
+<li><p>Click <strong>Add Firmware</strong> and select your <code class="docutils literal notranslate"><span class="pre">.bin</span></code> file, or drag the file onto the <strong>Your firmwares</strong> list. It is saved in your browser for future use.</p></li>
+<li><p>The flash address is set automatically from the file name:</p>
+<ul class="simple">
+<li><p>Files with <code class="docutils literal notranslate"><span class="pre">merged</span></code> in the name (for example, <code class="docutils literal notranslate"><span class="pre">NPG-LITE-BLE.ino.merged.bin</span></code>) are flashed at <code class="docutils literal notranslate"><span class="pre">0x0</span></code>. A merged image already has the bootloader, partition table and app in one file.</p></li>
+<li><p>Other files are treated as app-only binaries and flashed at <code class="docutils literal notranslate"><span class="pre">0x10000</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Click <strong>Flash Firmware</strong> and wait until the console shows <strong>Flash completed successfully!</strong>.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In Arduino IDE, use <code class="docutils literal notranslate"><span class="pre">Sketch</span> <span class="pre">&gt;</span> <span class="pre">Export</span> <span class="pre">Compiled</span> <span class="pre">Binary</span></code> to get a <code class="docutils literal notranslate"><span class="pre">.ino.merged.bin</span></code> file in the sketch’s <code class="docutils literal notranslate"><span class="pre">build</span></code> folder. Merged images are the easiest to flash, because they’re written as a single file.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only change the flash address under <strong>Advanced Options</strong> if you know the address your file needs. Writing to the wrong address can stop your board from booting. If this happens, flash a merged image at <code class="docutils literal notranslate"><span class="pre">0x0</span></code> to fix it.</p>
+</div>
+</div>
+</div>
+<section id="merged-images-and-flash-complete-firmware">
+<h3>Merged Images and Flash Complete Firmware<a class="headerlink" href="#merged-images-and-flash-complete-firmware" title="Link to this heading">#</a></h3>
+<p>ESP32 firmware comes in two forms:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>What it contains</strong></p></th>
+<th class="head"><p><strong>Written to</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">*.merged.bin</span></code></p></td>
+<td><p>Bootloader, partition table and app in one file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*.ino.bin</span></code></p></td>
+<td><p>The app only</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x10000</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All default firmwares and NPG Lite projects are merged images, so they’re flashed as a single file.</p>
+<p>If you flash an app-only file, the board keeps its existing bootloader and partition table. That’s fine when the firmware already on the board uses the same partition scheme. For a blank chip, or when the partition scheme changes, turn on <strong>Flash Complete Firmware</strong>, click <strong>Choose Files</strong> and select all three files (or click <strong>Add Files</strong> to add them from your computer):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 50.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Part</strong></p></th>
+<th class="head"><p><strong>File from Arduino IDE</strong></p></th>
+<th class="head"><p><strong>Written to</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Bootloader</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sketch.ino.bootloader.bin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Partition table</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sketch.ino.partitions.bin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x8000</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>App</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">sketch.ino.bin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0x10000</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The flasher also writes the OTA data (<code class="docutils literal notranslate"><span class="pre">boot_app0.bin</span></code>) at <code class="docutils literal notranslate"><span class="pre">0xe000</span></code>. Bootloader and partition table files are matched by name, so keep the names that Arduino IDE gives them.</p>
+</section>
+<section id="managing-saved-firmwares">
+<h3>Managing Saved Firmwares<a class="headerlink" href="#managing-saved-firmwares" title="Link to this heading">#</a></h3>
+<p>Firmwares you download or add are saved in your browser:</p>
+<ul class="simple">
+<li><p><strong>NPG Lite projects</strong> you downloaded are marked as saved. Projects that are no longer in the latest release still show up, so you can flash or delete them.</p></li>
+<li><p><strong>Your firmwares</strong> lists the files you added yourself. Click one to select it.</p></li>
+<li><p>Click the <strong>Delete</strong> icon next to a firmware to remove it, or <strong>Delete All</strong> to remove all your firmwares at once. Default firmwares can’t be deleted.</p></li>
+<li><p>Click the <strong>X</strong> under <strong>Flash Firmware</strong> to clear the selection.</p></li>
+</ul>
+</section>
+</section>
+<section id="real-time-visualization">
+<h2>Real-Time Visualization<a class="headerlink" href="#real-time-visualization" title="Link to this heading">#</a></h2>
+<p>After flashing, you can see your biopotential signals in real time:</p>
+<ul class="simple">
+<li><p><strong>BLE or Serial firmware</strong>: Open <a class="reference internal" href="../../chords/chords-web/index.html#chords"><span class="std std-ref">Chords-Web</span></a> and click <strong>BLE</strong> or <strong>Serial</strong> to connect. See <a class="reference internal" href="../../chords/chords-web/index.html#chords-web-npg-lite"><span class="std std-ref">Connecting over Bluetooth (NPG Lite)</span></a>.</p></li>
+<li><p><strong>Python</strong>: Follow the <a class="reference internal" href="../../chords/chords-python/index.html#chords-pythons"><span class="std std-ref">Chords-Python documentation</span></a>.</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>My board doesn’t appear in the port list<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul>
+<li><p class="sd-card-text">Make sure the NPG Lite is switched ON.</p></li>
+<li><p class="sd-card-text">Use a USB <strong>data</strong> cable, not a charge-only cable.</p></li>
+<li><p class="sd-card-text">Close any other app or browser tab using the port (Arduino IDE Serial Monitor, Chords-Web, NPG Lite Flasher, etc.).</p></li>
+<li><p class="sd-card-text"><strong>Linux</strong>: Add your user to the serial port group, then log out and log back in.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>uucp<span class="w"> </span><span class="nv">$USER</span><span class="w">      </span><span class="c1"># Arch / Manjaro</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>dialout<span class="w"> </span><span class="nv">$USER</span><span class="w">   </span><span class="c1"># Ubuntu / Debian</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>Flashing fails or stops in the middle<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Don’t unplug the board or close the tab while flashing.</p></li>
+<li><p class="sd-card-text">Click <strong>Disconnect</strong>, unplug and replug the board, then click <strong>Connect Device</strong> and try again.</p></li>
+<li><p class="sd-card-text">If the board doesn’t connect, put it in boot mode: hold the <strong>BOOT</strong> button, press and release <strong>RESET</strong>, then release <strong>BOOT</strong>. Then click <strong>Connect Device</strong> again.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>The board doesn’t work after flashing<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Press <strong>RESET</strong>, or toggle the power switch OFF and ON to restart the board.</p></li>
+<li><p class="sd-card-text">Make sure you flashed the right firmware for how you want to connect (BLE, WiFi or Serial).</p></li>
+<li><p class="sd-card-text">If you flashed a custom file, check that it was flashed at the right address. Flashing a merged image at <code class="docutils literal notranslate"><span class="pre">0x0</span></code> fixes most problems.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"></path></svg></span>A firmware won’t download<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Check your internet connection and reload the page.</p></li>
+<li><p class="sd-card-text">Download the <code class="docutils literal notranslate"><span class="pre">.merged.bin</span></code> file from the <a class="reference external" href="https://github.com/upsidedownlabs/Chords-Arduino-Firmware/releases/latest">Chords-Arduino-Firmware</a> or <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-Arduino-Firmware/releases/latest">NPG-Lite-Arduino-Firmware</a> release and add it with <strong>Add Firmware</strong>.</p></li>
+</ul>
+</div>
+</details></section>
+<section id="github-repository">
+<h2>GitHub Repository<a class="headerlink" href="#github-repository" title="Link to this heading">#</a></h2>
+<p>For the source code, issue tracking and contribution guidelines, visit the <a class="reference external" href="https://github.com/upsidedownlabs/NPG-Lite-Flasher-Web">NPG Lite Flasher Web GitHub repository</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../applications/m2w/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">M2W</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../npg-lite-flasher/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NPG Lite Flasher</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#npg-lite-flasher-web-or-npg-lite-flasher">NPG Lite Flasher Web or NPG Lite Flasher?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser">Browser</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-the-hardware">Setting up the Hardware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-the-firmware">Uploading the Firmware</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merged-images-and-flash-complete-firmware">Merged Images and Flash Complete Firmware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-saved-firmwares">Managing Saved Firmwares</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#real-time-visualization">Real-Time Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-repository">GitHub Repository</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/upsidedownlabs/upsidedownlabs.github.io/edit/mainsoftware/tools/npg-lite-flasher-web/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/software/tools/npg-lite-flasher-web/index.rst">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Upside Down Labs.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on Oct 29, 2026.
+  <br/>
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
